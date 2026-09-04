@@ -22,6 +22,7 @@ test("renders Bella's finished apartment finder", async () => {
   assert.match(html, /Closer to school/);
   assert.match(html, /The Atlantic BridgeMill/);
   assert.match(html, /Reported-crime context/);
+  assert.doesNotMatch(html, /LOCATION OVERVIEW|Apartment location overview|Open full map|map-card/i);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|Your site is taking shape/i);
 });
 

@@ -80,9 +80,6 @@ const priceRange = (price: Price) => {
 const directionsUrl = (address: string) =>
   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(address)}&destination=${encodeURIComponent(school.address)}&travelmode=driving`;
 
-const locationUrl = (address: string) =>
-  `https://www.openstreetmap.org/search?query=${encodeURIComponent(address)}`;
-
 const formatDate = (date: string) =>
   new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(new Date(`${date}T12:00:00`));
 
@@ -126,14 +123,6 @@ function affordabilityLabel(score: number) {
   if (score >= 40) return "Near shortlist median";
   if (score >= 20) return "Higher cost";
   return "Much higher cost";
-}
-
-function mapPosition(item: { lat: number; lng: number }) {
-  const bounds = { north: 34.36, south: 33.97, east: -84.40, west: -84.78 };
-  return {
-    left: `${Math.max(4, Math.min(96, ((item.lng - bounds.west) / (bounds.east - bounds.west)) * 100))}%`,
-    top: `${Math.max(5, Math.min(94, ((bounds.north - item.lat) / (bounds.north - bounds.south)) * 100))}%`,
-  };
 }
 
 function confidenceCopy(value: Apartment["priceConfidence"]) {
@@ -236,7 +225,7 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
             <span className="section-kicker">{apartment.city}, GEORGIA · {apartment.distanceMiles.toFixed(1)} MILES FROM SCHOOL</span>
             <h1>{apartment.name}</h1>
             <p className="property-lede">{description}</p>
-            <a className="property-address" href={locationUrl(apartment.address)} target="_blank" rel="noreferrer">{apartment.address} ↗</a>
+            <p className="property-address">{apartment.address}</p>
 
             <div className="detail-fact-grid">
               <div className="detail-commute"><span>EST. DRIVE</span><strong>{apartment.driveMin}–{apartment.driveMax} min</strong><small>to Sixes Elementary</small></div>
@@ -295,7 +284,7 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
               <p>{apartment.commuteNote}</p>
               <p>The range is a no-traffic baseline plus a 30% planning buffer—not a live-traffic promise. Check the route at the actual weekday school-arrival time before signing a lease.</p>
               {apartment.routeSourceUrl && <p className="source-note">Route source: <a href={apartment.routeSourceUrl} target="_blank" rel="noreferrer">{apartment.routeSource} ↗</a></p>}
-              <div className="inline-actions"><a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Open live Google directions ↗</a><a href={locationUrl(apartment.address)} target="_blank" rel="noreferrer">Open location map ↗</a></div>
+              <div className="inline-actions"><a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Open live Google directions ↗</a></div>
             </section>
           </div>
 
@@ -375,7 +364,6 @@ export default function Home() {
       return [];
     }
   });
-  const [selected, setSelected] = useState(apartments[0].id);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [detailId] = useState<string | null>(() => apartmentIdFromLocation());
 
@@ -399,8 +387,6 @@ export default function Home() {
       .sort((a, b) => compareApartments(a, b, sort, bedrooms));
   }, [bedrooms, dealsOnly, maxDrive, maxRent, query, securityOnly, sort]);
 
-  const effectiveSelected = matches.some((item) => item.id === selected) ? selected : matches[0]?.id;
-  const selectedApartment = matches.find((item) => item.id === effectiveSelected) ?? matches[0];
   const cheapest = matches.length ? Math.min(...matches.map((item) => priceFor(item, bedrooms))) : null;
   const dealCount = matches.filter(hasCurrentDeal).length;
 
@@ -513,7 +499,7 @@ export default function Home() {
                 ["reviews", "Most reviewed"],
                 ["deals", "Deals first"],
               ] as [SortKey, string][]).map(([value, label]) => (
-                <button key={value} type="button" className={sort === value ? "active" : ""} aria-pressed={sort === value} onClick={() => { setSort(value); setSelected(""); }}>{label}</button>
+                <button key={value} type="button" className={sort === value ? "active" : ""} aria-pressed={sort === value} onClick={() => setSort(value)}>{label}</button>
               ))}
             </div>
           </div>
@@ -524,9 +510,8 @@ export default function Home() {
             {matches.length ? matches.map((apartment, index) => {
               const valueScore = affordabilityScore(apartment, bedrooms);
               const isSaved = saved.includes(apartment.id);
-              const isSelected = effectiveSelected === apartment.id;
               return (
-                <article className={`home-card ${isSelected ? "selected" : ""}`} key={apartment.id} onMouseEnter={() => setSelected(apartment.id)}>
+                <article className="home-card" key={apartment.id}>
                   <figure className="property-photo">
                     <a className="property-photo-link" href={detailPageUrl(apartment.id)} aria-label={`Open the full page for ${apartment.name}`}>
                       <span className="photo-fallback" aria-hidden="true">{apartmentInitials(apartment.name)}</span>
@@ -584,20 +569,6 @@ export default function Home() {
             )}
           </div>
 
-          <aside className="map-card" aria-label="Apartment location overview">
-            <div className="map-toolbar"><div><span>LOCATION OVERVIEW</span><b>{matches.length} plotted</b></div><a href={locationUrl(school.address)} target="_blank" rel="noreferrer">Open full map ↗</a></div>
-            <div className="map-surface">
-              <div className="map-grid" aria-hidden="true" />
-              <div className="road road-one" aria-hidden="true" /><div className="road road-two" aria-hidden="true" /><div className="road road-three" aria-hidden="true" />
-              <span className="map-label canton">CANTON</span><span className="map-label woodstock">WOODSTOCK</span><span className="map-label acworth">ACWORTH</span>
-              <span className="school-pin" style={mapPosition(school)} aria-label="Sixes Elementary School">★<small>Sixes<br />Elementary</small></span>
-              {matches.map((apartment, index) => (
-                <button key={apartment.id} type="button" className={`map-pin ${effectiveSelected === apartment.id ? "active" : ""}`} style={mapPosition(apartment)} onClick={() => setSelected(apartment.id)} aria-label={`Select ${apartment.name}`}>{index + 1}</button>
-              ))}
-              {selectedApartment && <div className="map-note"><span>{selectedApartment.city} · {selectedApartment.distanceMiles.toFixed(1)} mi</span><b>{selectedApartment.name}</b><small>{selectedApartment.driveMin}–{selectedApartment.driveMax} min estimated</small><a href={directionsUrl(selectedApartment.address)} target="_blank" rel="noreferrer">Live directions ↗</a></div>}
-            </div>
-            <p className="map-disclaimer">Pins use geocoded addresses; roads are simplified. Routes use OSRM/OpenStreetMap with no live traffic; upper estimates add a 30% buffer.</p>
-          </aside>
         </div>
       </section>
 
