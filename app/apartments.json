@@ -1,0 +1,833 @@
+{
+  "meta": {
+    "checkedAt": "2026-09-04T15:01:33.033Z",
+    "school": {
+      "name": "Sixes Elementary School",
+      "address": "20 Ridge Road, Canton, GA 30114",
+      "lat": 34.1727246,
+      "lng": -84.5540977
+    },
+    "crimeContext": {
+      "period": "2024",
+      "cherokeeRate": 6.37,
+      "cobbRate": 14.45,
+      "unit": "reported Index Crimes per 1,000 residents",
+      "source": "Georgia Bureau of Investigation",
+      "sourceUrl": "https://gbi.georgia.gov/document/document/2024-crime-statistics-summary/download",
+      "cautionUrl": "https://ucr.fbi.gov/crime-in-the-u.s/2012/crime-in-the-u.s.-2012/resource-pages/caution-against-ranking/cautionagainstranking"
+    },
+    "automation": {
+      "checked": 13,
+      "reachable": 6,
+      "pricesUpdated": 2,
+      "dealsDetected": 3,
+      "method": "Best-effort checks of official property pricing pages; last curated values remain when parsing is inconclusive."
+    }
+  },
+  "apartments": [
+    {
+      "id": "atlantic-bridgemill",
+      "name": "The Atlantic BridgeMill",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "1000 Preston Glen Circle, Canton, GA 30114",
+      "lat": 34.190646,
+      "lng": -84.539535,
+      "distanceMiles": 2.4,
+      "driveMin": 5,
+      "driveMax": 7,
+      "commuteNote": "Closest option in this shortlist; estimate varies with Ridge Road traffic.",
+      "oneBed": {
+        "min": 1433,
+        "max": null,
+        "note": "Official live floor-plan feed; some layouts call for price."
+      },
+      "twoBed": {
+        "min": 1320,
+        "max": 1870,
+        "note": "Dynamic unit pricing; verify the exact floor plan."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "1 month free",
+      "dealDetail": "Reported for move-ins by September 12, 2026; lease and unit restrictions apply. Confirm before relying on it.",
+      "dealExpires": "2026-09-12",
+      "amenities": [
+        "Resort pool",
+        "24-hour fitness",
+        "Tennis court",
+        "Bark park",
+        "Auto-detail bay",
+        "Garages"
+      ],
+      "security": [
+        "Gated entry reported by listings",
+        "24-hour emergency maintenance"
+      ],
+      "petCost": "Up to 2 pets; $300 fee + $25/month per pet; breed restrictions.",
+      "fees": [
+        "Pet: $300 one-time per pet",
+        "Pet rent: $25/month per pet",
+        "Garage: ask property"
+      ],
+      "review": {
+        "rating": 3.9,
+        "count": 8,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-atlantic-bridgemill-canton-ga/8c0e152/"
+      },
+      "officialUrl": "https://www.atlanticbridgemillliving.com/",
+      "pricingUrl": "https://www.atlanticbridgemillliving.com/floorplans",
+      "amenitiesUrl": "https://www.atlanticbridgemillliving.com/amenities",
+      "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/atlantic_bridgemill_apartments_30114%20%285%29.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "unreachable"
+    },
+    {
+      "id": "the-darby",
+      "name": "The Darby Apartments",
+      "city": "Holly Springs",
+      "county": "Cherokee",
+      "address": "100 Holly Park Court, Holly Springs, GA 30115",
+      "lat": 34.152888,
+      "lng": -84.507832,
+      "distanceMiles": 4,
+      "driveMin": 7,
+      "driveMax": 9,
+      "commuteNote": "Short I-575/Holly Springs Parkway route; estimate excludes unusual congestion.",
+      "oneBed": {
+        "min": 1220,
+        "max": 1409,
+        "note": "$1,220 plan was listed as coming soon; available-now home was $1,409."
+      },
+      "twoBed": {
+        "min": 1516,
+        "max": 1616,
+        "note": "Current public availability snapshot."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property availability",
+      "deal": null,
+      "dealDetail": "No clearly current general special found. Ask the leasing office for unpublished offers.",
+      "dealExpires": null,
+      "amenities": [
+        "Washer/dryer included",
+        "Pool & sundeck",
+        "Fitness center",
+        "Outdoor kitchen",
+        "Package lockers",
+        "Garages"
+      ],
+      "security": [
+        "Package lockers",
+        "24-hour emergency maintenance"
+      ],
+      "petCost": "Up to 2 pets; first pet $250 fee + $250 deposit, second $150 + $150; $25/month wording should be confirmed.",
+      "fees": [
+        "First pet: $250 fee + $250 deposit",
+        "Second pet: $150 fee + $150 deposit",
+        "Pet rent: confirm whether per pet"
+      ],
+      "review": {
+        "rating": 4.8,
+        "count": 257,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-darby-apartments-holly-springs-ga/th5wxvc/"
+      },
+      "officialUrl": "https://www.thedarbyapartments.com/",
+      "pricingUrl": "https://www.thedarbyapartments.com/apartments/ga/holly-springs/floor-plans",
+      "amenitiesUrl": "https://www.thedarbyapartments.com/apartments/ga/holly-springs/amenities",
+      "imageUrl": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0%2Cy_246%2Ch_1249%2Cw_2499%2Cc_crop/q_auto%2Cf_auto%2Cfl_lossy%2Cg_center%2Ch_1000%2Cw_2000/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1oh2uvpdch-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-holly-springs-ga/uploads/6_The_Darby_-_Clubhouse_-_06_ezbiva.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "reachable",
+      "detectedDeal": null
+    },
+    {
+      "id": "sixes-ridge",
+      "name": "Sixes Ridge",
+      "city": "Holly Springs",
+      "county": "Cherokee",
+      "address": "4416 Holly Springs Parkway, Holly Springs, GA 30115",
+      "lat": 34.151971,
+      "lng": -84.510277,
+      "distanceMiles": 4.1,
+      "driveMin": 7,
+      "driveMax": 9,
+      "commuteNote": "Very close to the school by Sixes Road; check the morning peak before touring.",
+      "oneBed": {
+        "min": 1375,
+        "max": 1456,
+        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+      },
+      "twoBed": {
+        "min": 1660,
+        "max": 2320,
+        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official Equity Apartments availability",
+      "deal": "25% Off Your First Month",
+      "dealDetail": "Detected on the official pricing page on 2026-09-04. Confirm the eligible unit, lease term, move-in deadline, and full written terms.",
+      "dealExpires": null,
+      "amenities": [
+        "Saltwater pool",
+        "Nature trail & pond",
+        "Coworking",
+        "Pet park & spa",
+        "Fitness + yoga",
+        "In-home washer/dryer"
+      ],
+      "security": [
+        "Smart-home features",
+        "Gated access reported by current listings"
+      ],
+      "petCost": "Dogs and cats; $25/month; $350 dog fee shown; live listings show up to 3 pets—confirm details.",
+      "fees": [
+        "Dog fee shown: $350",
+        "Pet rent: $25/month",
+        "Carriage-home premium on select 2BRs"
+      ],
+      "review": {
+        "rating": 3.8,
+        "count": 8,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/sixes-ridge-holly-springs-ga/x3yqtgp/"
+      },
+      "officialUrl": "https://www.equityapartments.com/atlanta/holly-springs/sixes-ridge-apartments",
+      "pricingUrl": "https://www.equityapartments.com/atlanta/holly-springs/sixes-ridge-apartments",
+      "amenitiesUrl": "https://www.equityapartments.com/atlanta/holly-springs/sixes-ridge-apartments",
+      "imageUrl": "https://media.equityapartments.com/images/c_crop%2Cx_0%2Cy_0%2Cw_1920%2Ch_1080/c_fill%2Cw_1920%2Ch_1080/q_auto%2Cf_auto/4310-23/sixes-ridge-apartments-swimming-pool",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "reachable",
+      "detectedDeal": "25% off your first month"
+    },
+    {
+      "id": "linz-holly-springs",
+      "name": "Linz Holly Springs",
+      "city": "Holly Springs",
+      "county": "Cherokee",
+      "address": "4501 Holly Springs Parkway, Holly Springs, GA 30115",
+      "lat": 34.151282,
+      "lng": -84.510329,
+      "distanceMiles": 4.2,
+      "driveMin": 8,
+      "driveMax": 10,
+      "commuteNote": "Short route to Sixes Elementary; real-time traffic can change the estimate.",
+      "oneBed": {
+        "min": 1624,
+        "max": 1844,
+        "note": "Available-unit range; higher-priced waitlist layouts excluded."
+      },
+      "twoBed": {
+        "min": 2109,
+        "max": 2459,
+        "note": "Official current advertised range."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "Up to 2 months free",
+      "dealDetail": "Current page shows one month free on select A1/B1 homes and two months on a select B2. Restrictions apply.",
+      "dealExpires": null,
+      "amenities": [
+        "Gated & elevators",
+        "Saltwater pool",
+        "24/7 fitness + yoga",
+        "Movie theater",
+        "Private offices",
+        "EV charging"
+      ],
+      "security": [
+        "Gated/controlled access",
+        "Optional monitored intrusion alarms",
+        "Package lockers"
+      ],
+      "petCost": "Up to 2 pets, no weight limit; $400 one/$500 two; $20/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $400 one or $500 two",
+        "Pet rent: $20/month each",
+        "Optional monitored alarm service"
+      ],
+      "review": {
+        "rating": 4.5,
+        "count": 35,
+        "source": "RentCafe snapshot",
+        "url": "https://www.rentcafe.com/apartments/ga/canton/linz-holly-springs/default.aspx"
+      },
+      "officialUrl": "https://www.linzhollysprings.com/",
+      "pricingUrl": "https://www.linzhollysprings.com/floorplans/one-bedroom",
+      "amenitiesUrl": "https://www.linzhollysprings.com/amenities",
+      "imageUrl": "https://lh3.googleusercontent.com/IZmmApLjtvcLzW6ZDVl7RvT-HIv8sDCyw8WDWT_SDL348mfGPFuAmH8kRjw94Z5h5pA_OO-KRc47BogEsbNWUxZcNOr2-UmJFOx_o0I%3Ds3000-rw",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "reachable",
+      "detectedDeal": "Up to 2 months free"
+    },
+    {
+      "id": "heights-holly-springs",
+      "name": "The Heights at Holly Springs",
+      "city": "Holly Springs",
+      "county": "Cherokee",
+      "address": "1151 Heights Parkway, Holly Springs, GA 30115",
+      "lat": 34.145469,
+      "lng": -84.51029,
+      "distanceMiles": 5,
+      "driveMin": 9,
+      "driveMax": 11,
+      "commuteNote": "New community near I-575; weekday school-arrival traffic may add time.",
+      "oneBed": {
+        "min": 1550,
+        "max": 2540,
+        "note": "Most standard 1BR layouts were $1,550–$1,845; $2,540 is an oversized 1,065-sf plan."
+      },
+      "twoBed": {
+        "min": 2030,
+        "max": 2405,
+        "note": "Official floor-plan range."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property availability",
+      "deal": "6 weeks free + waived fees",
+      "dealDetail": "Advertised as six weeks free plus waived application and administration fees. Terms and selected homes apply.",
+      "dealExpires": null,
+      "amenities": [
+        "Peloton fitness",
+        "Pool cabanas",
+        "Coworking rooms",
+        "Pet park",
+        "Secure packages",
+        "Quartz finishes"
+      ],
+      "security": [
+        "Controlled access",
+        "Secure package room"
+      ],
+      "petCost": "Up to 2 pets; listings report $450 one-time + $30/month per pet; verify with the official portal.",
+      "fees": [
+        "Deposit shown: $200 on sampled plans",
+        "Pet: reported $450 + $30/month each",
+        "Application/admin fees currently advertised waived"
+      ],
+      "review": {
+        "rating": 5,
+        "count": 2,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-heights-at-holly-springs-holly-springs-ga/3d3t65g/"
+      },
+      "officialUrl": "https://www.heightshollysprings.com/",
+      "pricingUrl": "https://heightsathollysprings.prospectportal.com/holly-springs/the-heights-at-holly-springs/conventional/",
+      "amenitiesUrl": "https://www.heightshollysprings.com/amenities",
+      "imageUrl": "https://irp.cdn-website.com/0a9c02fa/dms3rep/multi/opt/Pool%2BEve%2B03-1a36d639-1920w.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "unreachable"
+    },
+    {
+      "id": "the-indigo",
+      "name": "The Indigo",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "300 Prominence Point Parkway, Canton, GA 30114",
+      "lat": 34.185478,
+      "lng": -84.518886,
+      "distanceMiles": 5.8,
+      "driveMin": 11,
+      "driveMax": 14,
+      "commuteNote": "Prominence Point/I-575 area; estimate should be checked at the actual school-arrival time.",
+      "oneBed": {
+        "min": 1560,
+        "max": 1590,
+        "note": "Official featured-unit feed; syndication showed lower figures, so verify."
+      },
+      "twoBed": {
+        "min": 1699,
+        "max": 2030,
+        "note": "Official featured-unit feed; other public feeds differed."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official featured availability",
+      "deal": "Up to 8 weeks free",
+      "dealDetail": "Advertised on select homes leased by September 18, 2026. Lease-length and unit restrictions apply.",
+      "dealExpires": "2026-09-18",
+      "amenities": [
+        "Gated/key-fob entry",
+        "Pool cabanas",
+        "Coworking",
+        "Fitness center",
+        "Outdoor kitchen",
+        "Quartz finishes"
+      ],
+      "security": [
+        "Gated community",
+        "Key-fob building access"
+      ],
+      "petCost": "Up to 2 pets; $400 one-time per pet + $25/month per pet; breed restrictions.",
+      "fees": [
+        "Valet trash: $28/month",
+        "Pest: $5/month",
+        "Application: $75/person",
+        "Administration: $200",
+        "Pet: $400 + $25/month each"
+      ],
+      "review": {
+        "rating": 4.8,
+        "count": 13,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-indigo-canton-ga/8pd2gt0/"
+      },
+      "officialUrl": "https://www.liveattheindigo.com/",
+      "pricingUrl": "https://www.liveattheindigo.com/floorplans",
+      "amenitiesUrl": "https://www.liveattheindigo.com/amenities",
+      "imageUrl": "https://cdn.prod.website-files.com/664c038971648304b3da479a/664c05a4085dc8d11e53fe29_dsc04134.webp",
+      "imageSource": "Official property website",
+      "priceConfidence": "conflict",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "unreachable"
+    },
+    {
+      "id": "avonlea-springs",
+      "name": "Avonlea Springs",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "640 Lakeside Drive, Canton, GA 30115",
+      "lat": 34.1917,
+      "lng": -84.49882,
+      "distanceMiles": 7,
+      "driveMin": 12,
+      "driveMax": 15,
+      "commuteNote": "East of I-575; allow extra time on local roads during peak hours.",
+      "oneBed": {
+        "min": 1620,
+        "max": 1795,
+        "note": "Official current advertised range."
+      },
+      "twoBed": {
+        "min": 1995,
+        "max": 2210,
+        "note": "Official current advertised range."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property availability",
+      "deal": "Half off first 5 months",
+      "dealDetail": "Advertised for 12–14 month leases if applying by September 30, 2026, plus a $100 gift card and half-off application fees. Confirm all terms; unusually large promotion.",
+      "dealExpires": "2026-09-30",
+      "amenities": [
+        "New 2026 community",
+        "Gated access",
+        "Fitness + yoga",
+        "Coworking",
+        "EV charging",
+        "Pet spa"
+      ],
+      "security": [
+        "Gated access",
+        "Controlled-access package area reported"
+      ],
+      "petCost": "Up to 2 pets; $400 first + $100 second; $15/month per pet; 74-lb combined limit and breed restrictions.",
+      "fees": [
+        "Pet fee: $400 first + $100 second",
+        "Pet rent: $15/month each",
+        "Separate pet application required"
+      ],
+      "review": {
+        "rating": null,
+        "count": 0,
+        "source": "New community—no resident review snapshot",
+        "url": "https://www.apartments.com/avonlea-springs-canton-ga/re7qbp2/"
+      },
+      "officialUrl": "https://www.avonleasprings.com/",
+      "pricingUrl": "https://www.avonleasprings.com/apartments/ga/canton/floor-plans",
+      "amenitiesUrl": "https://www.avonleasprings.com/apartments/ga/canton/amenities",
+      "imageUrl": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_189%2Cy_0%2Ch_1687%2Cw_2811%2Cc_crop/q_auto%2Cf_auto%2Cfl_lossy%2Cg_center%2Ch_600%2Cw_1000/g5/g5-c-5wlomy6ok-quintus-corporation/g5-cl-1qorhde8xi-quintus-corporation-holly-springs-ga/uploads/R03-1_POOL_AVONLEA_SPRINGS_LR_11.11.25_lqr0qa.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "reachable",
+      "detectedDeal": null
+    },
+    {
+      "id": "heights-ridgewalk",
+      "name": "The Heights at Ridgewalk",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "1003 Ridgewalk Parkway, Woodstock, GA 30188",
+      "lat": 34.12535,
+      "lng": -84.529106,
+      "distanceMiles": 6,
+      "driveMin": 12,
+      "driveMax": 18,
+      "commuteNote": "Static route estimate; I-575 traffic can widen the range.",
+      "oneBed": {
+        "min": 1537,
+        "max": null,
+        "note": "Recent Apartments.com snapshot; official site did not expose a simple price."
+      },
+      "twoBed": {
+        "min": 2110,
+        "max": 2336,
+        "note": "Recent Apartments.com available-unit snapshot."
+      },
+      "priceBasis": "Recent advertised base rent",
+      "priceSource": "Apartments.com snapshot—verify on official site",
+      "deal": "Up to 4 weeks free",
+      "dealDetail": "Reported if leased within 48 hours of touring. Confirm participating unit, term, and current expiration.",
+      "dealExpires": null,
+      "amenities": [
+        "9,000-sf pool deck",
+        "Coworking",
+        "Fitness center",
+        "Dog park",
+        "Smart locks",
+        "Parcel lockers"
+      ],
+      "security": [
+        "Smart-entry locks",
+        "Parcel lockers"
+      ],
+      "petCost": "Up to 2 pets, 75 lb each; $350 one-time + $30/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $350",
+        "Pet rent: $30/month each",
+        "Lease timing required for current offer"
+      ],
+      "review": {
+        "rating": 4.7,
+        "count": 58,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-heights-at-ridgewalk-apartments-woodstock-ga/1k6pfl6/"
+      },
+      "officialUrl": "https://www.heightsridgewalk.com/",
+      "pricingUrl": "https://www.heightsridgewalk.com/floorplans",
+      "amenitiesUrl": "https://www.heightsridgewalk.com/amenities",
+      "imageUrl": "https://irp.cdn-website.com/b585ae0c/dms3rep/multi/opt/Ridgewalk062325_052-81788cf8-1920w.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "unreachable"
+    },
+    {
+      "id": "view-at-woodstock",
+      "name": "The View at Woodstock",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "900 View Drive, Woodstock, GA 30189",
+      "lat": 34.082623,
+      "lng": -84.547464,
+      "distanceMiles": 8.7,
+      "driveMin": 16,
+      "driveMax": 23,
+      "commuteNote": "Drive estimate has no live traffic; verify around the needed arrival time.",
+      "oneBed": {
+        "min": 1480,
+        "max": 1727,
+        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+      },
+      "twoBed": {
+        "min": 1890,
+        "max": 2130,
+        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official Equity Apartments availability",
+      "deal": "Up to 2 months free",
+      "dealDetail": "Reported on select units: one month on 12 months or two months on 18 months, through September 30, 2026. Verify eligibility.",
+      "dealExpires": "2026-09-30",
+      "amenities": [
+        "Pool & lawn",
+        "Coworking",
+        "Fitness center",
+        "Pet spa",
+        "EV charging",
+        "Smart-home tech"
+      ],
+      "security": [
+        "Smart-home technology",
+        "Controlled package handling reported"
+      ],
+      "petCost": "Listings report up to 3 pets; $400 one-time dog fee and $25/month dog/cat. Confirm with leasing.",
+      "fees": [
+        "Dog fee reported: $400",
+        "Pet rent reported: $25/month",
+        "Longer lease terms shown in price feed"
+      ],
+      "review": {
+        "rating": 4.1,
+        "count": 38,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-view-at-woodstock-woodstock-ga/ctx07ze/"
+      },
+      "officialUrl": "https://www.equityapartments.com/atlanta/woodstock/the-view-at-woodstock",
+      "pricingUrl": "https://www.equityapartments.com/atlanta/woodstock/the-view-at-woodstock",
+      "amenitiesUrl": "https://www.equityapartments.com/atlanta/woodstock/the-view-at-woodstock",
+      "imageUrl": "https://media.equityapartments.com/images/c_crop%2Cx_0%2Cy_0%2Cw_1920%2Ch_1080/c_fill%2Cw_1920%2Ch_1080/q_auto%2Cf_auto/4304-22/the-view-at-woodstock-apartments-exterior",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "reachable",
+      "detectedDeal": "Up to 1 month free + 25% off your first month"
+    },
+    {
+      "id": "lea-woodstock",
+      "name": "Lea Woodstock",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "1 Sycamore Lane, Woodstock, GA 30188",
+      "lat": 34.085075,
+      "lng": -84.48612,
+      "distanceMiles": 10.9,
+      "driveMin": 19,
+      "driveMax": 27,
+      "commuteNote": "Southeast Woodstock route; check the morning run because local traffic is variable.",
+      "oneBed": {
+        "min": 1428,
+        "max": 2172,
+        "note": "Official range; sunroom layouts started around $1,531."
+      },
+      "twoBed": {
+        "min": 1760,
+        "max": 2555,
+        "note": "Official range; common 2BR/2BA layouts started around $1,802."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": null,
+      "dealDetail": "No broad current concession found. Ask about unit-specific offers.",
+      "dealExpires": null,
+      "amenities": [
+        "2 saltwater pools",
+        "Pickleball",
+        "Yoga/spin studio",
+        "Work lounge",
+        "Dog park",
+        "Garages"
+      ],
+      "security": [
+        "Controlled-access community",
+        "24-hour emergency maintenance"
+      ],
+      "petCost": "Up to 2 pets, 70 lb; $300 one/$400 two + $10/month each; breed restrictions.",
+      "fees": [
+        "Deposit: $500",
+        "Pet fee: $300 one or $400 two",
+        "Pet rent: $10/month each"
+      ],
+      "review": {
+        "rating": 4.5,
+        "count": 63,
+        "source": "RentCafe snapshot",
+        "url": "https://www.rentcafe.com/apartments/ga/woodstock/hudson-woodstock0/default.aspx"
+      },
+      "officialUrl": "https://www.leawoodstockapts.com/",
+      "pricingUrl": "https://www.leawoodstockapts.com/floorplans",
+      "amenitiesUrl": "https://www.leawoodstockapts.com/amenities",
+      "imageUrl": "https://resource.rentcafe.com/image/upload/x_0%2Cy_0%2Cw_4500%2Ch_3000%2Cc_crop/q_auto%2Cf_auto%2Cc_lfill%2Cw_576%2Car_2.304%2Cg_auto/s3/2/85119/lea%20woodstock-poi-027.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "unreachable"
+    },
+    {
+      "id": "crest-acworth",
+      "name": "The Crest at Acworth",
+      "city": "Acworth",
+      "county": "Cobb",
+      "address": "1348 Highway 92, Acworth, GA 30102",
+      "lat": 34.087172,
+      "lng": -84.653197,
+      "distanceMiles": 12.5,
+      "driveMin": 23,
+      "driveMax": 33,
+      "commuteNote": "Longer Highway 92 route; peak school traffic could approach the top of the range.",
+      "oneBed": {
+        "min": 1510,
+        "max": 1614,
+        "note": "Official current starting range."
+      },
+      "twoBed": {
+        "min": 1849,
+        "max": 2705,
+        "note": "Standard layouts start at $1,849; top end includes carriage homes."
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "1 month free",
+      "dealDetail": "Reported on 1–3 bedroom homes for move-in by September 30, 2026 on 12–15 month terms. Restrictions apply.",
+      "dealExpires": "2026-09-30",
+      "amenities": [
+        "Gated access",
+        "Resort pool",
+        "24-hour gym + yoga",
+        "EV charging",
+        "Bark park",
+        "Garages"
+      ],
+      "security": [
+        "Gated access",
+        "Package receiving"
+      ],
+      "petCost": "Up to 2 pets; no listed breed/weight restrictions or monthly pet rent; $300–$500 fee + $200 deposit each; confirm.",
+      "fees": [
+        "Pet fee: $300–$500 each",
+        "Pet deposit: $200 each",
+        "Pet screening: $30/year",
+        "No monthly pet rent currently advertised"
+      ],
+      "review": {
+        "rating": 4.5,
+        "count": 47,
+        "source": "RentCafe snapshot",
+        "url": "https://www.rentcafe.com/apartments/ga/acworth/the-crest-at-acworth/default.aspx"
+      },
+      "officialUrl": "https://www.crestacworth.com/",
+      "pricingUrl": "https://www.crestacworth.com/floorplans",
+      "amenitiesUrl": "https://www.crestacworth.com/amenities",
+      "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_576/s3/2/94173/img_0126%281%29.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "unreachable"
+    },
+    {
+      "id": "avana-acworth",
+      "name": "Avana Acworth",
+      "city": "Acworth",
+      "county": "Cobb",
+      "address": "4710 Baker Grove Road, Acworth, GA 30101",
+      "lat": 34.070629,
+      "lng": -84.648889,
+      "distanceMiles": 13.3,
+      "driveMin": 25,
+      "driveMax": 35,
+      "commuteNote": "Within the 40-minute ceiling in ordinary conditions; confirm during school/rush-hour traffic.",
+      "oneBed": {
+        "min": 1179,
+        "max": 1372,
+        "note": "Total mandatory monthly price; base rent was $1,138–$1,331."
+      },
+      "twoBed": {
+        "min": 1606,
+        "max": 1638,
+        "note": "Total mandatory monthly price; base rent was $1,565–$1,597."
+      },
+      "priceBasis": "Advertised mandatory monthly total",
+      "priceSource": "Official property availability",
+      "deal": null,
+      "dealDetail": "No move-in concession found. The displayed ranges already include mandatory monthly charges shown by the property.",
+      "dealExpires": null,
+      "amenities": [
+        "Resort pool",
+        "Modern gym",
+        "Tennis",
+        "Dog agility park",
+        "Playground",
+        "Garages"
+      ],
+      "security": [
+        "24-hour emergency maintenance",
+        "Community management on site"
+      ],
+      "petCost": "Up to 2 pets; $400 nonrefundable fee + $20/month per pet; breed restrictions.",
+      "fees": [
+        "Refundable deposit: $300",
+        "Pet fee: $400",
+        "Pet rent: $20/month each",
+        "Mandatory monthly fees included in shown total"
+      ],
+      "review": {
+        "rating": 4.3,
+        "count": 107,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/avana-acworth-acworth-ga/58gpd1p/"
+      },
+      "officialUrl": "https://www.avanaacworth.com/",
+      "pricingUrl": "https://www.avanaacworth.com/acworth/avana-acworth/conventional",
+      "amenitiesUrl": "https://www.avanaacworth.com/acworth/avana-acworth/amenities/",
+      "imageUrl": "https://medialibrarycfo.entrata.com/fit-in/700x700/15077/MLv3/3/27/2026/05/25/013443/6a14a452b87124.83286539749.png",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "unreachable"
+    },
+    {
+      "id": "park-kennesaw",
+      "name": "Park at Kennesaw",
+      "city": "Kennesaw",
+      "county": "Cobb",
+      "address": "2250 Ellison Lakes Drive NW, Kennesaw, GA 30152",
+      "lat": 34.002755,
+      "lng": -84.609699,
+      "distanceMiles": 16.1,
+      "driveMin": 25,
+      "driveMax": 38,
+      "commuteNote": "Borderline at school/rush-hour traffic. Check a live route at the exact weekday time before touring.",
+      "oneBed": {
+        "min": 1240,
+        "max": 1594,
+        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote."
+      },
+      "twoBed": {
+        "min": 1516,
+        "max": 1707,
+        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote."
+      },
+      "priceBasis": "Recent advertised base rent",
+      "priceSource": "Recent official referral snapshot—verify quote",
+      "deal": "Ask about select-unit offer",
+      "dealDetail": "A one-month-free offer was reported by a review marketplace, but the official page did not confirm it. Do not rely on it without written confirmation.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool & sundeck",
+        "Fitness center",
+        "Tennis",
+        "Dog park",
+        "EV charging",
+        "Car wash"
+      ],
+      "security": [
+        "Package services reported",
+        "On-site management"
+      ],
+      "petCost": "Pets welcome; listings report $300 fee, up to 2 pets and breed restrictions. Monthly rent should be confirmed.",
+      "fees": [
+        "Pet fee reported: $300",
+        "Monthly pet rent: call",
+        "Official current price requires a quote"
+      ],
+      "review": {
+        "rating": 4.5,
+        "count": 31,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/park-at-kennesaw-apartments-kennesaw-ga/40qkf6l/"
+      },
+      "officialUrl": "https://livebh.com/apartments/park-at-kennesaw-apartments/",
+      "pricingUrl": "https://livebh.com/apartments/park-at-kennesaw-apartments/?zgRef=zillow",
+      "amenitiesUrl": "https://livebh.com/apartments/park-at-kennesaw-apartments/features/",
+      "imageUrl": "https://cdn.livebh.com/wp-content/uploads/2022/03/05201229/ParkAtKennesaw-12Kitchen02.jpeg",
+      "imageSource": "Official property website",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "reachable",
+      "detectedDeal": null
+    }
+  ]
+}
