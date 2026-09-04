@@ -1,6 +1,9 @@
 {
   "meta": {
-    "checkedAt": "2026-09-04T15:01:33.033Z",
+    "checkedAt": "2026-09-04T15:46:01.592Z",
+    "curatedAt": "2026-09-04",
+    "discoveryCheckedAt": "2026-09-04",
+    "coverageDefinition": "Researched apartment communities with public one- or two-bedroom information and a conservative estimated drive ceiling of 40 minutes to Sixes Elementary. This is not a guaranteed feed of every individual available unit.",
     "school": {
       "name": "Sixes Elementary School",
       "address": "20 Ridge Road, Canton, GA 30114",
@@ -17,12 +20,19 @@
       "cautionUrl": "https://ucr.fbi.gov/crime-in-the-u.s/2012/crime-in-the-u.s.-2012/resource-pages/caution-against-ranking/cautionagainstranking"
     },
     "automation": {
-      "checked": 13,
-      "reachable": 6,
-      "pricesUpdated": 2,
-      "dealsDetected": 3,
-      "method": "Best-effort checks of official property pricing pages; last curated values remain when parsing is inconclusive."
-    }
+      "checked": 46,
+      "reachable": 25,
+      "verified": 0,
+      "blocked": 18,
+      "errors": 3,
+      "priceFieldsVerified": 0,
+      "pricesChanged": 0,
+      "priceCandidatesFound": 12,
+      "dealsDetected": 8,
+      "status": "partial",
+      "method": "Daily best-effort checks of official property pricing pages. Generic parser findings are saved only as review candidates and never overwrite curated rents; only an approved structured adapter may publish a new price."
+    },
+    "lastSuccessfulCheckAt": "2026-09-04T15:46:01.592Z"
   },
   "apartments": [
     {
@@ -40,12 +50,14 @@
       "oneBed": {
         "min": 1433,
         "max": null,
-        "note": "Official live floor-plan feed; some layouts call for price."
+        "note": "Official live floor-plan feed; some layouts call for price.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1320,
         "max": 1870,
-        "note": "Dynamic unit pricing; verify the exact floor plan."
+        "note": "Dynamic unit pricing; verify the exact floor plan.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
@@ -74,7 +86,8 @@
         "rating": 3.9,
         "count": 8,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/the-atlantic-bridgemill-canton-ga/8c0e152/"
+        "url": "https://www.apartments.com/the-atlantic-bridgemill-canton-ga/8c0e152/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.atlanticbridgemillliving.com/",
       "pricingUrl": "https://www.atlanticbridgemillliving.com/floorplans",
@@ -84,7 +97,7 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "unreachable"
+      "sourceCheckStatus": "blocked"
     },
     {
       "id": "the-darby",
@@ -101,12 +114,14 @@
       "oneBed": {
         "min": 1220,
         "max": 1409,
-        "note": "$1,220 plan was listed as coming soon; available-now home was $1,409."
+        "note": "$1,220 plan was listed as coming soon; available-now home was $1,409.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1516,
         "max": 1616,
-        "note": "Current public availability snapshot."
+        "note": "Current public availability snapshot.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property availability",
@@ -135,7 +150,8 @@
         "rating": 4.8,
         "count": 257,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/the-darby-apartments-holly-springs-ga/th5wxvc/"
+        "url": "https://www.apartments.com/the-darby-apartments-holly-springs-ga/th5wxvc/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.thedarbyapartments.com/",
       "pricingUrl": "https://www.thedarbyapartments.com/apartments/ga/holly-springs/floor-plans",
@@ -145,8 +161,10 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "reachable",
-      "detectedDeal": null
+      "sourceCheckStatus": "reachable_unparsed",
+      "detectedDeal": null,
+      "lastSourceSuccess": "2026-09-04",
+      "priceReviewCandidates": []
     },
     {
       "id": "sixes-ridge",
@@ -163,12 +181,14 @@
       "oneBed": {
         "min": 1375,
         "max": 1456,
-        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+        "note": "Official current advertised range; verify the exact unit and term.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1660,
         "max": 2320,
-        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+        "note": "Official current advertised range; top end includes carriage-home layouts.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official Equity Apartments availability",
@@ -197,7 +217,8 @@
         "rating": 3.8,
         "count": 8,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/sixes-ridge-holly-springs-ga/x3yqtgp/"
+        "url": "https://www.apartments.com/sixes-ridge-holly-springs-ga/x3yqtgp/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.equityapartments.com/atlanta/holly-springs/sixes-ridge-apartments",
       "pricingUrl": "https://www.equityapartments.com/atlanta/holly-springs/sixes-ridge-apartments",
@@ -207,8 +228,24 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "reachable",
-      "detectedDeal": "25% off your first month"
+      "sourceCheckStatus": "reachable_unparsed",
+      "detectedDeal": "25% off your first month",
+      "dealLastSeenAt": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "priceReviewCandidates": [
+        {
+          "min": 1375,
+          "max": 1930,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1375,
+          "max": 2280,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ]
     },
     {
       "id": "linz-holly-springs",
@@ -225,12 +262,14 @@
       "oneBed": {
         "min": 1624,
         "max": 1844,
-        "note": "Available-unit range; higher-priced waitlist layouts excluded."
+        "note": "Available-unit range; higher-priced waitlist layouts excluded.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 2109,
         "max": 2459,
-        "note": "Official current advertised range."
+        "note": "Official current advertised range.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
@@ -260,7 +299,8 @@
         "rating": 4.5,
         "count": 35,
         "source": "RentCafe snapshot",
-        "url": "https://www.rentcafe.com/apartments/ga/canton/linz-holly-springs/default.aspx"
+        "url": "https://www.rentcafe.com/apartments/ga/canton/linz-holly-springs/default.aspx",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.linzhollysprings.com/",
       "pricingUrl": "https://www.linzhollysprings.com/floorplans/one-bedroom",
@@ -270,8 +310,24 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "reachable",
-      "detectedDeal": "Up to 2 months free"
+      "sourceCheckStatus": "reachable_unparsed",
+      "detectedDeal": "Up to 2 months free",
+      "dealLastSeenAt": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "priceReviewCandidates": [
+        {
+          "min": 1624,
+          "max": 2849,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1624,
+          "max": 2459,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ]
     },
     {
       "id": "heights-holly-springs",
@@ -288,12 +344,14 @@
       "oneBed": {
         "min": 1550,
         "max": 2540,
-        "note": "Most standard 1BR layouts were $1,550–$1,845; $2,540 is an oversized 1,065-sf plan."
+        "note": "Most standard 1BR layouts were $1,550–$1,845; $2,540 is an oversized 1,065-sf plan.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 2030,
         "max": 2405,
-        "note": "Official floor-plan range."
+        "note": "Official floor-plan range.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property availability",
@@ -322,7 +380,8 @@
         "rating": 5,
         "count": 2,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/the-heights-at-holly-springs-holly-springs-ga/3d3t65g/"
+        "url": "https://www.apartments.com/the-heights-at-holly-springs-holly-springs-ga/3d3t65g/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.heightshollysprings.com/",
       "pricingUrl": "https://heightsathollysprings.prospectportal.com/holly-springs/the-heights-at-holly-springs/conventional/",
@@ -332,7 +391,7 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "unreachable"
+      "sourceCheckStatus": "blocked"
     },
     {
       "id": "the-indigo",
@@ -349,12 +408,14 @@
       "oneBed": {
         "min": 1560,
         "max": 1590,
-        "note": "Official featured-unit feed; syndication showed lower figures, so verify."
+        "note": "Official featured-unit feed; syndication showed lower figures, so verify.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1699,
         "max": 2030,
-        "note": "Official featured-unit feed; other public feeds differed."
+        "note": "Official featured-unit feed; other public feeds differed.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official featured availability",
@@ -385,7 +446,8 @@
         "rating": 4.8,
         "count": 13,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/the-indigo-canton-ga/8pd2gt0/"
+        "url": "https://www.apartments.com/the-indigo-canton-ga/8pd2gt0/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.liveattheindigo.com/",
       "pricingUrl": "https://www.liveattheindigo.com/floorplans",
@@ -395,7 +457,8 @@
       "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "unreachable"
+      "sourceCheckStatus": "error",
+      "sourceCheckError": "HTTP 404"
     },
     {
       "id": "avonlea-springs",
@@ -412,12 +475,14 @@
       "oneBed": {
         "min": 1620,
         "max": 1795,
-        "note": "Official current advertised range."
+        "note": "Official current advertised range.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1995,
         "max": 2210,
-        "note": "Official current advertised range."
+        "note": "Official current advertised range.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property availability",
@@ -446,7 +511,8 @@
         "rating": null,
         "count": 0,
         "source": "New community—no resident review snapshot",
-        "url": "https://www.apartments.com/avonlea-springs-canton-ga/re7qbp2/"
+        "url": "https://www.apartments.com/avonlea-springs-canton-ga/re7qbp2/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.avonleasprings.com/",
       "pricingUrl": "https://www.avonleasprings.com/apartments/ga/canton/floor-plans",
@@ -456,8 +522,10 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "reachable",
-      "detectedDeal": null
+      "sourceCheckStatus": "reachable_unparsed",
+      "detectedDeal": null,
+      "lastSourceSuccess": "2026-09-04",
+      "priceReviewCandidates": []
     },
     {
       "id": "heights-ridgewalk",
@@ -474,12 +542,14 @@
       "oneBed": {
         "min": 1537,
         "max": null,
-        "note": "Recent Apartments.com snapshot; official site did not expose a simple price."
+        "note": "Recent Apartments.com snapshot; official site did not expose a simple price.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 2110,
         "max": 2336,
-        "note": "Recent Apartments.com available-unit snapshot."
+        "note": "Recent Apartments.com available-unit snapshot.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Recent advertised base rent",
       "priceSource": "Apartments.com snapshot—verify on official site",
@@ -508,7 +578,8 @@
         "rating": 4.7,
         "count": 58,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/the-heights-at-ridgewalk-apartments-woodstock-ga/1k6pfl6/"
+        "url": "https://www.apartments.com/the-heights-at-ridgewalk-apartments-woodstock-ga/1k6pfl6/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.heightsridgewalk.com/",
       "pricingUrl": "https://www.heightsridgewalk.com/floorplans",
@@ -518,7 +589,8 @@
       "priceConfidence": "snapshot",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "unreachable"
+      "sourceCheckStatus": "error",
+      "sourceCheckError": "HTTP 404"
     },
     {
       "id": "view-at-woodstock",
@@ -535,18 +607,20 @@
       "oneBed": {
         "min": 1480,
         "max": 1727,
-        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+        "note": "Official current advertised range; verify the exact unit and term.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1890,
         "max": 2130,
-        "note": "Lowest price observed on the official page on 2026-09-04; the displayed upper range remains curated. Verify the exact unit and term."
+        "note": "Official current advertised range; verify the exact unit and term.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official Equity Apartments availability",
-      "deal": "Up to 2 months free",
-      "dealDetail": "Reported on select units: one month on 12 months or two months on 18 months, through September 30, 2026. Verify eligibility.",
-      "dealExpires": "2026-09-30",
+      "deal": "Up to 1 month free + 25% off first month",
+      "dealDetail": "Current offer wording was detected on the official Equity Apartments page on September 4, 2026. Confirm the selected unit, lease term, and full written terms.",
+      "dealExpires": null,
       "amenities": [
         "Pool & lawn",
         "Coworking",
@@ -569,7 +643,8 @@
         "rating": 4.1,
         "count": 38,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/the-view-at-woodstock-woodstock-ga/ctx07ze/"
+        "url": "https://www.apartments.com/the-view-at-woodstock-woodstock-ga/ctx07ze/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.equityapartments.com/atlanta/woodstock/the-view-at-woodstock",
       "pricingUrl": "https://www.equityapartments.com/atlanta/woodstock/the-view-at-woodstock",
@@ -579,8 +654,25 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "reachable",
-      "detectedDeal": "Up to 1 month free + 25% off your first month"
+      "sourceCheckStatus": "reachable_unparsed",
+      "detectedDeal": "Up to 1 month free + 25% off your first month",
+      "dealLastSeenAt": "2026-09-04",
+      "dealStatus": "needs_review",
+      "lastSourceSuccess": "2026-09-04",
+      "priceReviewCandidates": [
+        {
+          "min": 1480,
+          "max": 2160,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1480,
+          "max": 2160,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ]
     },
     {
       "id": "lea-woodstock",
@@ -597,12 +689,14 @@
       "oneBed": {
         "min": 1428,
         "max": 2172,
-        "note": "Official range; sunroom layouts started around $1,531."
+        "note": "Official range; sunroom layouts started around $1,531.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1760,
         "max": 2555,
-        "note": "Official range; common 2BR/2BA layouts started around $1,802."
+        "note": "Official range; common 2BR/2BA layouts started around $1,802.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
@@ -631,7 +725,8 @@
         "rating": 4.5,
         "count": 63,
         "source": "RentCafe snapshot",
-        "url": "https://www.rentcafe.com/apartments/ga/woodstock/hudson-woodstock0/default.aspx"
+        "url": "https://www.rentcafe.com/apartments/ga/woodstock/hudson-woodstock0/default.aspx",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.leawoodstockapts.com/",
       "pricingUrl": "https://www.leawoodstockapts.com/floorplans",
@@ -641,13 +736,13 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "unreachable"
+      "sourceCheckStatus": "blocked"
     },
     {
       "id": "crest-acworth",
       "name": "The Crest at Acworth",
       "city": "Acworth",
-      "county": "Cobb",
+      "county": "Cherokee",
       "address": "1348 Highway 92, Acworth, GA 30102",
       "lat": 34.087172,
       "lng": -84.653197,
@@ -656,14 +751,16 @@
       "driveMax": 33,
       "commuteNote": "Longer Highway 92 route; peak school traffic could approach the top of the range.",
       "oneBed": {
-        "min": 1510,
-        "max": 1614,
-        "note": "Official current starting range."
+        "min": 1440,
+        "max": 1609,
+        "note": "Official current floor-plan range on September 4, 2026.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1849,
+        "min": 1843,
         "max": 2705,
-        "note": "Standard layouts start at $1,849; top end includes carriage homes."
+        "note": "Standard layouts start at $1,843; top end includes carriage homes.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
@@ -693,7 +790,8 @@
         "rating": 4.5,
         "count": 47,
         "source": "RentCafe snapshot",
-        "url": "https://www.rentcafe.com/apartments/ga/acworth/the-crest-at-acworth/default.aspx"
+        "url": "https://www.rentcafe.com/apartments/ga/acworth/the-crest-at-acworth/default.aspx",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.crestacworth.com/",
       "pricingUrl": "https://www.crestacworth.com/floorplans",
@@ -703,7 +801,7 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "unreachable"
+      "sourceCheckStatus": "blocked"
     },
     {
       "id": "avana-acworth",
@@ -720,12 +818,14 @@
       "oneBed": {
         "min": 1179,
         "max": 1372,
-        "note": "Total mandatory monthly price; base rent was $1,138–$1,331."
+        "note": "Total mandatory monthly price; base rent was $1,138–$1,331.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1606,
         "max": 1638,
-        "note": "Total mandatory monthly price; base rent was $1,565–$1,597."
+        "note": "Total mandatory monthly price; base rent was $1,565–$1,597.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised mandatory monthly total",
       "priceSource": "Official property availability",
@@ -755,7 +855,8 @@
         "rating": 4.3,
         "count": 107,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/avana-acworth-acworth-ga/58gpd1p/"
+        "url": "https://www.apartments.com/avana-acworth-acworth-ga/58gpd1p/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.avanaacworth.com/",
       "pricingUrl": "https://www.avanaacworth.com/acworth/avana-acworth/conventional",
@@ -765,7 +866,7 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "unreachable"
+      "sourceCheckStatus": "blocked"
     },
     {
       "id": "park-kennesaw",
@@ -782,12 +883,14 @@
       "oneBed": {
         "min": 1240,
         "max": 1594,
-        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote."
+        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote.",
+        "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1516,
         "max": 1707,
-        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote."
+        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote.",
+        "observedAt": "2026-09-04"
       },
       "priceBasis": "Recent advertised base rent",
       "priceSource": "Recent official referral snapshot—verify quote",
@@ -816,7 +919,8 @@
         "rating": 4.5,
         "count": 31,
         "source": "Apartments.com snapshot",
-        "url": "https://www.apartments.com/park-at-kennesaw-apartments-kennesaw-ga/40qkf6l/"
+        "url": "https://www.apartments.com/park-at-kennesaw-apartments-kennesaw-ga/40qkf6l/",
+        "observedAt": "2026-09-04"
       },
       "officialUrl": "https://livebh.com/apartments/park-at-kennesaw-apartments/",
       "pricingUrl": "https://livebh.com/apartments/park-at-kennesaw-apartments/?zgRef=zillow",
@@ -826,8 +930,10 @@
       "priceConfidence": "snapshot",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "reachable",
-      "detectedDeal": null
+      "sourceCheckStatus": "reachable_unparsed",
+      "detectedDeal": null,
+      "lastSourceSuccess": "2026-09-04",
+      "priceReviewCandidates": []
     }
   ]
 }

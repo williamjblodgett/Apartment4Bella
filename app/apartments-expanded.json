@@ -1,0 +1,2234 @@
+{
+  "curatedAt": "2026-09-04",
+  "apartments": [
+    {
+      "id": "atlantic-canton-ridge",
+      "name": "The Atlantic Canton Ridge",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "101 Canterbury Ridge Parkway, Canton, GA 30114",
+      "lat": 34.198463,
+      "lng": -84.508118,
+      "distanceMiles": 3.9,
+      "driveMin": 9,
+      "driveMax": 14,
+      "commuteNote": "Static route baseline was about 9 minutes; ordinary traffic allowance is included.",
+      "oneBed": {
+        "min": 1213,
+        "max": 1513,
+        "note": "Official floor-plan snapshot; confirm available unit and lease term.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1347,
+        "max": 1925,
+        "note": "Official floor-plan snapshot; confirm available unit and lease term.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "2 months free—verify terms",
+      "dealDetail": "A community-supplied listing reported two months free without a posted expiration. Get the eligible unit, term, and deadline in writing.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Gated/controlled entry",
+        "Fitness center",
+        "Playground",
+        "In-unit washer/dryer",
+        "Picnic & BBQ areas"
+      ],
+      "security": [
+        "Gated/controlled entry",
+        "24-hour emergency maintenance"
+      ],
+      "petCost": "Up to 2 pets, 70 lb each; $350 per pet + $35/month per pet; breed restrictions.",
+      "fees": [
+        "Application: $75/person",
+        "Administration: $150",
+        "Deposit: $500",
+        "Access device: $50",
+        "Utility setup: $25"
+      ],
+      "review": {
+        "rating": 3.4,
+        "count": 5,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-atlantic-canton-ridge-canton-ga/ll16fde/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.atlanticcantonridgeliving.com/",
+      "pricingUrl": "https://www.atlanticcantonridgeliving.com/floorplans",
+      "amenitiesUrl": "https://www.atlanticcantonridgeliving.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "madison-overlook",
+      "name": "Madison Overlook",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "591 Jackie Moore Lane, Canton, GA 30114",
+      "lat": 34.2190885,
+      "lng": -84.5023163,
+      "distanceMiles": 5.4,
+      "driveMin": 13,
+      "driveMax": 19,
+      "commuteNote": "Static route baseline was about 13 minutes; Riverstone-area traffic can add time.",
+      "oneBed": {
+        "min": 1363,
+        "max": 1414,
+        "note": "Official plan starts on 16-month terms.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1701,
+        "max": 1797,
+        "note": "Official plan starts on 14-month terms.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": null,
+      "dealDetail": "No broad current promotion was verified on the official site.",
+      "dealExpires": null,
+      "amenities": [
+        "Resort pool",
+        "Fitness center",
+        "Coworking",
+        "In-unit washer/dryer",
+        "Smart package system",
+        "Garages"
+      ],
+      "security": [
+        "Building access control",
+        "24/7 smart package access"
+      ],
+      "petCost": "Up to 2 pets, no stated weight limit; $350 one/$500 two + $25/month each; breed restrictions.",
+      "fees": [
+        "Application: $65/adult",
+        "Administration: $250",
+        "Standard deposit: $300",
+        "Liability: $14/month",
+        "Other utilities/amenity fees may apply"
+      ],
+      "review": {
+        "rating": 5,
+        "count": 2,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/madison-overlook-canton-ga/xwvbmkm/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://livemadisonoverlook.com/",
+      "pricingUrl": "https://livemadisonoverlook.com/floorplans/",
+      "amenitiesUrl": "https://livemadisonoverlook.com/amenities/",
+      "imageUrl": "https://livemadisonoverlook.com/assets/images/cache/ChatGPT-Image-Jan-26-2026-12_56_14-PM1-f1a1e9890d07094f4b168947494fd028.jpeg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": [
+        {
+          "min": 1363,
+          "max": 1797,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ]
+    },
+    {
+      "id": "canton-mill-lofts",
+      "name": "Canton Mill Lofts",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "550 Riverstone Parkway, Canton, GA 30114",
+      "lat": 34.2453045,
+      "lng": -84.4827973,
+      "distanceMiles": 8.1,
+      "driveMin": 17,
+      "driveMax": 24,
+      "commuteNote": "Static route baseline was about 17 minutes; allow extra time near Riverstone Parkway.",
+      "oneBed": {
+        "min": 1249,
+        "max": null,
+        "note": "Official base-rent starting price; mandatory charges were reported separately.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1589,
+        "max": null,
+        "note": "Official base-rent starting price; mandatory charges were reported separately.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property availability",
+      "deal": "Up to $1,000 off first full month",
+      "dealDetail": "Official site advertises the offer on select homes with a 12+ month lease; no public end date was shown.",
+      "dealExpires": null,
+      "amenities": [
+        "Historic lofts",
+        "20–35 ft ceilings",
+        "Pool",
+        "24-hour fitness",
+        "Coworking",
+        "Bark park"
+      ],
+      "security": [
+        "Gated community",
+        "Smart locks and package lockers"
+      ],
+      "petCost": "Up to 3 pets, no weight limit; breed restrictions. Current dollar charges require confirmation.",
+      "fees": [
+        "Mandatory charges reported around $147/month—verify",
+        "Pet fees: call property"
+      ],
+      "review": {
+        "rating": 3.6,
+        "count": 443,
+        "source": "ApartmentRatings snapshot",
+        "url": "https://www.apartmentratings.com/ga/canton/canton-mill-loft-apartments_678493201230114/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://livecantonmill.com/",
+      "pricingUrl": "https://livecantonmill.com/apartments-pricing/",
+      "amenitiesUrl": "https://livecantonmill.com/amenities/",
+      "imageUrl": "https://livecantonmill.com/wp-content/uploads/2026/05/Home-Hero.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "error",
+      "sourceCheckError": "HTTP 404"
+    },
+    {
+      "id": "accent-overlook",
+      "name": "Accent Overlook",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "201 Hospital Road, Canton, GA 30114",
+      "lat": 34.2454282,
+      "lng": -84.4905494,
+      "distanceMiles": 7.8,
+      "driveMin": 17,
+      "driveMax": 24,
+      "commuteNote": "Static route baseline was about 17 minutes; downtown and Riverstone traffic can widen it.",
+      "oneBed": {
+        "min": 1284,
+        "max": 1590,
+        "note": "Official plan-start range; availability changes dynamically.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1604,
+        "max": 1964,
+        "note": "Official plan-start range; availability changes dynamically.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": null,
+      "dealDetail": "The official site references an office-only offer and a preferred-employer program, but no general public terms were verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Newer community",
+        "Pool",
+        "Fitness center",
+        "Coworking",
+        "In-unit washer/dryer",
+        "Balconies"
+      ],
+      "security": [
+        "Controlled/gated access",
+        "Package services reported"
+      ],
+      "petCost": "Up to 2 pets. Official and community-supplied fee/weight terms conflict; call for the current written policy.",
+      "fees": [
+        "Pet charges reported as $500 + $50/month each—confirm",
+        "Other recurring fees: request fee sheet"
+      ],
+      "review": {
+        "rating": 4.7,
+        "count": 84,
+        "source": "ApartmentRatings snapshot",
+        "url": "https://www.apartmentratings.com/ga/canton/accent-overlook_9199332346275216195/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://accentoverlook.com/",
+      "pricingUrl": "https://accentoverlook.com/floorplans/",
+      "amenitiesUrl": "https://accentoverlook.com/amenities/",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": [
+        {
+          "min": 1325,
+          "max": 1590,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1325,
+          "max": 1964,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ]
+    },
+    {
+      "id": "district-etowah",
+      "name": "District on the Etowah",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "215 Reformation Parkway, Canton, GA 30114",
+      "lat": 34.2362368,
+      "lng": -84.4966117,
+      "distanceMiles": 8,
+      "driveMin": 18,
+      "driveMax": 25,
+      "commuteNote": "Static route baseline was about 18 minutes; downtown traffic can add time.",
+      "oneBed": {
+        "min": 1539,
+        "max": 2357,
+        "note": "Official unit/lease-term range across available one-bedroom plans.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 2082,
+        "max": 2925,
+        "note": "Official unit/lease-term range across available two-bedroom plans.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent range",
+      "priceSource": "Official property floor plans",
+      "deal": null,
+      "dealDetail": "The previously published August 31 offer has expired.",
+      "dealExpires": null,
+      "amenities": [
+        "Etowah River access",
+        "Pool",
+        "Fitness center",
+        "Coworking",
+        "Elevators",
+        "EV parking"
+      ],
+      "security": [
+        "Swiftlane building access",
+        "Package lockers"
+      ],
+      "petCost": "$300–$500 fee + $200 deposit per pet; no monthly pet rent; $30 annual screening.",
+      "fees": [
+        "Application: $100",
+        "Reservation: $150",
+        "Deposit: $400–one month",
+        "Parking/car: $45/month",
+        "Trash/pest/locker/access fees apply"
+      ],
+      "review": {
+        "rating": 4.5,
+        "count": 44,
+        "source": "Birdeye snapshot",
+        "url": "https://birdeye.com/district-on-the-etowah-176582135218903",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.districtonetowah.com/",
+      "pricingUrl": "https://www.districtonetowah.com/floorplans",
+      "amenitiesUrl": "https://www.districtonetowah.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "harbor-creek",
+      "name": "Harbor Creek Apartments",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "501 Harbor Creek Parkway, Canton, GA 30115",
+      "lat": 34.183536,
+      "lng": -84.4987513,
+      "distanceMiles": 5.5,
+      "driveMin": 13,
+      "driveMax": 19,
+      "commuteNote": "Static route baseline was about 13 minutes; Holly Springs Parkway conditions vary.",
+      "oneBed": {
+        "min": 1161,
+        "max": null,
+        "note": "Current community-supplied listing snapshot; official page inventory is dynamic.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1397,
+        "max": null,
+        "note": "Current community-supplied listing snapshot; official page inventory is dynamic.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Recent advertised base rent",
+      "priceSource": "Community-supplied listing; verify on official site",
+      "deal": null,
+      "dealDetail": "No broad current official promotion was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Indoor & outdoor pools",
+        "24-hour fitness",
+        "Pickleball/tennis",
+        "Dog park",
+        "Playground",
+        "Car care"
+      ],
+      "security": [
+        "Gated entry",
+        "Smart-home features"
+      ],
+      "petCost": "Up to 2 pets; first $250 fee + $250 deposit, second $150 + $150; $25/month wording should be confirmed.",
+      "fees": [
+        "First pet: $250 fee + $250 deposit",
+        "Second pet: $150 fee + $150 deposit",
+        "Pet rent: confirm whether per pet"
+      ],
+      "review": {
+        "rating": 4.7,
+        "count": 300,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/harbor-creek-apartments-canton-ga/y9tykdt/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.harborcreekapartments.com/",
+      "pricingUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/floor-plans",
+      "amenitiesUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "walden-crossing",
+      "name": "Walden Crossing Apartments",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "100 Walden Crossing Drive, Canton, GA 30115",
+      "lat": 34.22374,
+      "lng": -84.478793,
+      "distanceMiles": 7.9,
+      "driveMin": 16,
+      "driveMax": 23,
+      "commuteNote": "Static route baseline was about 16 minutes; local-road traffic is included in the upper estimate.",
+      "oneBed": {
+        "min": 1325,
+        "max": 1780,
+        "note": "Official/RentCafe available-unit range.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1525,
+        "max": 1855,
+        "note": "Official/RentCafe available-unit range.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property availability",
+      "deal": null,
+      "dealDetail": "No broad current promotion was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Fitness center",
+        "Business center",
+        "Tennis",
+        "Two bark parks",
+        "Washer/dryer connections"
+      ],
+      "security": [
+        "Gated community",
+        "On-site management"
+      ],
+      "petCost": "Pets up to 65 lb; breed restrictions. Current dollar charges require confirmation.",
+      "fees": [
+        "Pet fees: call property",
+        "Ask for the current recurring-fee sheet"
+      ],
+      "review": {
+        "rating": 4.5,
+        "count": 7,
+        "source": "RentCafe snapshot",
+        "url": "https://www.rentcafe.com/apartments/ga/canton/walden-crossing/default.aspx",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.waldencrossingapts.com/",
+      "pricingUrl": "https://www.waldencrossingapts.com/floorplans",
+      "amenitiesUrl": "https://www.waldencrossingapts.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "heritage-riverstone",
+      "name": "Heritage at Riverstone",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "101 Heritage Drive, Canton, GA 30114",
+      "lat": 34.255692,
+      "lng": -84.486867,
+      "distanceMiles": 9,
+      "driveMin": 20,
+      "driveMax": 28,
+      "commuteNote": "Static route baseline was about 20 minutes; this northern option needs a school-arrival traffic check.",
+      "oneBed": {
+        "min": 1359,
+        "max": 1739,
+        "note": "Available-unit range observed on the official management network.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1610,
+        "max": 1995,
+        "note": "Available-unit range observed on the official management network.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official management-network inventory",
+      "deal": null,
+      "dealDetail": "The previously advertised August 31 promotion has expired.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Fitness center",
+        "Pet wash & agility",
+        "Sport court",
+        "Business lounge",
+        "Optional garages"
+      ],
+      "security": [
+        "Gated access",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets; $350 each + $25/month each; $30 annual screening.",
+      "fees": [
+        "Pet fee: $350 each",
+        "Pet rent: $25/month each",
+        "Pet screening: $30/year"
+      ],
+      "review": {
+        "rating": 4,
+        "count": 18,
+        "source": "RentCafe snapshot",
+        "url": "https://www.rentcafe.com/apartments/ga/canton/heritage-at-riverstone/default.aspx",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/",
+      "pricingUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/floor-plans",
+      "amenitiesUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "grand-reserve-canton",
+      "name": "Grand Reserve at Canton",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "165 Reservoir Drive, Canton, GA 30114",
+      "lat": 34.2644991,
+      "lng": -84.4841549,
+      "distanceMiles": 9.9,
+      "driveMin": 22,
+      "driveMax": 31,
+      "commuteNote": "Northern edge of the directory; static baseline was about 22 minutes and peak traffic can be materially longer.",
+      "oneBed": {
+        "min": 1507,
+        "max": 3188,
+        "note": "Official live unit/lease-term range; unusually wide range should be confirmed.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1578,
+        "max": 2280,
+        "note": "Official standard and study-plan range across units/terms.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent range",
+      "priceSource": "Official property availability",
+      "deal": "$99 move-in bundle—verify",
+      "dealDetail": "A community-supplied listing reported $99 total application/admin/deposit with approved credit for move-in by September 20, 2026.",
+      "dealExpires": "2026-09-20",
+      "amenities": [
+        "Large floor plans",
+        "Pool",
+        "Fitness & sauna",
+        "EV charging",
+        "Bark park",
+        "Outdoor kitchen"
+      ],
+      "security": [
+        "Controlled community access reported",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets; $400 one/$600 two + $25/month each; breed restrictions.",
+      "fees": [
+        "Deposit varies; Obligo option for qualified residents",
+        "Pet: $400 one/$600 two",
+        "Pet rent: $25/month each"
+      ],
+      "review": {
+        "rating": 4,
+        "count": 27,
+        "source": "RentCafe snapshot",
+        "url": "https://www.rentcafe.com/apartments/ga/canton/grand-reserve-at-canton/default.aspx",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.grandreservecanton.com/",
+      "pricingUrl": "https://www.grandreservecanton.com/floorplans",
+      "amenitiesUrl": "https://www.grandreservecanton.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "aspect-river",
+      "name": "Aspect on the River",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "59 Anderson Avenue, Canton, GA 30114",
+      "lat": 34.241763,
+      "lng": -84.4955826,
+      "distanceMiles": 7.3,
+      "driveMin": 16,
+      "driveMax": 23,
+      "commuteNote": "Static route baseline was about 16 minutes; downtown Canton traffic can add time.",
+      "oneBed": {
+        "min": 1500,
+        "max": null,
+        "note": "Official displayed starting price; another public feed showed lower, so verify.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1555,
+        "max": null,
+        "note": "Official displayed starting price; one unit crawl differed by $25.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official floor plans; public sources conflict",
+      "deal": "2 months free—verify",
+      "dealDetail": "A community-supplied listing advertises two months free prorated over four months, but the official page did not confirm it.",
+      "dealExpires": null,
+      "amenities": [
+        "Riverfront location",
+        "Fitness & yoga",
+        "Game room",
+        "Business room",
+        "Dog park",
+        "Elevators"
+      ],
+      "security": [
+        "Controlled access",
+        "Package lockers"
+      ],
+      "petCost": "Up to 2 pets, 300 lb max; $40/month each; breed restrictions; one-time fee requires confirmation.",
+      "fees": [
+        "Pet rent: $40/month each",
+        "One-time pet fee: call",
+        "Ask for required building/service fees"
+      ],
+      "review": {
+        "rating": 4.6,
+        "count": 77,
+        "source": "ForRent snapshot",
+        "url": "https://www.forrent.com/ga/canton/aspect-on-the-river/zs6n9yy",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.aspectontheriverapts.com/",
+      "pricingUrl": "https://www.aspectontheriverapts.com/floorplans",
+      "amenitiesUrl": "https://www.aspectontheriverapts.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "conflict",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "legends-laurel-canyon",
+      "name": "Legends at Laurel Canyon",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "100 Legends Drive, Canton, GA 30114",
+      "lat": 34.2681661,
+      "lng": -84.499951,
+      "distanceMiles": 9.4,
+      "driveMin": 20,
+      "driveMax": 28,
+      "commuteNote": "Static route baseline was about 20 minutes; verify the school-arrival drive from this northern location.",
+      "oneBed": {
+        "min": 1400,
+        "max": 1524,
+        "note": "Official modules varied dynamically within this range.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1922,
+        "max": 2162,
+        "note": "Official/current listing range; verify available unit.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property modules",
+      "deal": "$200 off first month",
+      "dealDetail": "Official floor-plan module showed $200 off the first month on select units without a public expiration.",
+      "dealExpires": null,
+      "amenities": [
+        "Saltwater pool",
+        "Fitness & yoga",
+        "Two dog parks",
+        "Pet spa",
+        "Cybercafe",
+        "Garages"
+      ],
+      "security": [
+        "Gated access",
+        "Package receiving"
+      ],
+      "petCost": "$400–$600 one-time + $20/month each; size/floor and breed restrictions; annual screening.",
+      "fees": [
+        "Pet fee: $400–$600",
+        "Pet rent: $20/month each",
+        "Pet screening: annual"
+      ],
+      "review": {
+        "rating": 1.7,
+        "count": 3,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/legends-at-laurel-canyon-canton-ga/5tvm66m/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.legendsatlaurelcanyon.com/",
+      "pricingUrl": "https://legendsatlaurelcanyon.prospectportal.com/",
+      "amenitiesUrl": "https://www.legendsatlaurelcanyon.com/amenities",
+      "imageUrl": "https://cdn.prod.website-files.com/6967dff5115c52d58d6cde65/69681de90a39ee51de827cc5_Laurel-Canyon-26.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "crest-laurel-canyon",
+      "name": "The Crest at Laurel Canyon",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "30 Laurel Canyon Village Circle, Canton, GA 30114",
+      "lat": 34.2710453,
+      "lng": -84.5042203,
+      "distanceMiles": 9.9,
+      "driveMin": 21,
+      "driveMax": 29,
+      "commuteNote": "Static route baseline was about 21 minutes; verify school-arrival traffic before touring.",
+      "oneBed": {
+        "min": 1441,
+        "max": null,
+        "note": "Recent marketplace starting snapshot; official page currently says call for 1BR pricing.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1709,
+        "max": 3588,
+        "note": "Official available-unit/lease-term range; the broad maximum needs confirmation.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Mixed official and recent base-rent snapshot",
+      "priceSource": "Official floor plans; 1BR marketplace snapshot",
+      "deal": null,
+      "dealDetail": "No broad current general promotion was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Fitness center",
+        "Putting green",
+        "Game room",
+        "Bark park",
+        "Garages"
+      ],
+      "security": [
+        "Gated/controlled access",
+        "Package receiving"
+      ],
+      "petCost": "No monthly pet rent; $300–$500 fee + $200 deposit per pet; $30 annual screening.",
+      "fees": [
+        "Application: $100",
+        "Administration: $150",
+        "Deposit: $400 or 0.5–1 month",
+        "Valet trash: $28/month",
+        "Pest: $4/month"
+      ],
+      "review": {
+        "rating": 4.5,
+        "count": 108,
+        "source": "RentCafe snapshot",
+        "url": "https://www.rentcafe.com/apartments/ga/canton/the-crest-at-laurel-canyon/default.aspx/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.crestlaurelcanyon.com/",
+      "pricingUrl": "https://www.crestlaurelcanyon.com/floorplans",
+      "amenitiesUrl": "https://www.crestlaurelcanyon.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "conflict",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "alexander-ridge",
+      "name": "Alexander Ridge",
+      "city": "Canton",
+      "county": "Cherokee",
+      "eligibility": "Mixed market-rate and income-qualified units; displayed prices are market-rate",
+      "address": "102 Alexander Drive, Canton, GA 30114",
+      "lat": 34.1996022,
+      "lng": -84.5126174,
+      "distanceMiles": 4,
+      "driveMin": 10,
+      "driveMax": 15,
+      "commuteNote": "Static route baseline was about 10 minutes; a close option in ordinary traffic.",
+      "oneBed": {
+        "min": 1199,
+        "max": 1251,
+        "note": "Current market-rate range. Lower AMI units have separate income eligibility.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1400,
+        "max": 1534,
+        "note": "Current market-rate range. Lower AMI units have separate income eligibility.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised market-rate base rent",
+      "priceSource": "Official property floor plans",
+      "deal": null,
+      "dealDetail": "The site says specials may be available but publishes no terms; call before relying on one.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Fitness center",
+        "Business center",
+        "Playground",
+        "Laundry",
+        "Washer/dryer hookups"
+      ],
+      "security": [
+        "Gated/controlled access",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets; $300 one/$500 two + $40/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $300 one/$500 two",
+        "Pet rent: $40/month each",
+        "Income-qualified homes require separate eligibility review"
+      ],
+      "review": {
+        "rating": 3.2,
+        "count": 289,
+        "source": "Birdeye snapshot",
+        "url": "https://reviews.birdeye.com/alexander-ridge-apartment-homes-149462004343431",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.alexanderridge.com/",
+      "pricingUrl": "https://www.alexanderridge.com/floorplans",
+      "amenitiesUrl": "https://www.alexanderridge.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "lancaster-ridge",
+      "name": "Lancaster Ridge",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "800 Hickory Knoll Drive, Canton, GA 30114",
+      "lat": 34.25142,
+      "lng": -84.4908051,
+      "distanceMiles": 8.3,
+      "driveMin": 18,
+      "driveMax": 25,
+      "commuteNote": "Static route baseline was about 18 minutes; allow for Riverstone-area traffic.",
+      "oneBed": {
+        "min": null,
+        "max": null,
+        "note": "One-bedroom plan is coming soon/call for price; no public current rent was shown.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1450,
+        "max": null,
+        "note": "Official current starting price.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "Up to 1 month free or $500 off",
+      "dealDetail": "Official summary references select-unit savings without a reliable public expiration; confirm before applying.",
+      "dealExpires": null,
+      "amenities": [
+        "In-home washer/dryer",
+        "Pool",
+        "Community room",
+        "Picnic area",
+        "Playground",
+        "Wooded setting"
+      ],
+      "security": [
+        "Off-street parking",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets, 75 lb; $300 each + $25/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $300 each",
+        "Pet rent: $25/month each"
+      ],
+      "review": {
+        "rating": 2.8,
+        "count": 9,
+        "source": "ApartmentHomeLiving snapshot",
+        "url": "https://www.apartmenthomeliving.com/apartment-finder/Lancaster-Ridge-Canton-GA-30114-1930415",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.lifeatlancaster.com/",
+      "pricingUrl": "https://www.lifeatlancaster.com/floor-plans",
+      "amenitiesUrl": "https://www.lifeatlancaster.com/amenities",
+      "imageUrl": "https://cdn.prod.website-files.com/68e53ca72d6146dac9d08814/68e54d06c67eb71a51440775_06.webp",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": "Up to one month free + one month free rent",
+      "dealLastSeenAt": "2026-09-04",
+      "dealStatus": "needs_review",
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "northwood-canton",
+      "name": "Northwood Apartments",
+      "city": "Canton",
+      "county": "Cherokee",
+      "address": "234 Marietta Highway, Canton, GA 30114",
+      "lat": 34.2427378,
+      "lng": -84.4959933,
+      "distanceMiles": 7.3,
+      "driveMin": 16,
+      "driveMax": 23,
+      "commuteNote": "Static route baseline was about 16 minutes; downtown traffic can widen the estimate.",
+      "oneBed": {
+        "min": 1250,
+        "max": 1350,
+        "note": "Current exact management-network range.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1550,
+        "max": 1600,
+        "note": "Current exact management-network range.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official management-network inventory",
+      "deal": null,
+      "dealDetail": "The previously posted August 31 promotion has expired.",
+      "dealExpires": null,
+      "amenities": [
+        "Water/trash/sewer included",
+        "Shared laundry",
+        "Washer/dryer hookups select",
+        "Grills",
+        "Renovated finishes"
+      ],
+      "security": [
+        "Video patrol",
+        "On-site management"
+      ],
+      "petCost": "No pets; service animals are accommodated under applicable law.",
+      "fees": [
+        "Water/trash/sewer included",
+        "No-pet policy; confirm all move-in charges"
+      ],
+      "review": {
+        "rating": 1.4,
+        "count": 7,
+        "source": "Birdeye snapshot",
+        "url": "https://reviews.birdeye.com/northwood-apartments-156807970637191",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.northwoodga.com/",
+      "pricingUrl": "https://www.rentcafe.com/apartments/ga/canton/northwood3/default.aspx",
+      "amenitiesUrl": "https://www.northwoodga.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "ridgewalk-income",
+      "name": "Ridgewalk Apartments",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "eligibility": "Income limits may apply—confirm household eligibility",
+      "address": "1 Elena Way, Woodstock, GA 30188",
+      "lat": 34.1171321,
+      "lng": -84.519852,
+      "distanceMiles": 6,
+      "driveMin": 11,
+      "driveMax": 18,
+      "commuteNote": "Static route estimate with a conservative ordinary-traffic allowance.",
+      "oneBed": {
+        "min": 1149,
+        "max": null,
+        "note": "Current base-rent snapshot; income limits may apply.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1479,
+        "max": null,
+        "note": "Current base-rent snapshot; income limits may apply.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official management page and community listing",
+      "deal": null,
+      "dealDetail": "No broad current promotion was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Tennis",
+        "Indoor basketball",
+        "Fitness center",
+        "Business center",
+        "Playground"
+      ],
+      "security": [
+        "On-site management",
+        "Income-qualified leasing review"
+      ],
+      "petCost": "Up to 2 pets, 25 lb; $450 one/$600 two + $25/month one or $55/month two; restrictions.",
+      "fees": [
+        "Pet fee: $450 one/$600 two",
+        "Pet rent: $25 one/$55 two",
+        "Income limits may apply"
+      ],
+      "review": {
+        "rating": 3.6,
+        "count": 11,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/ridgewalk-apartments-woodstock-ga/s778736/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.agpmonline.com/properties-1/ridgewalk-",
+      "pricingUrl": "https://www.agpmonline.com/properties-1/ridgewalk-",
+      "amenitiesUrl": "https://www.agpmonline.com/properties-1/ridgewalk-",
+      "imageUrl": "https://static.wixstatic.com/media/c89d3e_41e8a0fd18454fdbab731c5c197a2a0e~mv2.jpg/v1/fill/w_953,h_825,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c89d3e_41e8a0fd18454fdbab731c5c197a2a0e~mv2.jpg",
+      "imageSource": "Official management website",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "avonlea-towne-lake",
+      "name": "Avonlea Towne Lake",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "1000 Avonlea Place, Woodstock, GA 30189",
+      "lat": 34.0997557,
+      "lng": -84.5348834,
+      "distanceMiles": 7.8,
+      "driveMin": 12,
+      "driveMax": 20,
+      "commuteNote": "Static route estimate; Towne Lake traffic is reflected in the upper range.",
+      "oneBed": {
+        "min": 1462,
+        "max": 1810,
+        "note": "Current dynamic base-rent range.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1890,
+        "max": 2060,
+        "note": "Current dynamic base-rent range.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property availability",
+      "deal": "Half off first full month",
+      "dealDetail": "Advertised on classic homes; confirm the eligible unit and lease term.",
+      "dealExpires": null,
+      "amenities": [
+        "Greenway access",
+        "Two saltwater pools",
+        "Clubroom",
+        "Garages",
+        "Car care",
+        "Pet play area"
+      ],
+      "security": [
+        "Gated community",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets, 74-lb combined; $400 first + $100 second; $15/month each; $30 screening.",
+      "fees": [
+        "Pet fee: $400 first + $100 second",
+        "Pet rent: $15/month each",
+        "Pet screening: $30"
+      ],
+      "review": {
+        "rating": 3.7,
+        "count": 9,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/avonlea-towne-lake-woodstock-ga/v0jksxf/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.avonleatownelake.com/",
+      "pricingUrl": "https://www.avonleatownelake.com/apartments/ga/woodstock/floor-plans",
+      "amenitiesUrl": "https://www.avonleatownelake.com/apartments/ga/woodstock/amenities",
+      "imageUrl": "https://g5-assets-cld-res.cloudinary.com/image/upload/x_0,y_279,h_760,w_1901,c_crop/q_auto,f_auto,c_fill,g_center,h_800,w_2000/v1763055539/g5/g5-c-5wlomy6ok-quintus-corporation/g5-cl-1nd2c8knqg-quintus-corporation-woodstock-ga/uploads/173379118_1_doevyb_mrkdng.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "brooke-mill",
+      "name": "Brooke Mill",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "50 Downsby Lane, Woodstock, GA 30189",
+      "lat": 34.0822104,
+      "lng": -84.5542588,
+      "distanceMiles": 9.6,
+      "driveMin": 15,
+      "driveMax": 23,
+      "commuteNote": "Static route estimate; Towne Lake and Bells Ferry conditions can add time.",
+      "oneBed": {
+        "min": 1333,
+        "max": 2327,
+        "note": "Official current base-rent range across units and terms.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1394,
+        "max": 2035,
+        "note": "Official current base-rent range across units and terms.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "1 month free",
+      "dealDetail": "Current advertised concession; confirm the participating home, term, and move-in deadline.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Clubhouse Wi-Fi",
+        "Fitness center",
+        "Sports court",
+        "Washer/dryer connections",
+        "Storage"
+      ],
+      "security": [
+        "On-site management",
+        "24-hour emergency maintenance reported"
+      ],
+      "petCost": "Up to 2 pets; official site says to call for current charges and restrictions.",
+      "fees": [
+        "Application: $125",
+        "Administration: $200",
+        "Storage: $65",
+        "Pet charges: call"
+      ],
+      "review": {
+        "rating": 3.6,
+        "count": 14,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/brooke-mill-woodstock-ga/3xmzgzf/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.liveatbrookemill.com/",
+      "pricingUrl": "https://www.liveatbrookemill.com/floorplans",
+      "amenitiesUrl": "https://www.liveatbrookemill.com/amenities",
+      "imageUrl": "https://resource.rentcafe.com/image/upload/x_0,y_0,w_1600,h_1020,c_crop/q_auto,f_auto,c_lfill,w_1600,ar_1.9536019536019535,g_auto/s3/2/135284/p1171255_brooke-mill-ext-3288-(zf-9540-20919-1-001).jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "heights-towne-lake",
+      "name": "The Heights at Towne Lake",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "1395 Buckhead Crossing, Woodstock, GA 30189",
+      "lat": 34.1100195,
+      "lng": -84.5414174,
+      "distanceMiles": 8,
+      "driveMin": 14,
+      "driveMax": 22,
+      "commuteNote": "Static route estimate; Towne Lake congestion can widen the range.",
+      "oneBed": {
+        "min": 1458,
+        "max": null,
+        "note": "Recent advertised base-rent snapshot.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1684,
+        "max": null,
+        "note": "Recent advertised base-rent snapshot.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Recent advertised base rent",
+      "priceSource": "Community-supplied listing; verify on official site",
+      "deal": null,
+      "dealDetail": "No broad current promotion was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Fitness center",
+        "Dog park",
+        "Tennis",
+        "Wi-Fi cafe",
+        "Car wash"
+      ],
+      "security": [
+        "Gated access",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets; $350 first + $150 second; $20/month each.",
+      "fees": [
+        "Valet trash: $25/month",
+        "Pest: $3/month",
+        "Service fee: $5/month",
+        "Pet charges apply"
+      ],
+      "review": {
+        "rating": 3.6,
+        "count": 7,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-heights-at-towne-lake-woodstock-ga/84sx5j2/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.heightsattownlake.com/",
+      "pricingUrl": "https://www.heightsattownlake.com/home",
+      "amenitiesUrl": "https://www.heightsattownlake.com/home",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "park-towne-lake",
+      "name": "Park at Towne Lake",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "50 Paces Parkway, Woodstock, GA 30189",
+      "lat": 34.1082243,
+      "lng": -84.5385679,
+      "distanceMiles": 8,
+      "driveMin": 14,
+      "driveMax": 22,
+      "commuteNote": "Static route estimate; use the live route during the actual school commute.",
+      "oneBed": {
+        "min": 1441,
+        "max": 1486,
+        "note": "Advertised total monthly range; base started around $1,404.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1681,
+        "max": 1777,
+        "note": "Advertised total monthly range; base started around $1,644.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised mandatory monthly total",
+      "priceSource": "Official community-supplied availability",
+      "deal": null,
+      "dealDetail": "No current special was displayed.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Fitness center",
+        "Tennis",
+        "Movie theater",
+        "Dog park",
+        "EV charging"
+      ],
+      "security": [
+        "Gated access",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets, 80 lb; $300 each + $10/month each; breed restrictions. Older feeds differ.",
+      "fees": [
+        "Pet fee: $300 each—confirm",
+        "Pet rent: $10/month each",
+        "Shown rents are advertised monthly totals"
+      ],
+      "review": {
+        "rating": 3.9,
+        "count": 39,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/park-at-towne-lake-apartments-woodstock-ga/d6bw5nh/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://livebh.com/apartments/park-at-towne-lake-apartments/",
+      "pricingUrl": "https://livebh.com/apartments/park-at-towne-lake-apartments/",
+      "amenitiesUrl": "https://livebh.com/apartments/park-at-towne-lake-apartments/features/",
+      "imageUrl": "https://cdn.livebh.com/wp-content/uploads/2022/03/29163909/Park-At-Towne-Lake-Featured-Image.png",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "the-palmer",
+      "name": "The Palmer",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "1345 Towne Lake Hills South Drive, Woodstock, GA 30189",
+      "lat": 34.1039148,
+      "lng": -84.5458034,
+      "distanceMiles": 8,
+      "driveMin": 14,
+      "driveMax": 22,
+      "commuteNote": "Static route estimate; Towne Lake traffic is reflected in the upper bound.",
+      "oneBed": {
+        "min": 1363,
+        "max": null,
+        "note": "Official base starting rent; total widget showed about $1,399.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1357,
+        "max": null,
+        "note": "Official base starting rent; total widget showed about $1,393.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property/Greystar listing",
+      "deal": "Up to 1 month free",
+      "dealDetail": "Official property terms say select homes; a marketplace showed a larger conflicting offer, so first-party terms are used.",
+      "dealExpires": null,
+      "amenities": [
+        "Resort pool",
+        "Fitness center",
+        "Sauna",
+        "Wooded grounds",
+        "Upgraded finishes",
+        "Garages"
+      ],
+      "security": [
+        "On-site management",
+        "Package services reported"
+      ],
+      "petCost": "Up to 2 pets, no weight limit; $500 each + $10/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $500 each",
+        "Pet rent: $10/month each",
+        "Official total-price widgets differed slightly—verify"
+      ],
+      "review": {
+        "rating": 3.3,
+        "count": 187,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-palmer-woodstock-ga/fe2znmv/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.palmerapartments.com/",
+      "pricingUrl": "https://www.greystar.com/the-palmer-apartments-woodstock-ga/p_15063",
+      "amenitiesUrl": "https://www.palmerapartments.com/Amenities.aspx",
+      "imageUrl": "https://s7d9.scene7.com/is/image/greystarprod/15063PL2?fmt=avif&wid=1600&qlt=80&fit=constrain",
+      "imageSource": "Official Greystar property page",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "park-9",
+      "name": "Park 9",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "800 Milwood Street, Woodstock, GA 30189",
+      "lat": 34.1272058,
+      "lng": -84.5289769,
+      "distanceMiles": 7.2,
+      "driveMin": 13,
+      "driveMax": 20,
+      "commuteNote": "Static route estimate; upper range allows for ordinary Woodstock traffic.",
+      "oneBed": {
+        "min": 1455,
+        "max": 1720,
+        "note": "Official live-unit base-rent range; add required monthly fees.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1550,
+        "max": 2145,
+        "note": "Official live-unit base-rent range; add required monthly fees.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official Brookfield property cards",
+      "deal": "Up to 1.5 months free",
+      "dealDetail": "Apply by September 15, 2026; select homes and possible 48-hour look-and-lease terms apply.",
+      "dealExpires": "2026-09-15",
+      "amenities": [
+        "Beach-entry pool",
+        "Fitness center",
+        "Community garden",
+        "Dog park",
+        "EV charging",
+        "Bike rentals"
+      ],
+      "security": [
+        "Controlled building access reported",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets; $250 each + $25/month each; breed restrictions.",
+      "fees": [
+        "Required monthly fees: $98.56",
+        "Internet: $60",
+        "Pest: $4",
+        "Water admin: $14.56",
+        "Valet trash: $20"
+      ],
+      "review": {
+        "rating": 4.6,
+        "count": 118,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/park-9-woodstock-ga/r8m5gc3/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://rent.brookfieldproperties.com/property/park-9/",
+      "pricingUrl": "https://rent.brookfieldproperties.com/property/park-9/",
+      "amenitiesUrl": "https://rent.brookfieldproperties.com/property/park-9/",
+      "imageUrl": "https://rent.brookfieldproperties.com/wp-content/uploads/2026/06/Park-9-Living-Room-and-Kitchen-scaled.jpeg",
+      "imageSource": "Official Brookfield property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": "5 months free",
+      "dealLastSeenAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "station-92",
+      "name": "Station 92",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "10247 Highway 92, Woodstock, GA 30188",
+      "lat": 34.0893826,
+      "lng": -84.5180767,
+      "distanceMiles": 11.4,
+      "driveMin": 22,
+      "driveMax": 32,
+      "commuteNote": "Highway 92 and I-575 traffic can widen this static range; check live before touring.",
+      "oneBed": {
+        "min": 1650,
+        "max": null,
+        "note": "Official current base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1925,
+        "max": null,
+        "note": "Official current base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official Equity Apartments availability",
+      "deal": "1 month free",
+      "dealDetail": "Advertised through September 30, 2026 on select homes; verify lease term.",
+      "dealExpires": "2026-09-30",
+      "amenities": [
+        "Resort pool",
+        "Fitness center",
+        "Clubhouse",
+        "Greenprints access",
+        "In-home washer/dryer",
+        "Pet friendly"
+      ],
+      "security": [
+        "Controlled package handling reported",
+        "On-site management"
+      ],
+      "petCost": "Up to 3 pets; $400 dog fee shown; dogs/cats $20/month. Confirm cat fee.",
+      "fees": [
+        "Dog fee shown: $400",
+        "Pet rent: $20/month",
+        "Cat one-time fee: confirm"
+      ],
+      "review": {
+        "rating": 4.4,
+        "count": 17,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/station-92-woodstock-ga/zk6ehwx/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.equityapartments.com/atlanta/woodstock/station-92-at-woodstock-apartments",
+      "pricingUrl": "https://www.equityapartments.com/atlanta/woodstock/station-92-at-woodstock-apartments",
+      "amenitiesUrl": "https://www.equityapartments.com/atlanta/woodstock/station-92-at-woodstock-apartments",
+      "imageUrl": "https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_auto,f_auto/4307-35/station-92-at-woodstock-apartments-exterior",
+      "imageSource": "Official Equity Apartments website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": "Up to 1 month free + 25% off your first month",
+      "dealLastSeenAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": [
+        {
+          "min": 1375,
+          "max": 2050,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1615,
+          "max": 2065,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ]
+    },
+    {
+      "id": "elevate-woodstock",
+      "name": "Elevate Woodstock",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "address": "107 Skyridge Drive, Woodstock, GA 30188",
+      "lat": 34.087622,
+      "lng": -84.515005,
+      "distanceMiles": 11.5,
+      "driveMin": 22,
+      "driveMax": 32,
+      "commuteNote": "Borderline in heavier school/rush traffic; use the live-directions link at the intended time.",
+      "oneBed": {
+        "min": 1443,
+        "max": 1468,
+        "note": "Current syndicated total monthly price; official page did not expose a reliably parsed rent.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1836,
+        "max": null,
+        "note": "Current syndicated total monthly price; official page did not expose a reliably parsed rent.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Recent advertised monthly total",
+      "priceSource": "Community-supplied listing; verify on official site",
+      "deal": null,
+      "dealDetail": "No broad current official promotion was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Wooded grounds",
+        "Walking trails",
+        "Package service",
+        "Laundry facilities",
+        "Patios",
+        "Pet friendly"
+      ],
+      "security": [
+        "Package service",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 dogs/cats; other small pets may be allowed; breed restrictions; current charges require a quote.",
+      "fees": [
+        "Pet charges: call",
+        "Advertised figures are total-price snapshots"
+      ],
+      "review": {
+        "rating": 4.3,
+        "count": 12,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/elevate-woodstock-woodstock-ga/rq8s2h3/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://elevatewoodstockapts.com/",
+      "pricingUrl": "https://elevatewoodstockapts.com/",
+      "amenitiesUrl": "https://elevatewoodstockapts.com/",
+      "imageUrl": "https://elevatewoodstockapts.com/assets/images/cache/4tIqqc03ogp9vxVga9cPQIVObMQATMIObAkaWFLh-caaabe30aa8b52657f4a5fcbd77e4357.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "riverstock",
+      "name": "Riverstock Apartments",
+      "city": "Woodstock",
+      "county": "Cherokee",
+      "eligibility": "Income-restricted; household income limits apply",
+      "address": "50 Sandy Circle, Woodstock, GA 30188",
+      "lat": 34.0992698,
+      "lng": -84.5114669,
+      "distanceMiles": 10.5,
+      "driveMin": 20,
+      "driveMax": 28,
+      "commuteNote": "Static route estimate with ordinary-traffic allowance; verify at school-arrival time.",
+      "oneBed": {
+        "min": null,
+        "max": null,
+        "note": "One-bedroom homes are not offered.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1501,
+        "max": null,
+        "note": "Official 1,167-sf two-bedroom price; nine units were shown.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised income-restricted base rent",
+      "priceSource": "Official property availability",
+      "deal": null,
+      "dealDetail": "Official specials page says no current offer.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Playground",
+        "Fitness center",
+        "Community room",
+        "Water/sewer included",
+        "Private entrances"
+      ],
+      "security": [
+        "Income-qualified leasing review",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets, 75 lb; $300 deposit + $25/month; breed restrictions.",
+      "fees": [
+        "Pet deposit: $300; refundability unclear",
+        "Pet rent: $25/month",
+        "Income limits apply"
+      ],
+      "review": {
+        "rating": null,
+        "count": 0,
+        "source": "Current review listing unavailable",
+        "url": "https://www.apartments.com/riverstock-apartments-woodstock-ga/2w2rs6b/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.riverstockapartments.com/",
+      "pricingUrl": "https://www.riverstockapartments.com/floorplans/two-bedrooms",
+      "amenitiesUrl": "https://www.riverstockapartments.com/amenities",
+      "imageUrl": "https://resource.rentcafe.com/image/upload/x_0,y_0,w_1920,h_1233,c_crop/q_auto,f_auto,c_lfill,g_auto/s3/2/23127/dominium-riverstock-19%20-%20pool-ml-web.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "the-knox",
+      "name": "The Knox",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "address": "1000 Etowah Ferry Drive, Acworth, GA 30102",
+      "lat": 34.098325,
+      "lng": -84.584302,
+      "distanceMiles": 11,
+      "driveMin": 18,
+      "driveMax": 28,
+      "commuteNote": "Bells Ferry route can vary; the upper estimate allows for ordinary commute traffic.",
+      "oneBed": {
+        "min": 1448,
+        "max": null,
+        "note": "Current advertised base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1776,
+        "max": null,
+        "note": "Current advertised base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property and community-supplied availability",
+      "deal": "6 weeks free",
+      "dealDetail": "Reported for select homes with move-in by September 30, 2026; confirm exact eligibility.",
+      "dealExpires": "2026-09-30",
+      "amenities": [
+        "Resort pool",
+        "Coworking",
+        "Fitness center",
+        "Pet wash",
+        "Dog park",
+        "In-home washer/dryer"
+      ],
+      "security": [
+        "Controlled access",
+        "Package lockers"
+      ],
+      "petCost": "Up to 2 pets; $350 one/$500 two + $20/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $350 one/$500 two",
+        "Pet rent: $20/month each",
+        "Ask for all mandatory monthly charges"
+      ],
+      "review": {
+        "rating": 4.8,
+        "count": 175,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-knox-acworth-ga/ydtys5v/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://theknoxbellsferry.com/",
+      "pricingUrl": "https://theknoxbellsferry.com/",
+      "amenitiesUrl": "https://theknoxbellsferry.com/amenities/",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "cherokee-summit",
+      "name": "Cherokee Summit",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "address": "5920 Bells Ferry Road, Acworth, GA 30102",
+      "lat": 34.097296,
+      "lng": -84.579929,
+      "distanceMiles": 10.8,
+      "driveMin": 18,
+      "driveMax": 27,
+      "commuteNote": "Bells Ferry conditions can vary; use the live route at school-arrival time.",
+      "oneBed": {
+        "min": 1294,
+        "max": null,
+        "note": "Current advertised base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1326,
+        "max": null,
+        "note": "Current advertised base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Community-supplied current listing; verify on official site",
+      "deal": null,
+      "dealDetail": "No broad current promotion was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Fitness center",
+        "Playground",
+        "Basketball",
+        "Tennis",
+        "Washer/dryer connections"
+      ],
+      "security": [
+        "Controlled/gated access",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets; $250 each + $25/month each.",
+      "fees": [
+        "Amenity: $18/month",
+        "Utility admin: $6/month",
+        "Pest: $4/month",
+        "Variable trash/utilities"
+      ],
+      "review": {
+        "rating": 3.7,
+        "count": 9,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/cherokee-summit-acworth-ga/w21h8jl/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.cherokeesummitga.com/",
+      "pricingUrl": "https://www.cherokeesummitga.com/",
+      "amenitiesUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "snapshot",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "the-everlee",
+      "name": "The Everlee",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "address": "100 Peaks Ridge, Acworth, GA 30102",
+      "lat": 34.095173,
+      "lng": -84.581859,
+      "distanceMiles": 10.7,
+      "driveMin": 17,
+      "driveMax": 26,
+      "commuteNote": "Bells Ferry corridor traffic is reflected in the upper estimate.",
+      "oneBed": {
+        "min": 1439,
+        "max": 1508,
+        "note": "Current base-rent range.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1719,
+        "max": 1880,
+        "note": "Current base-rent range.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property availability",
+      "deal": "Up to $2,000 / 1 month free",
+      "dealDetail": "Reported for move-in by September 15, 2026 on select homes; confirm exact unit terms.",
+      "dealExpires": "2026-09-15",
+      "amenities": [
+        "Pool cabanas",
+        "Fitness center",
+        "Two dog parks",
+        "Pet wash",
+        "Smart-home features",
+        "In-home washer/dryer"
+      ],
+      "security": [
+        "Smart-home entry features",
+        "On-site management"
+      ],
+      "petCost": "Up to 2 pets; $300 one/$500 two + $20/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $300 one/$500 two",
+        "Pet rent: $20/month each",
+        "Ask for recurring service fees"
+      ],
+      "review": {
+        "rating": 4.2,
+        "count": 72,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-everlee-acworth-ga/zdce14y/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee",
+      "pricingUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee",
+      "amenitiesUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": "1 month free + 25% off first month",
+      "dealLastSeenAt": "2026-09-04",
+      "dealStatus": "needs_review",
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": [
+        {
+          "min": 1439,
+          "max": 1719,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ]
+    },
+    {
+      "id": "the-parker",
+      "name": "The Parker",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "address": "5944 Highway 92, Acworth, GA 30102",
+      "lat": 34.087208,
+      "lng": -84.590392,
+      "distanceMiles": 11.5,
+      "driveMin": 19,
+      "driveMax": 29,
+      "commuteNote": "Highway 92/Bells Ferry traffic can widen the static estimate.",
+      "oneBed": {
+        "min": 1711,
+        "max": null,
+        "note": "Advertised mandatory monthly total; base was about $1,595.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1915,
+        "max": null,
+        "note": "Advertised mandatory monthly total; base was about $1,799.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised mandatory monthly total",
+      "priceSource": "Official property availability",
+      "deal": "Up to 10 weeks free",
+      "dealDetail": "Advertised on select homes with possible waived application, administration, and deposit; get written eligibility terms.",
+      "dealExpires": null,
+      "amenities": [
+        "Gated",
+        "Pool",
+        "Pickleball",
+        "Fitness center",
+        "Dog park & wash",
+        "EV charging"
+      ],
+      "security": [
+        "Gated access",
+        "Controlled package handling reported"
+      ],
+      "petCost": "$400 per pet + $25/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $400 each",
+        "Pet rent: $25/month each",
+        "Shown rents are advertised monthly totals"
+      ],
+      "review": {
+        "rating": 4.8,
+        "count": 24,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-parker-acworth-ga/x376rvp/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://theparkerga.com/",
+      "pricingUrl": "https://theparkerga.com/",
+      "amenitiesUrl": "https://theparkerga.com/faqs/",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "brookstone-acworth",
+      "name": "The Brookstone Apartments",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "address": "4832 Highway 92, Acworth, GA 30102",
+      "lat": 34.0895914,
+      "lng": -84.6113311,
+      "distanceMiles": 12.5,
+      "driveMin": 23,
+      "driveMax": 33,
+      "commuteNote": "Outer edge of the corridor; Highway 92 traffic can push the route toward the upper estimate.",
+      "oneBed": {
+        "min": 1499,
+        "max": null,
+        "note": "Official base start; mandatory total was roughly $1,624.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1899,
+        "max": null,
+        "note": "Official base start; mandatory total was roughly $2,023.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "Up to 8 weeks free",
+      "dealDetail": "Advertised on select homes; confirm lease term, move-in deadline, and mandatory charges.",
+      "dealExpires": null,
+      "amenities": [
+        "Gated",
+        "Pool",
+        "Peloton fitness",
+        "Bark park",
+        "Fire pit",
+        "In-home washer/dryer"
+      ],
+      "security": [
+        "Gated access",
+        "Package access"
+      ],
+      "petCost": "Up to 2 pets; public feeds conflict around $350–$500 and $25–$30/month; 75-lb/breed limits.",
+      "fees": [
+        "Internet: $85/month",
+        "Trash: $10/month",
+        "Liability: $16.59/month",
+        "Pest: $5/month",
+        "Utility billing: $8/month"
+      ],
+      "review": {
+        "rating": 4.7,
+        "count": 14,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-brookstone-apartments-acworth-acworth-ga/d6c69wj/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.thebrookstoneapartments.com/",
+      "pricingUrl": "https://www.thebrookstoneapartments.com/floorplans",
+      "amenitiesUrl": "https://www.thebrookstoneapartments.com/amenities",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "the-quincy",
+      "name": "The Quincy",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "address": "900 Buice Lake Parkway, Acworth, GA 30102",
+      "lat": 34.100857,
+      "lng": -84.583395,
+      "distanceMiles": 12,
+      "driveMin": 25,
+      "driveMax": 35,
+      "commuteNote": "Outer-edge option; check the live school-arrival route because congestion can approach the 40-minute ceiling.",
+      "oneBed": {
+        "min": 1341,
+        "max": null,
+        "note": "Official current base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1723,
+        "max": null,
+        "note": "Official current base-rent start.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised base rent",
+      "priceSource": "Official property floor plans",
+      "deal": "1 month free",
+      "dealDetail": "Reported for 1BR/2BR move-ins by September 15, 2026; select homes and terms apply.",
+      "dealExpires": "2026-09-15",
+      "amenities": [
+        "Saltwater pool",
+        "24-hour fitness",
+        "Cowork pods",
+        "Bark park",
+        "EV charging",
+        "In-home washer/dryer"
+      ],
+      "security": [
+        "Controlled package handling reported",
+        "On-site management"
+      ],
+      "petCost": "$350 first + $200 second; $35/month each; breed restrictions.",
+      "fees": [
+        "Pet fee: $350 first + $200 second",
+        "Pet rent: $35/month each"
+      ],
+      "review": {
+        "rating": 2.3,
+        "count": 3,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/the-quincy-apartments-acworth-ga/f1jm6fv/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.livethequincy.com/",
+      "pricingUrl": "https://www.livethequincy.com/floorplans",
+      "amenitiesUrl": "https://www.livethequincy.com/amenities",
+      "imageUrl": "https://resource.rentcafe.com/image/upload/x_0,y_0,w_5568,h_3712,c_crop/q_auto,f_auto,c_lfill,w_1920,ar_1.7777777777777777,g_auto/s3/2/187779/the%20quincy%20poi-9.jpg",
+      "imageSource": "Official property website",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "lastSourceCheck": "2026-09-04",
+      "sourceCheckStatus": "blocked"
+    },
+    {
+      "id": "summerwell-bells-ferry",
+      "name": "Summerwell Bells Ferry",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "eligibility": "Rental-home/townhome format rather than a conventional apartment",
+      "address": "1151 Hunter Trail, Acworth, GA 30102",
+      "lat": 34.095927,
+      "lng": -84.58474,
+      "distanceMiles": 10,
+      "driveMin": 20,
+      "driveMax": 30,
+      "commuteNote": "Bells Ferry route; check live school-arrival traffic before relying on the range.",
+      "oneBed": {
+        "min": null,
+        "max": null,
+        "note": "One-bedroom homes are not offered.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 2150,
+        "max": 2158,
+        "note": "Advertised total monthly price; base was $2,000 and term-dependent.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Advertised mandatory monthly total",
+      "priceSource": "Official property and Greystar availability",
+      "deal": null,
+      "dealDetail": "No current rent special was verified.",
+      "dealExpires": null,
+      "amenities": [
+        "Rental-home layout",
+        "Private yard",
+        "Pool",
+        "Sundeck",
+        "Pet friendly",
+        "Modern interiors"
+      ],
+      "security": [
+        "Private-home entries",
+        "On-site management"
+      ],
+      "petCost": "Up to 3 pets; $500–$900 one-time based on count + $25/month each; breed restrictions; confirm wording.",
+      "fees": [
+        "Base rent: $2,000",
+        "Advertised total: $2,150–$2,158",
+        "Pet fees vary by count"
+      ],
+      "review": {
+        "rating": 4.9,
+        "count": 11,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/summerwell-bells-ferry-acworth-ga/1vh9rv7/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.summerwellbellsferry.com/",
+      "pricingUrl": "https://www.greystar.com/summerwell-bells-ferry-acworth-ga/p_21007",
+      "amenitiesUrl": "https://www.summerwellbellsferry.com/",
+      "imageUrl": "https://s7d9.scene7.com/is/image/greystarprod/21007RND1?fmt=avif&wid=1600&qlt=80&fit=constrain",
+      "imageSource": "Official Greystar property page",
+      "priceConfidence": "official",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": null,
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    },
+    {
+      "id": "gregory-lane",
+      "name": "Gregory Lane",
+      "city": "Acworth",
+      "county": "Cherokee",
+      "address": "466 Gregory Lane, Acworth, GA 30102",
+      "lat": 34.0822,
+      "lng": -84.577281,
+      "distanceMiles": 11.5,
+      "driveMin": 25,
+      "driveMax": 35,
+      "commuteNote": "Outer-edge option; live inventory and the school-arrival route both need phone/live-map confirmation.",
+      "oneBed": {
+        "min": null,
+        "max": null,
+        "note": "No one-bedroom availability was verified.",
+        "observedAt": "2026-09-04"
+      },
+      "twoBed": {
+        "min": 1410,
+        "max": null,
+        "note": "Estimated mandatory monthly total: $1,340 base + $15 community + $55 water.",
+        "observedAt": "2026-09-04"
+      },
+      "priceBasis": "Estimated mandatory monthly total",
+      "priceSource": "Official fee pages plus current community listing",
+      "deal": "Up to 1 month free + admin credit",
+      "dealDetail": "Reported with a 48-hour look-and-lease condition; official embedded availability showed no units, so call first.",
+      "dealExpires": null,
+      "amenities": [
+        "Pool",
+        "Playground",
+        "Renovated clubroom",
+        "Picnic/grill areas",
+        "Renovated interiors"
+      ],
+      "security": [
+        "On-site management",
+        "Phone confirmation recommended before touring"
+      ],
+      "petCost": "Up to 2 pets, 75 lb; $300 one/$450 two + $20/month each; breed restrictions.",
+      "fees": [
+        "Community: $15/month",
+        "Water: $55/month",
+        "Pet fee: $300 one/$450 two",
+        "Pet rent: $20/month each"
+      ],
+      "review": {
+        "rating": 4,
+        "count": 1,
+        "source": "Apartments.com snapshot",
+        "url": "https://www.apartments.com/gregory-lane-acworth-ga/ml6sbnl/",
+        "observedAt": "2026-09-04"
+      },
+      "officialUrl": "https://www.visitgregorylane.com/",
+      "pricingUrl": "https://www.visitgregorylane.com/availability",
+      "amenitiesUrl": "https://www.visitgregorylane.com/gallery",
+      "imageUrl": null,
+      "imageSource": "Official property gallery",
+      "priceConfidence": "conflict",
+      "verifiedAt": "2026-09-04",
+      "detectedDeal": "Up to 1 month free + 1 month free rent",
+      "dealLastSeenAt": "2026-09-04",
+      "dealStatus": "needs_review",
+      "lastSourceCheck": "2026-09-04",
+      "lastSourceSuccess": "2026-09-04",
+      "sourceCheckStatus": "reachable_unparsed",
+      "priceReviewCandidates": []
+    }
+  ]
+}

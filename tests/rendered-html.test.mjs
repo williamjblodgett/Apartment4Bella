@@ -28,18 +28,24 @@ test("renders Bella's finished apartment finder", async () => {
 });
 
 test("ships a complete, bounded apartment dataset", async () => {
-  const data = JSON.parse(await readFile(new URL("../app/apartments.json", import.meta.url), "utf8"));
-  assert.equal(data.apartments.length, 13);
-  assert.ok(data.apartments.every((home) => home.driveMax <= 40));
-  assert.ok(data.apartments.every((home) => home.oneBed.min > 0 && home.twoBed.min > 0));
-  assert.ok(data.apartments.every((home) => home.officialUrl.startsWith("https://")));
-  assert.ok(data.apartments.every((home) => home.imageUrl.startsWith("https://")));
-  assert.ok(data.apartments.every((home) => home.review.url.startsWith("https://")));
+  const primary = JSON.parse(await readFile(new URL("../app/apartments.json", import.meta.url), "utf8"));
+  const expanded = JSON.parse(await readFile(new URL("../app/apartments-expanded.json", import.meta.url), "utf8"));
+  const apartments = [...primary.apartments, ...expanded.apartments];
+  assert.ok(apartments.length >= 40);
+  assert.equal(new Set(apartments.map((home) => home.id)).size, apartments.length);
+  assert.equal(new Set(apartments.map((home) => home.address.toLowerCase())).size, apartments.length);
+  assert.ok(apartments.every((home) => home.driveMax <= 40));
+  assert.ok(apartments.every((home) => (home.oneBed.min ?? home.twoBed.min) > 0));
+  assert.ok(apartments.every((home) => home.officialUrl.startsWith("https://")));
+  assert.ok(apartments.every((home) => home.imageUrl === null || home.imageUrl.startsWith("https://")));
+  assert.ok(apartments.every((home) => home.review.url.startsWith("https://")));
 });
 
 test("includes the scheduled GitHub Pages publisher", async () => {
   const workflow = await readFile(new URL("../.github/workflows/pages.yml", import.meta.url), "utf8");
   assert.match(workflow, /schedule:/);
   assert.match(workflow, /npm run refresh:data/);
+  assert.match(workflow, /npm run validate:data/);
+  assert.match(workflow, /preserve daily apartment snapshot/i);
   assert.match(workflow, /actions\/deploy-pages@v4/);
 });

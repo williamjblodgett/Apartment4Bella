@@ -12,7 +12,8 @@
     "dev:pages": "vite --config vite.pages.config.ts",
     "build:pages": "vite build --config vite.pages.config.ts",
     "refresh:data": "node scripts/refresh-data.mjs",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "validate:data": "node scripts/validate-data.mjs",
+    "test": "npm run validate:data && npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },

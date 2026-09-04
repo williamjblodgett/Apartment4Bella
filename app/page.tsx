@@ -2,14 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import rawData from "./apartments.json";
+import expandedData from "./apartments-expanded.json";
 
-type Price = { min: number; max: number | null; note: string };
-type Review = { rating: number | null; count: number; source: string; url: string };
+type Price = { min: number | null; max: number | null; note: string; observedAt?: string };
+type Review = { rating: number | null; count: number; source: string; url: string; observedAt?: string };
+type SortKey = "drive" | "price" | "rating" | "reviews" | "deals";
 type Apartment = {
   id: string;
   name: string;
   city: string;
   county: "Cherokee" | "Cobb";
+  eligibility?: string;
   address: string;
   lat: number;
   lng: number;
@@ -32,22 +35,28 @@ type Apartment = {
   officialUrl: string;
   pricingUrl: string;
   amenitiesUrl: string;
-  imageUrl: string;
+  imageUrl: string | null;
   imageSource: string;
   priceConfidence: "official" | "snapshot" | "conflict";
   verifiedAt: string;
+  lastSourceCheck?: string;
+  sourceCheckStatus?: "verified" | "reachable_unparsed" | "blocked" | "error" | "reachable" | "unreachable";
 };
 
-const apartments = rawData.apartments as Apartment[];
+const apartments = [...rawData.apartments, ...expandedData.apartments] as Apartment[];
 const school = rawData.meta.school;
 const crimeContext = rawData.meta.crimeContext;
 const sourceCheckDate = rawData.meta.checkedAt.slice(0, 10);
+const automation = rawData.meta.automation;
+const closeCount = apartments.filter((apartment) => apartment.driveMax <= 15).length;
 
 const money = (value: number) =>
   new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);
 
-const priceRange = (price: Price) =>
-  price.max && price.max !== price.min ? `${money(price.min)}–${money(price.max)}` : `${money(price.min)}+`;
+const priceRange = (price: Price) => {
+  if (price.min === null) return "Not offered";
+  return price.max && price.max !== price.min ? `${money(price.min)}–${money(price.max)}` : `${money(price.min)}+`;
+};
 
 const directionsUrl = (address: string) =>
   `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(address)}&destination=${encodeURIComponent(school.address)}&travelmode=driving`;
@@ -59,13 +68,15 @@ const formatDate = (date: string) =>
   new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(new Date(`${date}T12:00:00`));
 
 function priceFor(apartment: Apartment, bedrooms: string) {
-  if (bedrooms === "2") return apartment.twoBed.min;
-  if (bedrooms === "1") return apartment.oneBed.min;
-  return Math.min(apartment.oneBed.min, apartment.twoBed.min);
+  if (bedrooms === "2") return apartment.twoBed.min ?? Number.POSITIVE_INFINITY;
+  if (bedrooms === "1") return apartment.oneBed.min ?? Number.POSITIVE_INFINITY;
+  const eligible = [apartment.oneBed.min, apartment.twoBed.min].filter((value): value is number => value !== null);
+  return eligible.length ? Math.min(...eligible) : Number.POSITIVE_INFINITY;
 }
 
 function affordabilityScore(apartment: Apartment, bedrooms: string) {
-  const values = apartments.map((item) => priceFor(item, bedrooms)).sort((a, b) => a - b);
+  const values = apartments.map((item) => priceFor(item, bedrooms)).filter(Number.isFinite).sort((a, b) => a - b);
+  if (!values.length || !Number.isFinite(priceFor(apartment, bedrooms))) return 0;
   const middle = Math.floor(values.length / 2);
   const median = values.length % 2 ? values[middle] : (values[middle - 1] + values[middle]) / 2;
   return Math.round(Math.max(0, Math.min(100, 150 - (100 * priceFor(apartment, bedrooms)) / median)));
@@ -80,7 +91,7 @@ function affordabilityLabel(score: number) {
 }
 
 function mapPosition(item: { lat: number; lng: number }) {
-  const bounds = { north: 34.21, south: 33.985, east: -84.47, west: -84.68 };
+  const bounds = { north: 34.36, south: 33.97, east: -84.40, west: -84.78 };
   return {
     left: `${Math.max(4, Math.min(96, ((item.lng - bounds.west) / (bounds.east - bounds.west)) * 100))}%`,
     top: `${Math.max(5, Math.min(94, ((bounds.north - item.lat) / (bounds.north - bounds.south)) * 100))}%`,
@@ -88,16 +99,45 @@ function mapPosition(item: { lat: number; lng: number }) {
 }
 
 function confidenceCopy(value: Apartment["priceConfidence"]) {
-  if (value === "official") return "Official live source";
+  if (value === "official") return "Official-site price snapshot";
   if (value === "conflict") return "Sources differ—verify";
   return "Recent price snapshot";
+}
+
+function hasCurrentDeal(apartment: Apartment) {
+  if (!apartment.deal || apartment.deal.toLowerCase().startsWith("ask")) return false;
+  return !apartment.dealExpires || apartment.dealExpires >= sourceCheckDate;
+}
+
+function sourceStatusCopy(apartment: Apartment) {
+  const checkDate = apartment.lastSourceCheck ? formatDate(apartment.lastSourceCheck) : "not yet checked";
+  const observed = apartment.oneBed.observedAt || apartment.twoBed.observedAt || apartment.verifiedAt;
+  const observedDate = formatDate(observed);
+  if (apartment.sourceCheckStatus === "verified") return `Price read ${checkDate}`;
+  if (apartment.sourceCheckStatus === "reachable_unparsed" || apartment.sourceCheckStatus === "reachable") {
+    return `Page reached ${checkDate} · price snapshot ${observedDate}`;
+  }
+  if (apartment.sourceCheckStatus === "blocked" || apartment.sourceCheckStatus === "unreachable") {
+    return `Check blocked ${checkDate} · price snapshot ${observedDate}`;
+  }
+  if (apartment.sourceCheckStatus === "error") return `Check failed ${checkDate} · price snapshot ${observedDate}`;
+  return `Price snapshot ${observedDate}`;
+}
+
+function compareApartments(a: Apartment, b: Apartment, sort: SortKey, bedrooms: string) {
+  const commuteTieBreak = () => a.driveMax - b.driveMax || a.driveMin - b.driveMin || a.distanceMiles - b.distanceMiles || a.name.localeCompare(b.name);
+  if (sort === "price") return priceFor(a, bedrooms) - priceFor(b, bedrooms) || commuteTieBreak();
+  if (sort === "rating") return (b.review.rating ?? -1) - (a.review.rating ?? -1) || b.review.count - a.review.count || commuteTieBreak();
+  if (sort === "reviews") return b.review.count - a.review.count || (b.review.rating ?? -1) - (a.review.rating ?? -1) || commuteTieBreak();
+  if (sort === "deals") return Number(hasCurrentDeal(b)) - Number(hasCurrentDeal(a)) || commuteTieBreak();
+  return commuteTieBreak();
 }
 
 export default function Home() {
   const [maxDrive, setMaxDrive] = useState(40);
   const [bedrooms, setBedrooms] = useState("either");
   const [maxRent, setMaxRent] = useState("any");
-  const [sort, setSort] = useState("drive");
+  const [sort, setSort] = useState<SortKey>("drive");
   const [query, setQuery] = useState("");
   const [dealsOnly, setDealsOnly] = useState(false);
   const [securityOnly, setSecurityOnly] = useState(false);
@@ -108,7 +148,10 @@ export default function Home() {
   useEffect(() => {
     try {
       const stored = window.localStorage.getItem("bella-saved-apartments");
-      if (stored) setSaved(JSON.parse(stored));
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.every((item) => typeof item === "string")) setSaved(parsed);
+      }
     } catch {
       // Blocked browser storage should never stop the search experience.
     }
@@ -126,16 +169,12 @@ export default function Home() {
     const normalized = query.trim().toLowerCase();
     return apartments
       .filter((apartment) => apartment.driveMax <= maxDrive)
+      .filter((apartment) => Number.isFinite(priceFor(apartment, bedrooms)))
       .filter((apartment) => maxRent === "any" || priceFor(apartment, bedrooms) <= Number(maxRent))
-      .filter((apartment) => !dealsOnly || Boolean(apartment.deal && !apartment.deal.toLowerCase().startsWith("ask")))
+      .filter((apartment) => !dealsOnly || hasCurrentDeal(apartment))
       .filter((apartment) => !securityOnly || apartment.security.some((item) => /gated|controlled|key-fob|smart-entry/i.test(item)))
       .filter((apartment) => !normalized || [apartment.name, apartment.city, apartment.address, ...apartment.amenities].join(" ").toLowerCase().includes(normalized))
-      .sort((a, b) => {
-        if (sort === "price") return priceFor(a, bedrooms) - priceFor(b, bedrooms);
-        if (sort === "rating") return (b.review.rating ?? -1) - (a.review.rating ?? -1);
-        if (sort === "value") return affordabilityScore(b, bedrooms) - affordabilityScore(a, bedrooms);
-        return a.driveMin - b.driveMin;
-      });
+      .sort((a, b) => compareApartments(a, b, sort, bedrooms));
   }, [bedrooms, dealsOnly, maxDrive, maxRent, query, securityOnly, sort]);
 
   useEffect(() => {
@@ -144,7 +183,7 @@ export default function Home() {
 
   const selectedApartment = matches.find((item) => item.id === selected) ?? matches[0];
   const cheapest = matches.length ? Math.min(...matches.map((item) => priceFor(item, bedrooms))) : null;
-  const dealCount = matches.filter((item) => item.deal && !item.deal.toLowerCase().startsWith("ask")).length;
+  const dealCount = matches.filter(hasCurrentDeal).length;
 
   const resetFilters = () => {
     setMaxDrive(40);
@@ -169,8 +208,8 @@ export default function Home() {
           <a href="#sources">Sources</a>
         </nav>
         <div className="header-meta">
-          <span className="live-dot" aria-hidden="true" />
-          Source check {formatDate(sourceCheckDate)}
+          <span className={`live-dot ${automation.reachable < automation.checked ? "partial" : ""}`} aria-hidden="true" />
+          Daily check {formatDate(sourceCheckDate)} · {automation.reachable}/{automation.checked} pages reached
           <a className="saved-button" href={saved.length ? "#saved" : "#matches"}>♥ Saved <span>{saved.length}</span></a>
         </div>
       </header>
@@ -181,9 +220,9 @@ export default function Home() {
           <h1>Closer to school.<br /><em>Clearer on cost.</em></h1>
           <p>A researched shortlist of 1–2 bedroom apartments within a conservative 40-minute drive—organized by commute, rent, perks, reviews, and honest area context.</p>
           <div className="hero-proof">
-            <span><b>{apartments.length}</b> communities reviewed</span>
-            <span><b>7</b> within ~15 minutes</span>
-            <span><b>{formatDate(apartments[0].verifiedAt)}</b> research snapshot</span>
+            <span><b>{apartments.length}</b> communities researched</span>
+            <span><b>{closeCount}</b> within ~15 minutes</span>
+            <span><b>{automation.reachable}/{automation.checked}</b> official pages reached in the latest daily check</span>
           </div>
         </div>
 
@@ -205,7 +244,7 @@ export default function Home() {
               </select>
             </label>
             <label>
-              <span>MAX MONTHLY PRICE</span>
+              <span>MAX ADVERTISED STARTING RENT</span>
               <select value={maxRent} onChange={(event) => setMaxRent(event.target.value)}>
                 <option value="any">Any listed price</option><option value="1400">Up to $1,400</option><option value="1600">Up to $1,600</option><option value="1800">Up to $1,800</option><option value="2000">Up to $2,000</option><option value="2200">Up to $2,200</option>
               </select>
@@ -231,14 +270,28 @@ export default function Home() {
         <div className="snapshot-note"><b>Commutes are conservative estimates.</b><small>Use each card’s live-directions link at the actual weekday time.</small></div>
       </section>
 
+      <section className="coverage-banner" aria-label="Directory coverage">
+        <span>SECOND-PASS COVERAGE</span>
+        <div><strong>A broad community directory—not every active rental unit.</strong><p>It covers researched apartment communities with public 1–2 bedroom information inside the 40-minute screen. Private rentals, newly posted units, and properties without public data can still be missing.</p></div>
+        <a href="#sources">See the accuracy rules ↓</a>
+      </section>
+
       <section className="results-shell" id="matches">
         <div className="results-heading">
           <div><span className="section-kicker">A SHORTER SHORTLIST</span><h2>Best nearby matches</h2></div>
-          <div className="sort-control">
-            <label htmlFor="sort">Sort by</label>
-            <select id="sort" value={sort} onChange={(event) => setSort(event.target.value)}>
-              <option value="drive">Closest first</option><option value="price">Lowest price</option><option value="value">Relative affordability</option><option value="rating">Review rating</option>
-            </select>
+          <div className="sort-control" aria-label="Sort apartment results">
+            <span>SORT RESULTS</span>
+            <div className="sort-buttons" role="group">
+              {([
+                ["drive", "Closest"],
+                ["price", bedrooms === "1" ? "Lowest 1BR" : bedrooms === "2" ? "Lowest 2BR" : "Lowest rent"],
+                ["rating", "Highest stars"],
+                ["reviews", "Most reviewed"],
+                ["deals", "Deals first"],
+              ] as [SortKey, string][]).map(([value, label]) => (
+                <button key={value} type="button" className={sort === value ? "active" : ""} aria-pressed={sort === value} onClick={() => { setSort(value); setSelected(""); }}>{label}</button>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -253,10 +306,10 @@ export default function Home() {
                 <article className={`home-card ${isSelected ? "selected" : ""}`} key={apartment.id} onMouseEnter={() => setSelected(apartment.id)}>
                   <figure className="property-photo" onClick={() => setSelected(apartment.id)}>
                     <span className="photo-fallback" aria-hidden="true">{apartment.name.split(" ").map((word) => word[0]).slice(0, 2).join("")}</span>
-                    <img src={apartment.imageUrl} alt={`${apartment.name} property photograph`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />
+                    {apartment.imageUrl && <img src={apartment.imageUrl} alt={`${apartment.name} property photograph`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
                     <span className="rank">{String(index + 1).padStart(2, "0")}</span>
                     {index === 0 && sort === "drive" && <span className="best-badge">CLOSEST MATCH</span>}
-                    <a className="photo-credit" href={apartment.officialUrl} target="_blank" rel="noreferrer">Photo: property site ↗</a>
+                    <a className="photo-credit" href={apartment.imageUrl ? apartment.officialUrl : apartment.amenitiesUrl} target="_blank" rel="noreferrer">{apartment.imageUrl ? "Photo: property site" : "Open official gallery"} ↗</a>
                   </figure>
 
                   <div className="card-copy">
@@ -274,17 +327,18 @@ export default function Home() {
                     </div>
 
                     <div className="signal-row">
-                      {apartment.deal ? <span className="deal">✦ {apartment.deal}</span> : <span className="no-deal">No broad deal found</span>}
+                      {hasCurrentDeal(apartment) ? <span className="deal">✦ {apartment.deal}</span> : <span className="no-deal">No current broad deal verified</span>}
+                      {apartment.eligibility && <span className="eligibility-badge">{apartment.eligibility}</span>}
                       <span className={`confidence ${apartment.priceConfidence}`}>{confidenceCopy(apartment.priceConfidence)}</span>
                     </div>
 
                     <div className="tags">{apartment.amenities.slice(0, 4).map((tag) => <span key={tag}>{tag}</span>)}</div>
 
                     <div className="score-row">
-                      <div className="value-score"><b>{valueScore}</b><span><strong>{affordabilityLabel(valueScore)}</strong>Relative affordability</span></div>
+                      <div className="value-score"><b>{valueScore}</b><span><strong>{affordabilityLabel(valueScore)}</strong>Starting-rent affordability</span></div>
                       <a className="review-score" href={apartment.review.url} target="_blank" rel="noreferrer">
-                        <b>{apartment.review.rating ? `${apartment.review.rating.toFixed(1)} ★` : "New"}</b>
-                        <span>{apartment.review.count ? `${apartment.review.count} reviews · ${apartment.review.source.replace(" snapshot", "")}` : "No review history yet"}</span>
+                        <b>{apartment.review.rating !== null ? `${apartment.review.rating.toFixed(1)} ★` : "N/A"}</b>
+                        <span>{apartment.review.count ? `${apartment.review.count} reviews · ${apartment.review.source.replace(" snapshot", "")}` : "No current review rating"}</span>
                       </a>
                       <button className="details-link" type="button" onClick={() => {
                         const details = document.getElementById(`details-${apartment.id}`) as HTMLDetailsElement | null;
@@ -311,6 +365,7 @@ export default function Home() {
                           <h4>Fees & pets found</h4>
                           <ul>{apartment.fees.map((fee) => <li key={fee}>{fee}</li>)}</ul>
                           <p>{apartment.petCost}</p>
+                          {apartment.eligibility && <p><b>Eligibility:</b> {apartment.eligibility}</p>}
                         </div>
                         <div>
                           <h4>Reported-crime context</h4>
@@ -334,7 +389,7 @@ export default function Home() {
                       <a className="primary-link" href={apartment.officialUrl} target="_blank" rel="noreferrer">Visit official site ↗</a>
                       <a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Check live drive ↗</a>
                       <a href={apartment.amenitiesUrl} target="_blank" rel="noreferrer">All amenities ↗</a>
-                      <span>Verified {formatDate(apartment.verifiedAt)}</span>
+                      <span>{sourceStatusCopy(apartment)}</span>
                     </div>
                   </div>
                 </article>
@@ -378,7 +433,7 @@ export default function Home() {
         </div>
         <div className="method-grid">
           <article><span>01</span><h3>Drive range</h3><p>A conservative static route range to Sixes Elementary. It is a first-pass filter, not a traffic promise. Every card opens a live Google Maps route.</p></article>
-          <article><span>02</span><h3>Relative affordability</h3><p>Compares the lowest eligible listed price with the median of the full 13-community shortlist for the current bedroom choice. It does not assess anyone’s income or lease eligibility.</p></article>
+          <article><span>02</span><h3>Starting-rent affordability</h3><p>Compares the lowest eligible advertised starting price with the median of the full {apartments.length}-community directory. Fee disclosures and price bases differ, so this is a first-pass signal—not a complete effective-rent or personal-affordability test.</p></article>
           <article><span>03</span><h3>Review snapshot</h3><p>A dated third-party rating and count, linked to the live review page. A high score with very few reviews is shown as such—never treated like a certainty.</p></article>
           <article><span>04</span><h3>Reported-crime context</h3><p>GBI county data shown consistently for context. It cannot measure a property, block, or personal risk. Security features are listed separately for tour verification.</p></article>
         </div>
@@ -393,9 +448,9 @@ export default function Home() {
       <section className="sources" id="sources">
         <div><span className="section-kicker">FRESHNESS & SOURCES</span><h2>Built to be checked, not blindly trusted.</h2></div>
         <div className="source-columns">
-          <div><h3>Daily apartment check</h3><p>The GitHub workflow checks official pricing pages each morning, keeps the last verified data if a source fails, and republishes the site. Deals and availability can change between checks.</p></div>
+          <div><h3>Daily apartment check</h3><p>The GitHub workflow attempts every official pricing page each morning, records which pages were reached or blocked, preserves the last curated price, and republishes the site. Generic price hints are queued for review rather than automatically replacing trusted rents.</p></div>
           <div><h3>Official links stay primary</h3><p>Every community links directly to its property, pricing, amenity, photo, and live-directions pages. Call the leasing office before paying any fee or relying on a concession.</p></div>
-          <div><h3>Images & reviews</h3><p>Images are loaded from each official property website and attributed there. Ratings are dated snapshots with direct links to the third-party review source.</p></div>
+          <div><h3>Coverage & reviews</h3><p>This is a researched community directory, not a guaranteed feed of every individual unit. Stable official-site images are embedded; otherwise the card links to the property gallery. Ratings are dated snapshots with direct review links.</p></div>
         </div>
         <div className="source-list">
           <a href="https://gbi.georgia.gov/services/crime-statistics" target="_blank" rel="noreferrer">GBI crime statistics ↗</a>
@@ -408,7 +463,7 @@ export default function Home() {
       <footer>
         <a className="brand footer-brand" href="#top"><span className="brand-mark">B</span><span>Bella&apos;s Home Base</span></a>
         <p>Made for a smarter apartment hunt around Sixes Elementary.</p>
-        <p className="footer-fine">Research snapshot: September 4, 2026 · Equal-housing-minded, source-forward comparisons.</p>
+        <p className="footer-fine">Directory curated {formatDate(rawData.meta.curatedAt || sourceCheckDate)} · Equal-housing-minded, source-forward comparisons.</p>
       </footer>
     </main>
   );

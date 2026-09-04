@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://williamjblodgett.github.io/Apartment4Bella/"),
   title: "Bella's Home Base | Apartments near Sixes Elementary",
-  description: "A daily-reviewed shortlist of 1–2 bedroom apartments within 40 minutes of Sixes Elementary in Canton, Georgia.",
+  description: "A daily-checked directory of 1–2 bedroom apartment communities within 40 minutes of Sixes Elementary in Canton, Georgia.",
   openGraph: {
     title: "Bella's Home Base",
     description: "Apartments near Sixes Elementary—compared by drive, price, perks, reviews, and area context.",
