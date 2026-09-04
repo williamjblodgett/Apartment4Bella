@@ -32,17 +32,28 @@ test("ships a complete, bounded apartment dataset", async () => {
   assert.ok(apartments.length >= 40);
   assert.equal(new Set(apartments.map((home) => home.id)).size, apartments.length);
   assert.equal(new Set(apartments.map((home) => home.address.toLowerCase())).size, apartments.length);
-  assert.ok(apartments.every((home) => home.driveMax <= 40));
+  assert.ok(apartments.every((home) => home.withinDriveLimit === (home.driveMax <= 40)));
   assert.ok(apartments.every((home) => (home.oneBed.min ?? home.twoBed.min) > 0));
   assert.ok(apartments.every((home) => home.officialUrl.startsWith("https://")));
   assert.ok(apartments.every((home) => home.imageUrl?.startsWith("https://")));
-  assert.ok(apartments.every((home) => home.review.url.startsWith("https://")));
+  assert.ok(apartments.every((home) => home.review.url === null || home.review.url.startsWith("https://")));
+  assert.equal(primary.meta.manualAudit.communitiesReviewed, apartments.length);
+  assert.ok(apartments.every((home) => home.auditedAt === primary.meta.manualAudit.completedAt));
+  assert.ok(apartments.every((home) => ["official", "source_conflict", "limited_public_data"].includes(home.auditStatus)));
+  assert.ok(apartments.every((home) => home.auditNote));
+
+  const byId = new Map(apartments.map((home) => [home.id, home]));
+  assert.equal(byId.get("sixes-ridge").deal, "Up to 2 months free");
+  assert.doesNotMatch(JSON.stringify(byId.get("sixes-ridge")), /25% Off Your First Month/i);
+  assert.equal(byId.get("view-at-woodstock").deal, null);
+  assert.equal(byId.get("park-9").review.rating, null);
+  assert.equal(byId.get("the-palmer").review.rating, null);
 });
 
 test("builds a unique, shareable detail page for every apartment", async () => {
   const primary = JSON.parse(await readFile(new URL("../app/apartments.json", import.meta.url), "utf8"));
   const expanded = JSON.parse(await readFile(new URL("../app/apartments-expanded.json", import.meta.url), "utf8"));
-  const apartments = [...primary.apartments, ...expanded.apartments];
+  const apartments = [...primary.apartments, ...expanded.apartments].filter((home) => home.withinDriveLimit && home.driveMax <= 40);
 
   for (const apartment of apartments) {
     const html = await readFile(new URL(`../pages-dist/apartments/${apartment.id}/index.html`, import.meta.url), "utf8");
@@ -58,6 +69,8 @@ test("builds a unique, shareable detail page for every apartment", async () => {
   const withPhoto = await readFile(new URL("../pages-dist/apartments/atlantic-bridgemill/index.html", import.meta.url), "utf8");
   assert.match(withPhoto, /property="og:image" content="https:\/\//i);
   assert.doesNotMatch(withPhoto, /property="og:image" content="https:\/\/williamjblodgett\.github\.io\/Apartment4Bella\/og\.png"/i);
+  assert.match(withPhoto, /1BR no public price/i);
+  assert.doesNotMatch(withPhoto, /1BR not offered/i);
 
 });
 

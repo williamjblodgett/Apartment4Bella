@@ -5,7 +5,7 @@ import rawData from "./apartments.json";
 import expandedData from "./apartments-expanded.json";
 
 type Price = { min: number | null; max: number | null; note: string; observedAt?: string };
-type Review = { rating: number | null; count: number; source: string; url: string; observedAt?: string };
+type Review = { rating: number | null; count: number | null; source: string; url: string | null; observedAt?: string };
 type GalleryImage = { url: string; sourceUrl: string; alt: string };
 type SortKey = "drive" | "price" | "rating" | "reviews" | "deals";
 type Apartment = {
@@ -21,6 +21,10 @@ type Apartment = {
   driveMin: number;
   driveMax: number;
   commuteNote: string;
+  routeObservedAt?: string;
+  routeSource?: string;
+  routeSourceUrl?: string;
+  withinDriveLimit?: boolean;
   oneBed: Price;
   twoBed: Price;
   priceBasis: string;
@@ -28,6 +32,8 @@ type Apartment = {
   deal: string | null;
   dealDetail: string;
   dealExpires: string | null;
+  dealLastSeenAt?: string;
+  dealStatus?: "confirmed" | "candidate_mismatch" | "needs_review" | "expired";
   amenities: string[];
   security: string[];
   petCost: string;
@@ -44,21 +50,31 @@ type Apartment = {
   verifiedAt: string;
   lastSourceCheck?: string;
   sourceCheckStatus?: "verified" | "reachable_unparsed" | "blocked" | "error" | "reachable" | "unreachable";
+  auditedAt?: string;
+  auditStatus?: "official" | "source_conflict" | "limited_public_data";
+  auditNote?: string;
 };
 
-const apartments = [...rawData.apartments, ...expandedData.apartments] as Apartment[];
+const allApartments = [...rawData.apartments, ...expandedData.apartments] as Apartment[];
+const apartments = allApartments.filter((apartment) => apartment.withinDriveLimit !== false && apartment.driveMax <= 40);
 const school = rawData.meta.school;
 const crimeContext = rawData.meta.crimeContext;
 const sourceCheckDate = rawData.meta.checkedAt.slice(0, 10);
 const automation = rawData.meta.automation;
+const manualAudit = (rawData.meta as typeof rawData.meta & {
+  manualAudit?: { completedAt: string; communitiesReviewed: number; scope: string; limitation: string };
+}).manualAudit;
 const closeCount = apartments.filter((apartment) => apartment.driveMax <= 15).length;
+const conflictCount = apartments.filter((apartment) => apartment.auditStatus === "source_conflict").length;
+const limitedDataCount = apartments.filter((apartment) => apartment.auditStatus === "limited_public_data").length;
 
 const money = (value: number) =>
-  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(value);
+  new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 2 }).format(value);
 
 const priceRange = (price: Price) => {
-  if (price.min === null) return "Not offered";
-  return price.max && price.max !== price.min ? `${money(price.min)}–${money(price.max)}` : `${money(price.min)}+`;
+  if (price.min === null) return /not offered|no 1br product/i.test(price.note) ? "Not offered" : "No public price";
+  if (price.max === price.min) return money(price.min);
+  return price.max !== null ? `${money(price.min)}–${money(price.max)}` : `${money(price.min)}+`;
 };
 
 const directionsUrl = (address: string) =>
@@ -128,7 +144,11 @@ function confidenceCopy(value: Apartment["priceConfidence"]) {
 
 function hasCurrentDeal(apartment: Apartment) {
   if (!apartment.deal || apartment.deal.toLowerCase().startsWith("ask")) return false;
-  return !apartment.dealExpires || apartment.dealExpires >= sourceCheckDate;
+  if (["candidate_mismatch", "needs_review", "expired"].includes(apartment.dealStatus ?? "")) return false;
+  if (apartment.dealExpires) return apartment.dealExpires >= sourceCheckDate;
+  const lastSeen = apartment.dealLastSeenAt || apartment.auditedAt || apartment.verifiedAt;
+  const ageDays = (new Date(`${sourceCheckDate}T12:00:00Z`).getTime() - new Date(`${lastSeen}T12:00:00Z`).getTime()) / 86_400_000;
+  return ageDays <= 7;
 }
 
 function sourceStatusCopy(apartment: Apartment) {
@@ -146,11 +166,19 @@ function sourceStatusCopy(apartment: Apartment) {
   return `Price snapshot ${observedDate}`;
 }
 
+function auditStatusCopy(apartment: Apartment) {
+  if (!apartment.auditedAt) return null;
+  const date = formatDate(apartment.auditedAt);
+  if (apartment.auditStatus === "source_conflict") return `Manually rechecked ${date} · sources differ`;
+  if (apartment.auditStatus === "limited_public_data") return `Manually rechecked ${date} · limited public data`;
+  return `Manually rechecked ${date}`;
+}
+
 function compareApartments(a: Apartment, b: Apartment, sort: SortKey, bedrooms: string) {
   const commuteTieBreak = () => a.driveMax - b.driveMax || a.driveMin - b.driveMin || a.distanceMiles - b.distanceMiles || a.name.localeCompare(b.name);
   if (sort === "price") return priceFor(a, bedrooms) - priceFor(b, bedrooms) || commuteTieBreak();
-  if (sort === "rating") return (b.review.rating ?? -1) - (a.review.rating ?? -1) || b.review.count - a.review.count || commuteTieBreak();
-  if (sort === "reviews") return b.review.count - a.review.count || (b.review.rating ?? -1) - (a.review.rating ?? -1) || commuteTieBreak();
+  if (sort === "rating") return (b.review.rating ?? -1) - (a.review.rating ?? -1) || (b.review.count ?? 0) - (a.review.count ?? 0) || commuteTieBreak();
+  if (sort === "reviews") return (b.review.count ?? 0) - (a.review.count ?? 0) || (b.review.rating ?? -1) - (a.review.rating ?? -1) || commuteTieBreak();
   if (sort === "deals") return Number(hasCurrentDeal(b)) - Number(hasCurrentDeal(a)) || commuteTieBreak();
   return commuteTieBreak();
 }
@@ -214,7 +242,7 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
               <div className="detail-commute"><span>EST. DRIVE</span><strong>{apartment.driveMin}–{apartment.driveMax} min</strong><small>to Sixes Elementary</small></div>
               <div><span>1 BEDROOM</span><strong>{priceRange(apartment.oneBed)}</strong><small>{apartment.priceBasis}</small></div>
               <div><span>2 BEDROOM</span><strong>{priceRange(apartment.twoBed)}</strong><small>{apartment.priceBasis}</small></div>
-              <a href={apartment.review.url} target="_blank" rel="noreferrer"><span>RESIDENT REVIEWS</span><strong>{apartment.review.rating !== null ? `${apartment.review.rating.toFixed(1)} ★` : "Not rated"}</strong><small>{apartment.review.count ? `${apartment.review.count} on ${apartment.review.source.replace(" snapshot", "")}` : "Open review source"}</small></a>
+              {apartment.review.url ? <a href={apartment.review.url} target="_blank" rel="noreferrer"><span>RESIDENT REVIEWS</span><strong>{apartment.review.rating !== null ? `${apartment.review.rating.toFixed(1)} ★` : "Not rated"}</strong><small>{apartment.review.count ? `${apartment.review.count} on ${apartment.review.source.replace(" snapshot", "")}` : "Open review source"}</small></a> : <div><span>RESIDENT REVIEWS</span><strong>Unavailable</strong><small>No live review source</small></div>}
             </div>
 
             <div className="detail-signals">
@@ -228,7 +256,8 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
               <a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Check live drive ↗</a>
               <button type="button" className={isSaved ? "detail-save active" : "detail-save"} onClick={onToggleSaved}>{isSaved ? "♥ Saved" : "♡ Save this place"}</button>
             </div>
-            <p className="detail-freshness">{sourceStatusCopy(apartment)} · Always confirm the final quote with the leasing office.</p>
+            <p className="detail-freshness">{auditStatusCopy(apartment)} · {sourceStatusCopy(apartment)} · Always confirm the final quote with the leasing office.</p>
+            {apartment.auditNote && <p className="detail-freshness">{apartment.auditNote}</p>}
           </div>
         </section>
 
@@ -241,7 +270,7 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
                 <article><span>ONE BEDROOM</span><strong>{priceRange(apartment.oneBed)}</strong><p>{apartment.oneBed.note}</p></article>
                 <article><span>TWO BEDROOM</span><strong>{priceRange(apartment.twoBed)}</strong><p>{apartment.twoBed.note}</p></article>
               </div>
-              <div className="affordability-detail"><b>{valueScore}</b><div><strong>{affordabilityLabel(valueScore)}</strong><span>Starting-rent comparison within this researched directory—not a personal affordability determination.</span></div></div>
+              <div className="affordability-detail"><b>REL.</b><div><strong>{affordabilityLabel(valueScore)}</strong><span>Starting-rent comparison within this researched directory—not a complete effective-rent or personal-affordability determination.</span></div></div>
               <p className="source-note">Pricing basis: {apartment.priceBasis}. Source: <a href={apartment.pricingUrl} target="_blank" rel="noreferrer">{apartment.priceSource} ↗</a></p>
             </section>
 
@@ -264,7 +293,8 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
               <h2>The school drive</h2>
               <div className="commute-callout"><b>{apartment.driveMin}–{apartment.driveMax}</b><span>estimated minutes</span></div>
               <p>{apartment.commuteNote}</p>
-              <p>The range is a planning estimate without guaranteed live traffic. Check the route at the actual weekday school-arrival time before signing a lease.</p>
+              <p>The range is a no-traffic baseline plus a 30% planning buffer—not a live-traffic promise. Check the route at the actual weekday school-arrival time before signing a lease.</p>
+              {apartment.routeSourceUrl && <p className="source-note">Route source: <a href={apartment.routeSourceUrl} target="_blank" rel="noreferrer">{apartment.routeSource} ↗</a></p>}
               <div className="inline-actions"><a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Open live Google directions ↗</a><a href={locationUrl(apartment.address)} target="_blank" rel="noreferrer">Open location map ↗</a></div>
             </section>
           </div>
@@ -277,7 +307,7 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
               <a href={apartment.pricingUrl} target="_blank" rel="noreferrer">Current floor plans & pricing ↗</a>
               <a href={photoPageUrl} target="_blank" rel="noreferrer">Official photos ↗</a>
               <a href={apartment.amenitiesUrl} target="_blank" rel="noreferrer">Complete amenities ↗</a>
-              <a href={apartment.review.url} target="_blank" rel="noreferrer">Read resident reviews ↗</a>
+              {apartment.review.url ? <a href={apartment.review.url} target="_blank" rel="noreferrer">Read resident reviews ↗</a> : <span>Live review source unavailable</span>}
               <a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Check live commute ↗</a>
             </section>
 
@@ -403,7 +433,7 @@ export default function Home() {
         </nav>
         <div className="header-meta">
           <span className={`live-dot ${automation.reachable < automation.checked ? "partial" : ""}`} aria-hidden="true" />
-          Daily check {formatDate(sourceCheckDate)} · {automation.reachable}/{automation.checked} pages reached
+          {manualAudit ? `Manual audit ${formatDate(manualAudit.completedAt)} · ${manualAudit.communitiesReviewed}/${allApartments.length}; daily check ${formatDate(sourceCheckDate)} · ${automation.reachable}/${automation.checked} reached` : `Daily check ${formatDate(sourceCheckDate)} · ${automation.reachable}/${automation.checked} pages reached`}
           <a className="saved-button" href={saved.length ? "#saved" : "#matches"}>♥ Saved <span>{saved.length}</span></a>
         </div>
       </header>
@@ -412,11 +442,11 @@ export default function Home() {
         <div className="hero-copy">
           <div className="eyebrow">APARTMENTS NEAR SIXES ELEMENTARY · CANTON, GA</div>
           <h1>Closer to school.<br /><em>Clearer on cost.</em></h1>
-          <p>A researched shortlist of 1–2 bedroom apartments within a conservative 40-minute drive—organized by commute, rent, perks, reviews, and honest area context.</p>
+          <p>A researched shortlist of 1–2 bedroom apartments whose no-traffic route plus a 30% planning buffer remains under 40 minutes—organized by commute, rent, perks, reviews, and honest area context.</p>
           <div className="hero-proof">
             <span><b>{apartments.length}</b> communities researched</span>
             <span><b>{closeCount}</b> within ~15 minutes</span>
-            <span><b>{automation.reachable}/{automation.checked}</b> official pages reached in the latest daily check</span>
+            <span><b>{manualAudit?.communitiesReviewed ?? 0}/{allApartments.length}</b> records manually rechecked {manualAudit ? formatDate(manualAudit.completedAt) : ""}</span>
           </div>
         </div>
 
@@ -461,12 +491,12 @@ export default function Home() {
         <div><span>RESULTS</span><strong>{matches.length}</strong><small>inside the selected drive</small></div>
         <div><span>LOWEST LISTED</span><strong>{cheapest ? `${money(cheapest)}+` : "—"}</strong><small>{bedrooms === "2" ? "2 bedroom" : bedrooms === "1" ? "1 bedroom" : "eligible floor plan"}</small></div>
         <div><span>CURRENT DEALS</span><strong>{dealCount}</strong><small>always confirm eligibility</small></div>
-        <div className="snapshot-note"><b>Commutes are conservative estimates.</b><small>Use each card’s live-directions link at the actual weekday time.</small></div>
+        <div className="snapshot-note"><b>Commutes are planning estimates.</b><small>The upper number adds 30% to a refreshed no-traffic route. Use live directions at the actual weekday time.</small></div>
       </section>
 
       <section className="coverage-banner" aria-label="Directory coverage">
-        <span>SECOND-PASS COVERAGE</span>
-        <div><strong>A broad community directory—not every active rental unit.</strong><p>It covers researched apartment communities with public 1–2 bedroom information inside the 40-minute screen. Private rentals, newly posted units, and properties without public data can still be missing.</p></div>
+        <span>MANUAL AUDIT</span>
+        <div><strong>{manualAudit ? `${manualAudit.communitiesReviewed} community records rechecked ${formatDate(manualAudit.completedAt)}—not every active rental unit.` : "A broad community directory—not every active rental unit."}</strong><p>Dynamic data can change immediately. {conflictCount} records show a source conflict and {limitedDataCount} disclose limited public data; private rentals and newly posted units can still be missing.</p></div>
         <a href="#sources">See the accuracy rules ↓</a>
       </section>
 
@@ -478,7 +508,7 @@ export default function Home() {
             <div className="sort-buttons" role="group">
               {([
                 ["drive", "Closest"],
-                ["price", bedrooms === "1" ? "Lowest 1BR" : bedrooms === "2" ? "Lowest 2BR" : "Lowest rent"],
+                ["price", bedrooms === "1" ? "Lowest listed 1BR" : bedrooms === "2" ? "Lowest listed 2BR" : "Lowest listed start"],
                 ["rating", "Highest stars"],
                 ["reviews", "Most reviewed"],
                 ["deals", "Deals first"],
@@ -530,11 +560,11 @@ export default function Home() {
                     <div className="tags">{apartment.amenities.slice(0, 4).map((tag) => <span key={tag}>{tag}</span>)}</div>
 
                     <div className="score-row">
-                      <div className="value-score"><b>{valueScore}</b><span><strong>{affordabilityLabel(valueScore)}</strong>Starting-rent affordability</span></div>
-                      <a className="review-score" href={apartment.review.url} target="_blank" rel="noreferrer">
+                      <div className="value-score"><b>REL.</b><span><strong>{affordabilityLabel(valueScore)}</strong>Starting-rent position</span></div>
+                      {apartment.review.url ? <a className="review-score" href={apartment.review.url} target="_blank" rel="noreferrer">
                         <b>{apartment.review.rating !== null ? `${apartment.review.rating.toFixed(1)} ★` : "N/A"}</b>
                         <span>{apartment.review.count ? `${apartment.review.count} reviews · ${apartment.review.source.replace(" snapshot", "")}` : "No current review rating"}</span>
-                      </a>
+                      </a> : <div className="review-score"><b>N/A</b><span>Review source unavailable</span></div>}
                       <a className="details-link" href={detailPageUrl(apartment.id)}>View property page →</a>
                     </div>
 
@@ -542,7 +572,7 @@ export default function Home() {
                       <a className="primary-link" href={detailPageUrl(apartment.id)}>View full page →</a>
                       <a href={apartment.officialUrl} target="_blank" rel="noreferrer">Official site ↗</a>
                       <a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Check live drive ↗</a>
-                      <span>{sourceStatusCopy(apartment)}</span>
+                      <span>{auditStatusCopy(apartment)} · {sourceStatusCopy(apartment)}</span>
                     </div>
                   </div>
                 </article>
@@ -566,7 +596,7 @@ export default function Home() {
               ))}
               {selectedApartment && <div className="map-note"><span>{selectedApartment.city} · {selectedApartment.distanceMiles.toFixed(1)} mi</span><b>{selectedApartment.name}</b><small>{selectedApartment.driveMin}–{selectedApartment.driveMax} min estimated</small><a href={directionsUrl(selectedApartment.address)} target="_blank" rel="noreferrer">Live directions ↗</a></div>}
             </div>
-            <p className="map-disclaimer">Pins use geocoded addresses; roads are simplified. Drive ranges are static estimates without live traffic.</p>
+            <p className="map-disclaimer">Pins use geocoded addresses; roads are simplified. Routes use OSRM/OpenStreetMap with no live traffic; upper estimates add a 30% buffer.</p>
           </aside>
         </div>
       </section>
@@ -585,9 +615,9 @@ export default function Home() {
           <p>The goal is a useful comparison—not false precision. Every signal is labeled by source and scope so Bella can decide what matters to her.</p>
         </div>
         <div className="method-grid">
-          <article><span>01</span><h3>Drive range</h3><p>A conservative static route range to Sixes Elementary. It is a first-pass filter, not a traffic promise. Every card opens a live Google Maps route.</p></article>
+          <article><span>01</span><h3>Drive range</h3><p>A refreshed OSRM/OpenStreetMap no-traffic route plus a 30% planning buffer. It is a first-pass filter, not a traffic promise. Every card opens a live Google Maps route.</p></article>
           <article><span>02</span><h3>Starting-rent affordability</h3><p>Compares the lowest eligible advertised starting price with the median of the full {apartments.length}-community directory. Fee disclosures and price bases differ, so this is a first-pass signal—not a complete effective-rent or personal-affordability test.</p></article>
-          <article><span>03</span><h3>Review snapshot</h3><p>A dated third-party rating and count, linked to the live review page. A high score with very few reviews is shown as such—never treated like a certainty.</p></article>
+          <article><span>03</span><h3>Review snapshot</h3><p>When a current property review page is available, its dated rating and count are shown with a direct link. A high score with very few reviews is shown as such—never treated like a certainty.</p></article>
           <article><span>04</span><h3>Reported-crime context</h3><p>GBI county data shown consistently for context. It cannot measure a property, block, or personal risk. Security features are listed separately for tour verification.</p></article>
         </div>
       </section>
@@ -601,9 +631,9 @@ export default function Home() {
       <section className="sources" id="sources">
         <div><span className="section-kicker">FRESHNESS & SOURCES</span><h2>Built to be checked, not blindly trusted.</h2></div>
         <div className="source-columns">
-          <div><h3>Daily apartment check</h3><p>The GitHub workflow attempts every official pricing page each morning, records which pages were reached or blocked, preserves the last curated price, and republishes the site. Generic price hints are queued for review rather than automatically replacing trusted rents.</p></div>
+          <div><h3>Manual audit + daily check</h3><p>{manualAudit ? `${manualAudit.communitiesReviewed} community records were manually rechecked on ${formatDate(manualAudit.completedAt)}. ` : ""}The GitHub workflow then attempts each configured primary pricing/source page every morning, records which pages were reached or blocked, preserves the last curated price, and republishes the site. Generic price hints are queued for review rather than automatically replacing trusted rents; undated deals stop appearing as current after seven days unless reconfirmed.</p></div>
           <div><h3>Official links stay primary</h3><p>Every community links directly to its property, pricing, amenity, photo, and live-directions pages. Call the leasing office before paying any fee or relying on a concession.</p></div>
-          <div><h3>Coverage & reviews</h3><p>This is a researched community directory, not a guaranteed feed of every individual unit. Stable official-site images are embedded; otherwise the card links to the property gallery. Ratings are dated snapshots with direct review links.</p></div>
+          <div><h3>Coverage & reviews</h3><p>This is a researched community directory, not a guaranteed feed of every individual unit. Stable property/management-site images are embedded with provenance notes; otherwise the card links to the property gallery. Ratings are dated snapshots with direct review links when one remains available.</p></div>
         </div>
         <div className="source-list">
           <a href="https://gbi.georgia.gov/services/crime-statistics" target="_blank" rel="noreferrer">GBI crime statistics ↗</a>

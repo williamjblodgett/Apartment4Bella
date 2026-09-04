@@ -1,9 +1,9 @@
 {
   "meta": {
-    "checkedAt": "2026-09-04T15:46:01.592Z",
+    "checkedAt": "2026-09-04T17:05:25.441Z",
     "curatedAt": "2026-09-04",
     "discoveryCheckedAt": "2026-09-04",
-    "coverageDefinition": "Researched apartment communities with public one- or two-bedroom information and a conservative estimated drive ceiling of 40 minutes to Sixes Elementary. This is not a guaranteed feed of every individual available unit.",
+    "coverageDefinition": "Researched apartment communities with public 1BR or 2BR information whose refreshed OSRM/OpenStreetMap no-traffic route plus a 30% planning buffer is at most 40 minutes to Sixes Elementary. This is not live traffic and is not a guaranteed feed of every individual available unit.",
     "school": {
       "name": "Sixes Elementary School",
       "address": "20 Ridge Road, Canton, GA 30114",
@@ -21,18 +21,30 @@
     },
     "automation": {
       "checked": 46,
-      "reachable": 25,
+      "reachable": 29,
       "verified": 0,
-      "blocked": 18,
-      "errors": 3,
+      "blocked": 17,
+      "errors": 0,
       "priceFieldsVerified": 0,
       "pricesChanged": 0,
-      "priceCandidatesFound": 12,
-      "dealsDetected": 8,
+      "priceCandidatesFound": 17,
+      "dealsDetected": 9,
+      "routeRefresh": {
+        "status": "complete",
+        "updated": 46,
+        "reviewNeeded": 0,
+        "observedAt": "2026-09-04"
+      },
       "status": "partial",
-      "method": "Daily best-effort checks of official property pricing pages. Generic parser findings are saved only as review candidates and never overwrite curated rents; only an approved structured adapter may publish a new price."
+      "method": "Daily best-effort checks of configured primary pricing/source pages plus one refreshed OSRM/OpenStreetMap route matrix. Generic price hints are review-only and never overwrite curated rents; undated deals stop displaying as current after seven days unless reconfirmed."
     },
-    "lastSuccessfulCheckAt": "2026-09-04T15:46:01.592Z"
+    "lastSuccessfulCheckAt": "2026-09-04T17:05:25.441Z",
+    "manualAudit": {
+      "completedAt": "2026-09-04",
+      "communitiesReviewed": 46,
+      "scope": "Identity/address, public 1BR/2BR pricing and availability, price basis, deals, fees, pet terms, amenities/access features, review snapshots, source links, available image reachability/provenance notes, and route inputs.",
+      "limitation": "This is a dated source audit, not a permanent accuracy guarantee. Rents, availability, fees, promotions, and reviews can change after the observation time; conflicting or blocked sources are labeled."
+    }
   },
   "apartments": [
     {
@@ -43,26 +55,26 @@
       "address": "1000 Preston Glen Circle, Canton, GA 30114",
       "lat": 34.190646,
       "lng": -84.539535,
-      "distanceMiles": 2.4,
-      "driveMin": 5,
+      "distanceMiles": 2.1,
+      "driveMin": 6,
       "driveMax": 7,
-      "commuteNote": "Closest option in this shortlist; estimate varies with Ridge Road traffic.",
+      "commuteNote": "2.1 mi / 6 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1433,
+        "min": null,
         "max": null,
-        "note": "Official live floor-plan feed; some layouts call for price.",
+        "note": "1BR plans exist, but no public price is currently shown; call for availability.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1320,
+        "min": 1549,
         "max": 1870,
-        "note": "Dynamic unit pricing; verify the exact floor plan.",
+        "note": "Official available-unit starting-rent range.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
       "deal": "1 month free",
-      "dealDetail": "Reported for move-ins by September 12, 2026; lease and unit restrictions apply. Confirm before relying on it.",
+      "dealDetail": "Community-supplied listing: move in by September 12, 2026; unit and lease restrictions apply. The official site separately offers half off application/admin fees when a prospect tours and applies within 24 hours, credited at move-in; no public end date was shown.",
       "dealExpires": "2026-09-12",
       "amenities": [
         "Resort pool",
@@ -73,10 +85,10 @@
         "Garages"
       ],
       "security": [
-        "Gated entry reported by listings",
+        "Gated entry",
         "24-hour emergency maintenance"
       ],
-      "petCost": "Up to 2 pets; $300 fee + $25/month per pet; breed restrictions.",
+      "petCost": "Up to 2 pets, no weight limit; $300 fee + $25/month per pet; breed restrictions.",
       "fees": [
         "Pet: $300 one-time per pet",
         "Pet rent: $25/month per pet",
@@ -97,7 +109,19 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The official site currently asks visitors to call for 1BR pricing. The 2BR range is official; the rent concession is community-supplied.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "the-darby",
@@ -107,10 +131,10 @@
       "address": "100 Holly Park Court, Holly Springs, GA 30115",
       "lat": 34.152888,
       "lng": -84.507832,
-      "distanceMiles": 4,
-      "driveMin": 7,
-      "driveMax": 9,
-      "commuteNote": "Short I-575/Holly Springs Parkway route; estimate excludes unusual congestion.",
+      "distanceMiles": 4.4,
+      "driveMin": 10,
+      "driveMax": 13,
+      "commuteNote": "4.4 mi / 10 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1220,
         "max": 1409,
@@ -140,11 +164,14 @@
         "Package lockers",
         "24-hour emergency maintenance"
       ],
-      "petCost": "Up to 2 pets; first pet $250 fee + $250 deposit, second $150 + $150; $25/month wording should be confirmed.",
+      "petCost": "Up to 2 pets; first pet $250 fee + $250 deposit, second $150 fee + $150 deposit; $25/month per pet; aggressive or bite-history dogs excluded.",
       "fees": [
+        "Application: $100 per applicant",
+        "Administration: $175 per apartment",
+        "Deposit: $500",
         "First pet: $250 fee + $250 deposit",
         "Second pet: $150 fee + $150 deposit",
-        "Pet rent: confirm whether per pet"
+        "Pet rent: $25/month per pet"
       ],
       "review": {
         "rating": 4.8,
@@ -164,7 +191,15 @@
       "sourceCheckStatus": "reachable_unparsed",
       "detectedDeal": null,
       "lastSourceSuccess": "2026-09-04",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Current rents and property details were rechecked; the lower 1BR is marked coming soon.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "sixes-ridge",
@@ -174,27 +209,27 @@
       "address": "4416 Holly Springs Parkway, Holly Springs, GA 30115",
       "lat": 34.151971,
       "lng": -84.510277,
-      "distanceMiles": 4.1,
-      "driveMin": 7,
-      "driveMax": 9,
-      "commuteNote": "Very close to the school by Sixes Road; check the morning peak before touring.",
+      "distanceMiles": 4.2,
+      "driveMin": 9,
+      "driveMax": 12,
+      "commuteNote": "4.2 mi / 9 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1375,
+        "min": 1365,
         "max": 1456,
-        "note": "Official current advertised range; verify the exact unit and term.",
+        "note": "Official available-unit starting-rent range.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1660,
+        "min": 1670,
         "max": 2320,
-        "note": "Official current advertised range; top end includes carriage-home layouts.",
+        "note": "Official available-unit range; the upper end includes carriage-home layouts.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official Equity Apartments availability",
-      "deal": "25% Off Your First Month",
-      "dealDetail": "Detected on the official pricing page on 2026-09-04. Confirm the eligible unit, lease term, move-in deadline, and full written terms.",
-      "dealExpires": null,
+      "deal": "Up to 2 months free",
+      "dealDetail": "Community-supplied listing: 1.5 months free plus an additional half month for move-in by September 30, 2026; new residents only, transfers excluded, and other restrictions apply.",
+      "dealExpires": "2026-09-30",
       "amenities": [
         "Saltwater pool",
         "Nature trail & pond",
@@ -205,9 +240,9 @@
       ],
       "security": [
         "Smart-home features",
-        "Gated access reported by current listings"
+        "On-site management"
       ],
-      "petCost": "Dogs and cats; $25/month; $350 dog fee shown; live listings show up to 3 pets—confirm details.",
+      "petCost": "Community-supplied terms: up to 3 pets; $25/month per pet; $350 dog fee and $0 cat fee shown; confirm before applying.",
       "fees": [
         "Dog fee shown: $350",
         "Pet rent: $25/month",
@@ -229,8 +264,6 @@
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "detectedDeal": "25% off your first month",
-      "dealLastSeenAt": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "priceReviewCandidates": [
         {
@@ -245,7 +278,16 @@
           "observedAt": "2026-09-04",
           "bedroom": 2
         }
-      ]
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Official rents were rechecked. Promotion and pet terms are from the current community-supplied listing.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true,
+      "dealLastSeenAt": "2026-09-04"
     },
     {
       "id": "linz-holly-springs",
@@ -255,10 +297,10 @@
       "address": "4501 Holly Springs Parkway, Holly Springs, GA 30115",
       "lat": 34.151282,
       "lng": -84.510329,
-      "distanceMiles": 4.2,
-      "driveMin": 8,
-      "driveMax": 10,
-      "commuteNote": "Short route to Sixes Elementary; real-time traffic can change the estimate.",
+      "distanceMiles": 4.3,
+      "driveMin": 10,
+      "driveMax": 13,
+      "commuteNote": "4.3 mi / 10 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1624,
         "max": 1844,
@@ -327,7 +369,15 @@
           "observedAt": "2026-09-04",
           "bedroom": 2
         }
-      ]
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Current available-unit ranges, promotion, amenities, access features, pets, and review snapshot were rechecked.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "heights-holly-springs",
@@ -337,24 +387,24 @@
       "address": "1151 Heights Parkway, Holly Springs, GA 30115",
       "lat": 34.145469,
       "lng": -84.51029,
-      "distanceMiles": 5,
-      "driveMin": 9,
-      "driveMax": 11,
-      "commuteNote": "New community near I-575; weekday school-arrival traffic may add time.",
+      "distanceMiles": 4,
+      "driveMin": 10,
+      "driveMax": 13,
+      "commuteNote": "4.0 mi / 10 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1550,
         "max": 2540,
-        "note": "Most standard 1BR layouts were $1,550–$1,845; $2,540 is an oversized 1,065-sf plan.",
+        "note": "Official plan-start snapshot; linked inventory simultaneously showed about $1,685–$2,570.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 2030,
         "max": 2405,
-        "note": "Official floor-plan range.",
+        "note": "Official plan-start snapshot; linked inventory simultaneously showed about $1,980–$2,405.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
-      "priceSource": "Official property availability",
+      "priceSource": "Official plan-start snapshot; linked inventory conflicts",
       "deal": "6 weeks free + waived fees",
       "dealDetail": "Advertised as six weeks free plus waived application and administration fees. Terms and selected homes apply.",
       "dealExpires": null,
@@ -367,7 +417,7 @@
         "Quartz finishes"
       ],
       "security": [
-        "Controlled access",
+        "Controlled access reported by the community-supplied listing",
         "Secure package room"
       ],
       "petCost": "Up to 2 pets; listings report $450 one-time + $30/month per pet; verify with the official portal.",
@@ -388,10 +438,22 @@
       "amenitiesUrl": "https://www.heightshollysprings.com/amenities",
       "imageUrl": "https://irp.cdn-website.com/0a9c02fa/dms3rep/multi/opt/Pool%2BEve%2B03-1a36d639-1920w.jpg",
       "imageSource": "Official property website",
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "source_conflict",
+      "auditNote": "Official plan-start pricing and the linked current inventory differed during the audit; call for an exact unit quote.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "the-indigo",
@@ -401,26 +463,26 @@
       "address": "300 Prominence Point Parkway, Canton, GA 30114",
       "lat": 34.185478,
       "lng": -84.518886,
-      "distanceMiles": 5.8,
-      "driveMin": 11,
-      "driveMax": 14,
-      "commuteNote": "Prominence Point/I-575 area; estimate should be checked at the actual school-arrival time.",
+      "distanceMiles": 3.2,
+      "driveMin": 9,
+      "driveMax": 11,
+      "commuteNote": "3.2 mi / 9 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1560,
-        "max": 1590,
-        "note": "Official featured-unit feed; syndication showed lower figures, so verify.",
+        "max": 1650,
+        "note": "Official featured-unit range; a community-supplied feed started at $1,429.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1699,
         "max": 2030,
-        "note": "Official featured-unit feed; other public feeds differed.",
+        "note": "Official featured-unit range; other public feeds differed.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official featured availability",
       "deal": "Up to 8 weeks free",
-      "dealDetail": "Advertised on select homes leased by September 18, 2026. Lease-length and unit restrictions apply.",
+      "dealDetail": "Community-supplied listing: up to eight weeks free on select homes leased by September 18, 2026; confirm lease length and unit eligibility.",
       "dealExpires": "2026-09-18",
       "amenities": [
         "Gated/key-fob entry",
@@ -431,8 +493,8 @@
         "Quartz finishes"
       ],
       "security": [
-        "Gated community",
-        "Key-fob building access"
+        "Gated community reported by the community-supplied listing",
+        "Key-fob access reported by the community-supplied listing"
       ],
       "petCost": "Up to 2 pets; $400 one-time per pet + $25/month per pet; breed restrictions.",
       "fees": [
@@ -450,15 +512,26 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.liveattheindigo.com/",
-      "pricingUrl": "https://www.liveattheindigo.com/floorplans",
+      "pricingUrl": "https://www.liveattheindigo.com/floor-plans",
       "amenitiesUrl": "https://www.liveattheindigo.com/amenities",
       "imageUrl": "https://cdn.prod.website-files.com/664c038971648304b3da479a/664c05a4085dc8d11e53fe29_dsc04134.webp",
       "imageSource": "Official property website",
       "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "error",
-      "sourceCheckError": "HTTP 404"
+      "sourceCheckStatus": "reachable_unparsed",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "lastSourceSuccess": "2026-09-04",
+      "auditStatus": "source_conflict",
+      "auditNote": "The official feed and community-supplied inventory show different starting rents; both are linked for verification.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "avonlea-springs",
@@ -468,10 +541,10 @@
       "address": "640 Lakeside Drive, Canton, GA 30115",
       "lat": 34.1917,
       "lng": -84.49882,
-      "distanceMiles": 7,
+      "distanceMiles": 5.2,
       "driveMin": 12,
-      "driveMax": 15,
-      "commuteNote": "East of I-575; allow extra time on local roads during peak hours.",
+      "driveMax": 16,
+      "commuteNote": "5.2 mi / 12 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1620,
         "max": 1795,
@@ -503,9 +576,11 @@
       ],
       "petCost": "Up to 2 pets; $400 first + $100 second; $15/month per pet; 74-lb combined limit and breed restrictions.",
       "fees": [
+        "Mandatory water/trash/pest package: $57–$67/month",
+        "Utility-account activation: $30",
         "Pet fee: $400 first + $100 second",
         "Pet rent: $15/month each",
-        "Separate pet application required"
+        "Pet screening: $30"
       ],
       "review": {
         "rating": null,
@@ -525,7 +600,16 @@
       "sourceCheckStatus": "reachable_unparsed",
       "detectedDeal": null,
       "lastSourceSuccess": "2026-09-04",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Rents, promotion, gated entry, pet terms, and mandatory-fee disclosure were rechecked.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "heights-ridgewalk",
@@ -535,26 +619,26 @@
       "address": "1003 Ridgewalk Parkway, Woodstock, GA 30188",
       "lat": 34.12535,
       "lng": -84.529106,
-      "distanceMiles": 6,
+      "distanceMiles": 5.3,
       "driveMin": 12,
-      "driveMax": 18,
-      "commuteNote": "Static route estimate; I-575 traffic can widen the range.",
+      "driveMax": 16,
+      "commuteNote": "5.3 mi / 12 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1537,
-        "max": null,
-        "note": "Recent Apartments.com snapshot; official site did not expose a simple price.",
+        "max": 1762,
+        "note": "Community-supplied available-unit base-rent range.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 2110,
-        "max": 2336,
-        "note": "Recent Apartments.com available-unit snapshot.",
+        "max": 2356,
+        "note": "Community-supplied available-unit base-rent range.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Recent advertised base rent",
       "priceSource": "Apartments.com snapshot—verify on official site",
       "deal": "Up to 4 weeks free",
-      "dealDetail": "Reported if leased within 48 hours of touring. Confirm participating unit, term, and current expiration.",
+      "dealDetail": "Community-supplied offer: up to four weeks free when leasing within 48 hours of touring; confirm the participating unit and term.",
       "dealExpires": null,
       "amenities": [
         "9,000-sf pool deck",
@@ -570,9 +654,15 @@
       ],
       "petCost": "Up to 2 pets, 75 lb each; $350 one-time + $30/month each; breed restrictions.",
       "fees": [
-        "Pet fee: $350",
-        "Pet rent: $30/month each",
-        "Lease timing required for current offer"
+        "Mandatory fixed fees: $81.59/month",
+        "Utility billing: $10/month",
+        "Liability: $16.59/month",
+        "Amenity: $20/month",
+        "Trash: $30/month",
+        "Pest: $5/month",
+        "Application: $85 per applicant",
+        "Administration: $200",
+        "Standard deposit: $250; conditional deposit may be $500–$3,500"
       ],
       "review": {
         "rating": 4.7,
@@ -582,15 +672,26 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.heightsridgewalk.com/",
-      "pricingUrl": "https://www.heightsridgewalk.com/floorplans",
+      "pricingUrl": "https://www.heightsridgewalk.com/floor-plans",
       "amenitiesUrl": "https://www.heightsridgewalk.com/amenities",
       "imageUrl": "https://irp.cdn-website.com/b585ae0c/dms3rep/multi/opt/Ridgewalk062325_052-81788cf8-1920w.jpg",
       "imageSource": "Official property website",
       "priceConfidence": "snapshot",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "error",
-      "sourceCheckError": "HTTP 404"
+      "sourceCheckStatus": "reachable_unparsed",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "lastSourceSuccess": "2026-09-04",
+      "auditStatus": "limited_public_data",
+      "auditNote": "Prices, deal, fees, and reviews are a current community-supplied snapshot; the official site confirms amenities and pet rules.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "view-at-woodstock",
@@ -600,10 +701,10 @@
       "address": "900 View Drive, Woodstock, GA 30189",
       "lat": 34.082623,
       "lng": -84.547464,
-      "distanceMiles": 8.7,
-      "driveMin": 16,
+      "distanceMiles": 8.9,
+      "driveMin": 17,
       "driveMax": 23,
-      "commuteNote": "Drive estimate has no live traffic; verify around the needed arrival time.",
+      "commuteNote": "8.9 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1480,
         "max": 1727,
@@ -612,14 +713,14 @@
       },
       "twoBed": {
         "min": 1890,
-        "max": 2130,
-        "note": "Official current advertised range; verify the exact unit and term.",
+        "max": null,
+        "note": "Official starting rent; visible units reached $2,085, but the complete maximum was not reproducible.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official Equity Apartments availability",
-      "deal": "Up to 1 month free + 25% off first month",
-      "dealDetail": "Current offer wording was detected on the official Equity Apartments page on September 4, 2026. Confirm the selected unit, lease term, and full written terms.",
+      "deal": null,
+      "dealDetail": "Official inventory marks select units with a special offer but does not publish a dollar amount, duration, or eligibility terms. Ask the leasing office for a written offer.",
       "dealExpires": null,
       "amenities": [
         "Pool & lawn",
@@ -631,13 +732,14 @@
       ],
       "security": [
         "Smart-home technology",
-        "Controlled package handling reported"
+        "On-site management"
       ],
       "petCost": "Listings report up to 3 pets; $400 one-time dog fee and $25/month dog/cat. Confirm with leasing.",
       "fees": [
+        "Application: $100 per applicant",
+        "Administration: $250 per apartment",
         "Dog fee reported: $400",
-        "Pet rent reported: $25/month",
-        "Longer lease terms shown in price feed"
+        "Pet rent reported: $25/month"
       ],
       "review": {
         "rating": 4.1,
@@ -655,9 +757,6 @@
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "detectedDeal": "Up to 1 month free + 25% off your first month",
-      "dealLastSeenAt": "2026-09-04",
-      "dealStatus": "needs_review",
       "lastSourceSuccess": "2026-09-04",
       "priceReviewCandidates": [
         {
@@ -672,7 +771,15 @@
           "observedAt": "2026-09-04",
           "bedroom": 2
         }
-      ]
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The official page showed unit-specific specials without public terms, so no quantified concession is presented.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "lea-woodstock",
@@ -682,26 +789,26 @@
       "address": "1 Sycamore Lane, Woodstock, GA 30188",
       "lat": 34.085075,
       "lng": -84.48612,
-      "distanceMiles": 10.9,
-      "driveMin": 19,
+      "distanceMiles": 11.1,
+      "driveMin": 21,
       "driveMax": 27,
-      "commuteNote": "Southeast Woodstock route; check the morning run because local traffic is variable.",
+      "commuteNote": "11.1 mi / 21 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1428,
-        "max": 2172,
-        "note": "Official range; sunroom layouts started around $1,531.",
+        "min": 1441,
+        "max": 1706,
+        "note": "Current available-unit starting rents observed on the official site; sources shifted during the audit.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1760,
-        "max": 2555,
-        "note": "Official range; common 2BR/2BA layouts started around $1,802.",
+        "max": 2050,
+        "note": "Current available-unit starting rents observed on the official site; sources shifted during the audit.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
-      "priceSource": "Official property floor plans",
+      "priceSource": "Official available-unit snapshot; current sources differed",
       "deal": null,
-      "dealDetail": "No broad current concession found. Ask about unit-specific offers.",
+      "dealDetail": "No broad rent concession verified. A named-employer program may waive application and administration fees for eligible employees.",
       "dealExpires": null,
       "amenities": [
         "2 saltwater pools",
@@ -717,6 +824,7 @@
       ],
       "petCost": "Up to 2 pets, 70 lb; $300 one/$400 two + $10/month each; breed restrictions.",
       "fees": [
+        "No standard additional monthly fees shown in the official FAQ",
         "Deposit: $500",
         "Pet fee: $300 one or $400 two",
         "Pet rent: $10/month each"
@@ -733,10 +841,21 @@
       "amenitiesUrl": "https://www.leawoodstockapts.com/amenities",
       "imageUrl": "https://resource.rentcafe.com/image/upload/x_0%2Cy_0%2Cw_4500%2Ch_3000%2Cc_crop/q_auto%2Cf_auto%2Cc_lfill%2Cw_576%2Car_2.304%2Cg_auto/s3/2/85119/lea%20woodstock-poi-027.jpg",
       "imageSource": "Official property website",
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "source_conflict",
+      "auditNote": "Available-unit starts differed across the official browser, search index, and RentCafe during the audit.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "crest-acworth",
@@ -746,20 +865,20 @@
       "address": "1348 Highway 92, Acworth, GA 30102",
       "lat": 34.087172,
       "lng": -84.653197,
-      "distanceMiles": 12.5,
-      "driveMin": 23,
+      "distanceMiles": 12.3,
+      "driveMin": 26,
       "driveMax": 33,
-      "commuteNote": "Longer Highway 92 route; peak school traffic could approach the top of the range.",
+      "commuteNote": "12.3 mi / 26 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1440,
-        "max": 1609,
-        "note": "Official current floor-plan range on September 4, 2026.",
+        "max": 1604,
+        "note": "Official live available-unit range observed September 4, 2026; dynamic pricing may move.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1843,
+        "min": 1837,
         "max": 2705,
-        "note": "Standard layouts start at $1,843; top end includes carriage homes.",
+        "note": "Official live range; upper end includes carriage-home layouts.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
@@ -781,6 +900,13 @@
       ],
       "petCost": "Up to 2 pets; no listed breed/weight restrictions or monthly pet rent; $300–$500 fee + $200 deposit each; confirm.",
       "fees": [
+        "Application: $100",
+        "Administration: $150",
+        "Deposit: $400, half-month, or one month depending on screening",
+        "Valet trash: $31/month",
+        "Locker: $3/month",
+        "Pest: $5/month",
+        "Key fob: $75 per leaseholder",
         "Pet fee: $300–$500 each",
         "Pet deposit: $200 each",
         "Pet screening: $30/year",
@@ -798,10 +924,22 @@
       "amenitiesUrl": "https://www.crestacworth.com/amenities",
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_576/s3/2/94173/img_0126%281%29.jpg",
       "imageSource": "Official property website",
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "source_conflict",
+      "auditNote": "Live rents shifted by several dollars during the audit; the displayed range is a dated official-site observation.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "avana-acworth",
@@ -811,10 +949,10 @@
       "address": "4710 Baker Grove Road, Acworth, GA 30101",
       "lat": 34.070629,
       "lng": -84.648889,
-      "distanceMiles": 13.3,
-      "driveMin": 25,
+      "distanceMiles": 13.4,
+      "driveMin": 27,
       "driveMax": 35,
-      "commuteNote": "Within the 40-minute ceiling in ordinary conditions; confirm during school/rush-hour traffic.",
+      "commuteNote": "13.4 mi / 27 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1179,
         "max": 1372,
@@ -846,10 +984,16 @@
       ],
       "petCost": "Up to 2 pets; $400 nonrefundable fee + $20/month per pet; breed restrictions.",
       "fees": [
+        "Mandatory fees included in shown total: $41/month",
+        "Trash: $10/month",
+        "Packages: $18/month",
+        "Pest: $6/month",
+        "Billing: $7/month",
+        "Application: $35 per applicant",
+        "Access device: $50",
         "Refundable deposit: $300",
-        "Pet fee: $400",
-        "Pet rent: $20/month each",
-        "Mandatory monthly fees included in shown total"
+        "Optional garage: $125/month",
+        "Optional storage: $50/month"
       ],
       "review": {
         "rating": 4.3,
@@ -863,10 +1007,21 @@
       "amenitiesUrl": "https://www.avanaacworth.com/acworth/avana-acworth/amenities/",
       "imageUrl": "https://medialibrarycfo.entrata.com/fit-in/700x700/15077/MLv3/3/27/2026/05/25/013443/6a14a452b87124.83286539749.png",
       "imageSource": "Official property website",
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "source_conflict",
+      "auditNote": "Official and community-supplied current price responses differed; shown totals are a dated snapshot.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "park-kennesaw",
@@ -876,26 +1031,26 @@
       "address": "2250 Ellison Lakes Drive NW, Kennesaw, GA 30152",
       "lat": 34.002755,
       "lng": -84.609699,
-      "distanceMiles": 16.1,
-      "driveMin": 25,
-      "driveMax": 38,
-      "commuteNote": "Borderline at school/rush-hour traffic. Check a live route at the exact weekday time before touring.",
+      "distanceMiles": 16.5,
+      "driveMin": 28,
+      "driveMax": 36,
+      "commuteNote": "16.5 mi / 28 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1240,
-        "max": 1594,
-        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote.",
+        "min": 1372,
+        "max": 1452,
+        "note": "Current community-supplied total monthly price.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1516,
-        "max": 1707,
-        "note": "Recent referred-page snapshot; official page currently asks visitors to request a quote.",
+        "min": 1675,
+        "max": 1809,
+        "note": "Current community-supplied total monthly price.",
         "observedAt": "2026-09-04"
       },
-      "priceBasis": "Recent advertised base rent",
-      "priceSource": "Recent official referral snapshot—verify quote",
-      "deal": "Ask about select-unit offer",
-      "dealDetail": "A one-month-free offer was reported by a review marketplace, but the official page did not confirm it. Do not rely on it without written confirmation.",
+      "priceBasis": "Advertised total monthly price",
+      "priceSource": "Community-supplied current listing; official site requires a quote",
+      "deal": null,
+      "dealDetail": "The current linked listing says no rent special. Ask the property about any newly added unit-specific offer.",
       "dealExpires": null,
       "amenities": [
         "Pool & sundeck",
@@ -906,14 +1061,19 @@
         "Car wash"
       ],
       "security": [
-        "Package services reported",
-        "On-site management"
+        "On-site management",
+        "24-hour emergency maintenance"
       ],
-      "petCost": "Pets welcome; listings report $300 fee, up to 2 pets and breed restrictions. Monthly rent should be confirmed.",
+      "petCost": "Community-supplied terms: up to 2 pets; $300 fee + $10/month per pet; restrictions may apply.",
       "fees": [
-        "Pet fee reported: $300",
-        "Monthly pet rent: call",
-        "Official current price requires a quote"
+        "Application: $100 per applicant",
+        "Administration: $150",
+        "Pest: $1/month",
+        "Doorstep trash: $25/month",
+        "Pet fee: $300 each",
+        "Pet rent: $10/month each",
+        "Optional storage: $25/month",
+        "Garage: price varies"
       ],
       "review": {
         "rating": 4.5,
@@ -933,7 +1093,15 @@
       "sourceCheckStatus": "reachable_unparsed",
       "detectedDeal": null,
       "lastSourceSuccess": "2026-09-04",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The official site asks for a quote; current totals, fees, and review data are from the linked community-supplied listing.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     }
   ]
 }

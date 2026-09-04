@@ -11,6 +11,53 @@ const today = startedAt.toISOString().slice(0, 10);
 
 const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+async function refreshRoutes(apartments) {
+  const school = data.meta.school;
+  const coordinates = [`${school.lng},${school.lat}`, ...apartments.map((apartment) => `${apartment.lng},${apartment.lat}`)];
+  const url = `https://router.project-osrm.org/table/v1/driving/${coordinates.join(";")}?destinations=0&annotations=duration,distance`;
+  try {
+    const response = await fetch(url, {
+      headers: { "user-agent": "Apartment4Bella/1.2 (+https://github.com/williamjblodgett/Apartment4Bella)" },
+      signal: AbortSignal.timeout(30000),
+    });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const result = await response.json();
+    if (result.code !== "Ok" || !Array.isArray(result.durations?.[0]) || !Array.isArray(result.distances?.[0])) throw new Error("Incomplete route matrix");
+
+    let updated = 0;
+    let reviewNeeded = 0;
+    for (let index = 0; index < apartments.length; index += 1) {
+      const durationSeconds = result.durations[index + 1]?.[0];
+      const distanceMeters = result.distances[index + 1]?.[0];
+      if (!Number.isFinite(durationSeconds) || !Number.isFinite(distanceMeters)) {
+        reviewNeeded += 1;
+        continue;
+      }
+      const baselineMinutes = Math.ceil(durationSeconds / 60);
+      const bufferedMinutes = Math.max(baselineMinutes + 1, Math.ceil((durationSeconds / 60) * 1.3));
+      const routeMiles = Math.round((distanceMeters / 1609.344) * 10) / 10;
+      const apartment = apartments[index];
+      apartment.routeReviewCandidate = null;
+      apartment.distanceMiles = routeMiles;
+      apartment.driveMin = baselineMinutes;
+      apartment.driveMax = bufferedMinutes;
+      apartment.withinDriveLimit = bufferedMinutes <= 40;
+      apartment.routeObservedAt = today;
+      apartment.routeSource = "OSRM route using OpenStreetMap road data";
+      apartment.routeSourceUrl = "https://www.openstreetmap.org/copyright";
+      apartment.commuteNote = `${routeMiles.toFixed(1)} mi / ${baselineMinutes} min no-traffic route rechecked ${today}. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.`;
+      if (!apartment.withinDriveLimit) {
+        apartment.routeReviewCandidate = { distanceMiles: routeMiles, baselineMinutes, bufferedMinutes, observedAt: today };
+        reviewNeeded += 1;
+      }
+      updated += 1;
+    }
+    return { status: reviewNeeded ? "partial" : "complete", updated, reviewNeeded, observedAt: today };
+  } catch (error) {
+    return { status: "failed", updated: 0, reviewNeeded: apartments.length, observedAt: today, error: error instanceof Error ? error.message.slice(0, 180) : String(error).slice(0, 180) };
+  }
+}
+
 function visibleText(html) {
   return html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
@@ -88,6 +135,16 @@ function dealSignal(text) {
   return joined.charAt(0).toUpperCase() + joined.slice(1);
 }
 
+function comparableDeal(value) {
+  const numbers = { one: "1", two: "2", three: "3", four: "4", five: "5", six: "6", eight: "8", ten: "10" };
+  return value
+    .toLowerCase()
+    .replace(/\b(one|two|three|four|five|six|eight|ten)\b/g, (word) => numbers[word])
+    .replace(/\bup to\b/g, "")
+    .replace(/[^a-z0-9%]+/g, " ")
+    .trim();
+}
+
 function applyPrice(apartment, key, next) {
   const current = apartment[key];
   if (apartment.priceConfidence !== "official" || !plausible(next, current)) return { verified: false, changed: false, candidate: null };
@@ -108,6 +165,7 @@ async function checkApartment(apartment) {
     apartment.dealExpires = null;
     apartment.dealDetail = "The previously dated promotion has ended. Check the official site for a replacement offer.";
     apartment.dealStatus = "expired";
+    delete apartment.dealLastSeenAt;
   }
 
   const controller = new AbortController();
@@ -144,9 +202,13 @@ async function checkApartment(apartment) {
 
     apartment.detectedDeal = detectedDeal;
     if (detectedDeal) {
-      apartment.dealLastSeenAt = today;
-      if (apartment.deal && !apartment.deal.toLowerCase().includes(detectedDeal.toLowerCase()) && !detectedDeal.toLowerCase().includes(apartment.deal.toLowerCase())) {
-        apartment.dealStatus = "needs_review";
+      const detected = comparableDeal(detectedDeal);
+      const curated = apartment.deal ? comparableDeal(apartment.deal) : null;
+      if (curated && (curated.includes(detected) || detected.includes(curated))) {
+        apartment.dealLastSeenAt = today;
+        apartment.dealStatus = "confirmed";
+      } else if (curated) {
+        apartment.dealStatus = "candidate_mismatch";
       }
     }
 
@@ -178,7 +240,8 @@ function validate(nextData) {
   for (const apartment of nextData.apartments) {
     if (seen.has(apartment.id)) errors.push(`duplicate id: ${apartment.id}`);
     seen.add(apartment.id);
-    if (apartment.driveMax > 40 || apartment.driveMin < 0 || apartment.driveMin > apartment.driveMax) errors.push(`invalid drive range: ${apartment.id}`);
+    if (apartment.driveMax > 120 || apartment.driveMin < 0 || apartment.driveMin > apartment.driveMax) errors.push(`invalid drive range: ${apartment.id}`);
+    if (apartment.withinDriveLimit !== (apartment.driveMax <= 40)) errors.push(`stale drive eligibility: ${apartment.id}`);
     if (apartment.oneBed?.min === null && apartment.twoBed?.min === null) errors.push(`no eligible 1BR/2BR price: ${apartment.id}`);
     for (const [label, price] of [["1BR", apartment.oneBed], ["2BR", apartment.twoBed]]) {
       if (price.min !== null && (!Number.isFinite(price.min) || price.min <= 0 || (price.max !== null && price.max < price.min))) errors.push(`invalid ${label} price: ${apartment.id}`);
@@ -192,6 +255,7 @@ function validate(nextData) {
   if (errors.length) throw new Error(`Refusing to write invalid apartment data:\n${errors.join("\n")}`);
 }
 
+const routeRefresh = await refreshRoutes(data.apartments);
 const checks = [];
 for (const apartment of data.apartments) {
   checks.push(await checkApartment(apartment));
@@ -213,8 +277,9 @@ data.meta.automation = {
   pricesChanged: checks.reduce((sum, item) => sum + item.priceFieldsChanged, 0),
   priceCandidatesFound: checks.reduce((sum, item) => sum + item.priceCandidatesFound, 0),
   dealsDetected: checks.filter((item) => item.dealDetected).length,
+  routeRefresh,
   status: verified === checks.length ? "complete" : reachable ? "partial" : "failed",
-  method: "Daily best-effort checks of official property pricing pages. Generic parser findings are saved only as review candidates and never overwrite curated rents; only an approved structured adapter may publish a new price.",
+  method: "Daily best-effort checks of configured primary pricing/source pages plus one refreshed OSRM/OpenStreetMap route matrix. Generic price hints are review-only and never overwrite curated rents; undated deals stop displaying as current after seven days unless reconfirmed.",
 };
 
 validate(data);

@@ -7,7 +7,8 @@ const siteUrl = "https://williamjblodgett.github.io/Apartment4Bella/";
 
 const primary = JSON.parse(await readFile(path.join(projectRoot, "app", "apartments.json"), "utf8"));
 const expanded = JSON.parse(await readFile(path.join(projectRoot, "app", "apartments-expanded.json"), "utf8"));
-const apartments = [...primary.apartments, ...expanded.apartments];
+const apartments = [...primary.apartments, ...expanded.apartments]
+  .filter((apartment) => apartment.withinDriveLimit !== false && apartment.driveMax <= 40);
 const template = await readFile(path.join(outputRoot, "index.html"), "utf8");
 
 const escapeHtml = (value) => String(value)
@@ -30,8 +31,10 @@ function removeMeta(html, attribute, name) {
 }
 
 function priceLabel(price) {
-  if (price.min === null) return "not offered";
-  return `$${price.min.toLocaleString("en-US")}+`;
+  if (price.min === null) return /not offered|no 1br product/i.test(price.note) ? "not offered" : "no public price";
+  const money = (value) => `$${value.toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
+  if (price.max === price.min) return money(price.min);
+  return price.max === null ? `${money(price.min)}+` : `${money(price.min)}–${money(price.max)}`;
 }
 
 for (const apartment of apartments) {

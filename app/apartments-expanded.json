@@ -9,27 +9,27 @@
       "address": "101 Canterbury Ridge Parkway, Canton, GA 30114",
       "lat": 34.198463,
       "lng": -84.508118,
-      "distanceMiles": 3.9,
+      "distanceMiles": 3.8,
       "driveMin": 9,
-      "driveMax": 14,
-      "commuteNote": "Static route baseline was about 9 minutes; ordinary traffic allowance is included.",
+      "driveMax": 11,
+      "commuteNote": "3.8 mi / 9 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1213,
-        "max": 1513,
-        "note": "Official floor-plan snapshot; confirm available unit and lease term.",
+        "min": 1217,
+        "max": 1241,
+        "note": "Official currently available-unit starting rents.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1347,
-        "max": 1925,
-        "note": "Official floor-plan snapshot; confirm available unit and lease term.",
+        "min": 1335,
+        "max": 1485,
+        "note": "Official currently available-unit starting rents.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
-      "deal": "2 months free—verify terms",
-      "dealDetail": "A community-supplied listing reported two months free without a posted expiration. Get the eligible unit, term, and deadline in writing.",
-      "dealExpires": null,
+      "deal": "2 months free or $1,500 off",
+      "dealDetail": "Community-supplied offer: apply by September 7, 2026 for two months free on select units or $1,500 off all units; restrictions apply.",
+      "dealExpires": "2026-09-07",
       "amenities": [
         "Pool",
         "Gated/controlled entry",
@@ -44,10 +44,18 @@
       ],
       "petCost": "Up to 2 pets, 70 lb each; $350 per pet + $35/month per pet; breed restrictions.",
       "fees": [
-        "Application: $75/person",
+        "Fixed recurring fees reported: $69.49/month plus variable utilities",
+        "Valet trash: $15/month",
+        "Property-loss benefit: $15/month",
+        "Trash: $20/month",
+        "Pest: $5/month",
+        "Locker: $5/month",
+        "Utility billing: $9.49/month",
+        "Reservation: $150",
+        "Application: $75 per applicant; a separate $75/unit listing conflicts—confirm",
         "Administration: $150",
-        "Deposit: $500",
         "Access device: $50",
+        "Deposit: $500",
         "Utility setup: $25"
       ],
       "review": {
@@ -64,14 +72,38 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/04_101_canterbury_ridge_pkwy_canton_ga_30114_usa-living_room-a7406126.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/04_101_canterbury_ridge_pkwy_canton_ga_30114_usa-living_room-a7406126.jpg", "sourceUrl": "https://www.atlanticcantonridgeliving.com/photogallery", "alt": "The Atlantic Canton Ridge living room" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/06_101_canterbury_ridge_pkwy_canton_ga_30114_usa-dining_room-a7406105.jpg", "sourceUrl": "https://www.atlanticcantonridgeliving.com/photogallery", "alt": "The Atlantic Canton Ridge dining room" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/05_101_canterbury_ridge_pkwy_canton_ga_30114_usa-kitchen-a7406099.jpg", "sourceUrl": "https://www.atlanticcantonridgeliving.com/photogallery", "alt": "The Atlantic Canton Ridge kitchen" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/04_101_canterbury_ridge_pkwy_canton_ga_30114_usa-living_room-a7406126.jpg",
+          "sourceUrl": "https://www.atlanticcantonridgeliving.com/photogallery",
+          "alt": "The Atlantic Canton Ridge living room"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/06_101_canterbury_ridge_pkwy_canton_ga_30114_usa-dining_room-a7406105.jpg",
+          "sourceUrl": "https://www.atlanticcantonridgeliving.com/photogallery",
+          "alt": "The Atlantic Canton Ridge dining room"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/149891/05_101_canterbury_ridge_pkwy_canton_ga_30114_usa-kitchen-a7406099.jpg",
+          "sourceUrl": "https://www.atlanticcantonridgeliving.com/photogallery",
+          "alt": "The Atlantic Canton Ridge kitchen"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "Current available-unit starts were rechecked on the official site; deal terms and fee details are community-supplied.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "madison-overlook",
@@ -81,10 +113,10 @@
       "address": "591 Jackie Moore Lane, Canton, GA 30114",
       "lat": 34.2190885,
       "lng": -84.5023163,
-      "distanceMiles": 5.4,
-      "driveMin": 13,
-      "driveMax": 19,
-      "commuteNote": "Static route baseline was about 13 minutes; Riverstone-area traffic can add time.",
+      "distanceMiles": 5.3,
+      "driveMin": 12,
+      "driveMax": 16,
+      "commuteNote": "5.3 mi / 12 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1363,
         "max": 1414,
@@ -99,9 +131,9 @@
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
-      "deal": null,
-      "dealDetail": "No broad current promotion was verified on the official site.",
-      "dealExpires": null,
+      "deal": "Half off rent for first 5 months",
+      "dealDetail": "Move in by September 30, 2026 for half off rent during the first five months on select units. The linked listing adds new-applicant and tour/apply-within-48-hours terms; confirm eligibility.",
+      "dealExpires": "2026-09-30",
       "amenities": [
         "Resort pool",
         "Fitness center",
@@ -116,11 +148,13 @@
       ],
       "petCost": "Up to 2 pets, no stated weight limit; $350 one/$500 two + $25/month each; breed restrictions.",
       "fees": [
-        "Application: $65/adult",
+        "Mandatory resident-services bundle: $133/month",
+        "Application: $65 per adult",
         "Administration: $250",
-        "Standard deposit: $300",
-        "Liability: $14/month",
-        "Other utilities/amenity fees may apply"
+        "Deposit: $300, $600, or one month depending on screening",
+        "Utility setup: $6.01",
+        "Utility final fee: $6.01",
+        "Optional garage: $175/month"
       ],
       "review": {
         "rating": 5,
@@ -147,7 +181,16 @@
           "observedAt": "2026-09-04",
           "bedroom": 2
         }
-      ]
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Live rents, the official move-in offer, mandatory service bundle, pet terms, and review snapshot were rechecked.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "canton-mill-lofts",
@@ -159,8 +202,8 @@
       "lng": -84.4827973,
       "distanceMiles": 8.1,
       "driveMin": 17,
-      "driveMax": 24,
-      "commuteNote": "Static route baseline was about 17 minutes; allow extra time near Riverstone Parkway.",
+      "driveMax": 22,
+      "commuteNote": "8.1 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1249,
         "max": null,
@@ -190,10 +233,14 @@
         "Gated community",
         "Smart locks and package lockers"
       ],
-      "petCost": "Up to 3 pets, no weight limit; breed restrictions. Current dollar charges require confirmation.",
+      "petCost": "Community-supplied terms: up to 3 pets; $350 one-time fee + $25/month per pet; no pet deposit or weight limit; breed restrictions.",
       "fees": [
-        "Mandatory charges reported around $147/month—verify",
-        "Pet fees: call property"
+        "Mandatory recurring bundle reported: $147.25/month",
+        "Liability: $12/month",
+        "Service bundle: $128.25/month",
+        "Billing administration: $7/month",
+        "Pet fee: $350 per pet",
+        "Pet rent: $25/month per pet"
       ],
       "review": {
         "rating": 3.6,
@@ -203,15 +250,39 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://livecantonmill.com/",
-      "pricingUrl": "https://livecantonmill.com/apartments-pricing/",
+      "pricingUrl": "https://livecantonmill.com/apartments/",
       "amenitiesUrl": "https://livecantonmill.com/amenities/",
       "imageUrl": "https://livecantonmill.com/wp-content/uploads/2026/05/Home-Hero.jpg",
       "imageSource": "Official property website",
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "error",
-      "sourceCheckError": "HTTP 404"
+      "sourceCheckStatus": "reachable_unparsed",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [
+        {
+          "min": 1339,
+          "max": 1482,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1339,
+          "max": 1964,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ],
+      "detectedDeal": null,
+      "lastSourceSuccess": "2026-09-04",
+      "auditStatus": "official",
+      "auditNote": "Rents, promotion, amenities, access features, and review were rechecked; fee and pet amounts are community-supplied.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "accent-overlook",
@@ -221,14 +292,14 @@
       "address": "201 Hospital Road, Canton, GA 30114",
       "lat": 34.2454282,
       "lng": -84.4905494,
-      "distanceMiles": 7.8,
+      "distanceMiles": 7.7,
       "driveMin": 17,
-      "driveMax": 24,
-      "commuteNote": "Static route baseline was about 17 minutes; downtown and Riverstone traffic can widen it.",
+      "driveMax": 22,
+      "commuteNote": "7.7 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1284,
+        "min": 1325,
         "max": 1590,
-        "note": "Official plan-start range; availability changes dynamically.",
+        "note": "Current official floor-plan starting-rent range.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
@@ -239,9 +310,9 @@
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
-      "deal": null,
-      "dealDetail": "The official site references an office-only offer and a preferred-employer program, but no general public terms were verified.",
-      "dealExpires": null,
+      "deal": "2 months free",
+      "dealDetail": "Official offer: two months free on select homes for move-in by October 31, 2026; contact leasing for eligibility and full terms.",
+      "dealExpires": "2026-10-31",
       "amenities": [
         "Newer community",
         "Pool",
@@ -251,8 +322,7 @@
         "Balconies"
       ],
       "security": [
-        "Controlled/gated access",
-        "Package services reported"
+        "Controlled/gated access"
       ],
       "petCost": "Up to 2 pets. Official and community-supplied fee/weight terms conflict; call for the current written policy.",
       "fees": [
@@ -273,9 +343,21 @@
       "imageUrl": "https://accentoverlook.com/assets/images/cache/shoootin-photo-16-aa9f7d635affcce5f3fd25efb6a2a291.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://accentoverlook.com/assets/images/cache/shoootin-photo-16-aa9f7d635affcce5f3fd25efb6a2a291.jpg", "sourceUrl": "https://accentoverlook.com/gallery/", "alt": "Accent Overlook official property photo one" },
-        { "url": "https://accentoverlook.com/assets/images/cache/shoootin-photo-221-cf43d594e70934ff407da0a031bb4e2e.jpg", "sourceUrl": "https://accentoverlook.com/gallery/", "alt": "Accent Overlook official property photo two" },
-        { "url": "https://accentoverlook.com/assets/images/cache/shoootin-photo-212-45d6492a8ef506ac63648d9404d3bada.jpg", "sourceUrl": "https://accentoverlook.com/gallery/", "alt": "Accent Overlook official property photo three" }
+        {
+          "url": "https://accentoverlook.com/assets/images/cache/shoootin-photo-16-aa9f7d635affcce5f3fd25efb6a2a291.jpg",
+          "sourceUrl": "https://accentoverlook.com/gallery/",
+          "alt": "Accent Overlook official property photo one"
+        },
+        {
+          "url": "https://accentoverlook.com/assets/images/cache/shoootin-photo-221-cf43d594e70934ff407da0a031bb4e2e.jpg",
+          "sourceUrl": "https://accentoverlook.com/gallery/",
+          "alt": "Accent Overlook official property photo two"
+        },
+        {
+          "url": "https://accentoverlook.com/assets/images/cache/shoootin-photo-212-45d6492a8ef506ac63648d9404d3bada.jpg",
+          "sourceUrl": "https://accentoverlook.com/gallery/",
+          "alt": "Accent Overlook official property photo three"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
@@ -286,17 +368,20 @@
       "priceReviewCandidates": [
         {
           "min": 1325,
-          "max": 1590,
-          "observedAt": "2026-09-04",
-          "bedroom": 1
-        },
-        {
-          "min": 1325,
           "max": 1964,
           "observedAt": "2026-09-04",
           "bedroom": 2
         }
-      ]
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Official floor plans and the current move-in promotion were rechecked. Pet dollar amounts remain third-party and should be confirmed.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "district-etowah",
@@ -306,10 +391,10 @@
       "address": "215 Reformation Parkway, Canton, GA 30114",
       "lat": 34.2362368,
       "lng": -84.4966117,
-      "distanceMiles": 8,
-      "driveMin": 18,
-      "driveMax": 25,
-      "commuteNote": "Static route baseline was about 18 minutes; downtown traffic can add time.",
+      "distanceMiles": 7.1,
+      "driveMin": 17,
+      "driveMax": 22,
+      "commuteNote": "7.1 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1539,
         "max": 2357,
@@ -343,9 +428,12 @@
       "fees": [
         "Application: $100",
         "Reservation: $150",
-        "Deposit: $400–one month",
-        "Parking/car: $45/month",
-        "Trash/pest/locker/access fees apply"
+        "Deposit: $400 to one month",
+        "Package lockers: $5/month",
+        "Parking: $45/month per car",
+        "Pest control: $5/month",
+        "Trash: $13/month",
+        "Swiftlane activation: $55 one-time per leaseholder"
       ],
       "review": {
         "rating": 4.5,
@@ -361,14 +449,37 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/studio%20model-12.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/studio%20model-12.jpg", "sourceUrl": "https://www.districtonetowah.com/photogallery", "alt": "District on the Etowah model apartment" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/studio%20model-13.jpg", "sourceUrl": "https://www.districtonetowah.com/photogallery", "alt": "District on the Etowah apartment interior" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/studio%20model-9.jpg", "sourceUrl": "https://www.districtonetowah.com/photogallery", "alt": "District on the Etowah official property photo" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/studio%20model-12.jpg",
+          "sourceUrl": "https://www.districtonetowah.com/photogallery",
+          "alt": "District on the Etowah model apartment"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/studio%20model-13.jpg",
+          "sourceUrl": "https://www.districtonetowah.com/photogallery",
+          "alt": "District on the Etowah apartment interior"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/studio%20model-9.jpg",
+          "sourceUrl": "https://www.districtonetowah.com/photogallery",
+          "alt": "District on the Etowah official property photo"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "Current ranges, fees, amenities, access features, pet terms, and review snapshot were rechecked.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "harbor-creek",
@@ -378,10 +489,10 @@
       "address": "501 Harbor Creek Parkway, Canton, GA 30115",
       "lat": 34.183536,
       "lng": -84.4987513,
-      "distanceMiles": 5.5,
+      "distanceMiles": 5.4,
       "driveMin": 13,
-      "driveMax": 19,
-      "commuteNote": "Static route baseline was about 13 minutes; Holly Springs Parkway conditions vary.",
+      "driveMax": 16,
+      "commuteNote": "5.4 mi / 13 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1161,
         "max": null,
@@ -402,14 +513,14 @@
       "amenities": [
         "Indoor & outdoor pools",
         "24-hour fitness",
-        "Pickleball/tennis",
-        "Dog park",
+        "Pickleball & tennis",
+        "Dog park & aqua park",
         "Playground",
-        "Car care"
+        "Smart-home features"
       ],
       "security": [
         "Gated entry",
-        "Smart-home features"
+        "24-hour emergency maintenance"
       ],
       "petCost": "Up to 2 pets; first $250 fee + $250 deposit, second $150 + $150; $25/month wording should be confirmed.",
       "fees": [
@@ -431,9 +542,21 @@
       "imageUrl": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_3680,w_5520,c_crop/q_auto,f_auto,fl_lossy,g_center,h_800,w_1200/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1ogmyp0apk-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-canton-ga/uploads/DSC_9402_001_hriua8.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_3680,w_5520,c_crop/q_auto,f_auto,fl_lossy,g_center,h_800,w_1200/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1ogmyp0apk-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-canton-ga/uploads/DSC_9402_001_hriua8.jpg", "sourceUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/gallery", "alt": "Harbor Creek apartment interior" },
-        { "url": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_3699,w_5549,c_crop/q_auto,f_auto,fl_lossy,g_center,h_800,w_1200/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1ogmyp0apk-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-canton-ga/uploads/DSC_9390_vnhio6.jpg", "sourceUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/gallery", "alt": "Harbor Creek official property photo two" },
-        { "url": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_2400,w_3600,c_crop/q_auto,f_auto,fl_lossy,g_center,h_800,w_1200/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1ogmyp0apk-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-canton-ga/uploads/Harbor_Creek-27_d0nigz.jpg", "sourceUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/gallery", "alt": "Harbor Creek community amenity" }
+        {
+          "url": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_3680,w_5520,c_crop/q_auto,f_auto,fl_lossy,g_center,h_800,w_1200/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1ogmyp0apk-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-canton-ga/uploads/DSC_9402_001_hriua8.jpg",
+          "sourceUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/gallery",
+          "alt": "Harbor Creek apartment interior"
+        },
+        {
+          "url": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_3699,w_5549,c_crop/q_auto,f_auto,fl_lossy,g_center,h_800,w_1200/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1ogmyp0apk-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-canton-ga/uploads/DSC_9390_vnhio6.jpg",
+          "sourceUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/gallery",
+          "alt": "Harbor Creek official property photo two"
+        },
+        {
+          "url": "https://res.cloudinary.com/g5-assets-cld/image/upload/x_0,y_0,h_2400,w_3600,c_crop/q_auto,f_auto,fl_lossy,g_center,h_800,w_1200/g5/g5-c-60my76eob-starwood-capital-fka-highmark-residential/g5-cl-1ogmyp0apk-starwood-capital-fka-highmark-residential-scg-global-holdings-l-l-c-canton-ga/uploads/Harbor_Creek-27_d0nigz.jpg",
+          "sourceUrl": "https://www.harborcreekapartments.com/apartments/ga/canton/gallery",
+          "alt": "Harbor Creek community amenity"
+        }
       ],
       "priceConfidence": "snapshot",
       "verifiedAt": "2026-09-04",
@@ -441,7 +564,15 @@
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The official dynamic page did not expose complete price ranges; shown starts and the review are community-supplied.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "walden-crossing",
@@ -452,13 +583,13 @@
       "lat": 34.22374,
       "lng": -84.478793,
       "distanceMiles": 7.9,
-      "driveMin": 16,
-      "driveMax": 23,
-      "commuteNote": "Static route baseline was about 16 minutes; local-road traffic is included in the upper estimate.",
+      "driveMin": 15,
+      "driveMax": 19,
+      "commuteNote": "7.9 mi / 15 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1325,
-        "max": 1780,
-        "note": "Official/RentCafe available-unit range.",
+        "max": 1725,
+        "note": "Current official available-unit range.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
@@ -469,8 +600,8 @@
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property availability",
-      "deal": null,
-      "dealDetail": "No broad current promotion was verified.",
+      "deal": "6 weeks free",
+      "dealDetail": "Official page: six weeks free on available 1-, 2-, and 3-bedroom homes; new applicants and restrictions apply. No public expiration was shown.",
       "dealExpires": null,
       "amenities": [
         "Pool",
@@ -503,14 +634,38 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/4541/p1438660_mg0007_22.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/4541/p1438660_mg0007_22.jpg", "sourceUrl": "https://www.waldencrossingapts.com/photogallery", "alt": "Walden Crossing official property photo one" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/4541/p1438660_wxmg0139_01.jpg", "sourceUrl": "https://www.waldencrossingapts.com/photogallery", "alt": "Walden Crossing official property photo two" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/4541/p1438660_mg0220_06.jpg", "sourceUrl": "https://www.waldencrossingapts.com/photogallery", "alt": "Walden Crossing official property photo three" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/4541/p1438660_mg0007_22.jpg",
+          "sourceUrl": "https://www.waldencrossingapts.com/photogallery",
+          "alt": "Walden Crossing official property photo one"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/4541/p1438660_wxmg0139_01.jpg",
+          "sourceUrl": "https://www.waldencrossingapts.com/photogallery",
+          "alt": "Walden Crossing official property photo two"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/4541/p1438660_mg0220_06.jpg",
+          "sourceUrl": "https://www.waldencrossingapts.com/photogallery",
+          "alt": "Walden Crossing official property photo three"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "Current unit ranges and the official promotion were rechecked; public pet dollar charges remain unavailable.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "heritage-riverstone",
@@ -520,20 +675,20 @@
       "address": "101 Heritage Drive, Canton, GA 30114",
       "lat": 34.255692,
       "lng": -84.486867,
-      "distanceMiles": 9,
+      "distanceMiles": 8.9,
       "driveMin": 20,
-      "driveMax": 28,
-      "commuteNote": "Static route baseline was about 20 minutes; this northern option needs a school-arrival traffic check.",
+      "driveMax": 25,
+      "commuteNote": "8.9 mi / 20 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1359,
-        "max": 1739,
-        "note": "Available-unit range observed on the official management network.",
+        "min": 1178,
+        "max": 1815,
+        "note": "Current management-network base-rent plan range; availability and lease-term pricing are dynamic.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1610,
-        "max": 1995,
-        "note": "Available-unit range observed on the official management network.",
+        "min": 1342,
+        "max": 1984,
+        "note": "Current management-network base-rent plan range; availability and lease-term pricing are dynamic.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
@@ -555,8 +710,9 @@
       ],
       "petCost": "Up to 2 pets; $350 each + $25/month each; $30 annual screening.",
       "fees": [
-        "Pet fee: $350 each",
-        "Pet rent: $25/month each",
+        "Application: $65",
+        "Pet fee: $350 first + $350 second",
+        "Pet rent: $25/month per pet",
         "Pet screening: $30/year"
       ],
       "review": {
@@ -573,9 +729,21 @@
       "imageUrl": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_1000,w_1000/v1664213333/g5/g5-c-5wdb8lm77-allegiant-carter-management/g5-cl-1mzp4fdoi0-allegiant-carter-management-canton-ga/uploads/nuu2h47oitw1a4krijmb.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_1000,w_1000/v1664213333/g5/g5-c-5wdb8lm77-allegiant-carter-management/g5-cl-1mzp4fdoi0-allegiant-carter-management-canton-ga/uploads/nuu2h47oitw1a4krijmb.jpg", "sourceUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/photo-gallery", "alt": "Heritage at Riverstone official property photo one" },
-        { "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_1000,w_1000/v1664213333/g5/g5-c-5wdb8lm77-allegiant-carter-management/g5-cl-1mzp4fdoi0-allegiant-carter-management-canton-ga/uploads/blymcvjilucguwjgllb5.jpg", "sourceUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/photo-gallery", "alt": "Heritage at Riverstone official property photo two" },
-        { "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_1000,w_1000/v1664213330/g5/g5-c-5wdb8lm77-allegiant-carter-management/g5-cl-1mzp4fdoi0-allegiant-carter-management-canton-ga/uploads/btjdtj35uuf7o1hbto7z.jpg", "sourceUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/photo-gallery", "alt": "Heritage at Riverstone official property photo three" }
+        {
+          "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_1000,w_1000/v1664213333/g5/g5-c-5wdb8lm77-allegiant-carter-management/g5-cl-1mzp4fdoi0-allegiant-carter-management-canton-ga/uploads/nuu2h47oitw1a4krijmb.jpg",
+          "sourceUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/photo-gallery",
+          "alt": "Heritage at Riverstone official property photo one"
+        },
+        {
+          "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_1000,w_1000/v1664213333/g5/g5-c-5wdb8lm77-allegiant-carter-management/g5-cl-1mzp4fdoi0-allegiant-carter-management-canton-ga/uploads/blymcvjilucguwjgllb5.jpg",
+          "sourceUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/photo-gallery",
+          "alt": "Heritage at Riverstone official property photo two"
+        },
+        {
+          "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_1000,w_1000/v1664213330/g5/g5-c-5wdb8lm77-allegiant-carter-management/g5-cl-1mzp4fdoi0-allegiant-carter-management-canton-ga/uploads/btjdtj35uuf7o1hbto7z.jpg",
+          "sourceUrl": "https://www.allegiant-carter.com/apartments/ga/canton/heritage-at-riverstone/photo-gallery",
+          "alt": "Heritage at Riverstone official property photo three"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
@@ -583,7 +751,15 @@
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Current management-network base-rent ranges, pet terms, amenities, access features, and review were rechecked.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "grand-reserve-canton",
@@ -593,10 +769,10 @@
       "address": "165 Reservoir Drive, Canton, GA 30114",
       "lat": 34.2644991,
       "lng": -84.4841549,
-      "distanceMiles": 9.9,
-      "driveMin": 22,
-      "driveMax": 31,
-      "commuteNote": "Northern edge of the directory; static baseline was about 22 minutes and peak traffic can be materially longer.",
+      "distanceMiles": 9.3,
+      "driveMin": 20,
+      "driveMax": 26,
+      "commuteNote": "9.3 mi / 20 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1507,
         "max": 3188,
@@ -611,8 +787,8 @@
       },
       "priceBasis": "Advertised base rent range",
       "priceSource": "Official property availability",
-      "deal": "$99 move-in bundle—verify",
-      "dealDetail": "A community-supplied listing reported $99 total application/admin/deposit with approved credit for move-in by September 20, 2026.",
+      "deal": "$99 application/admin/deposit",
+      "dealDetail": "Official live offer: $99 total application fee, administration fee, and deposit with approved credit for move-in by September 20, 2026; restrictions apply.",
       "dealExpires": "2026-09-20",
       "amenities": [
         "Large floor plans",
@@ -623,12 +799,14 @@
         "Outdoor kitchen"
       ],
       "security": [
-        "Controlled community access reported",
+        "After-hours courtesy patrol",
         "On-site management"
       ],
       "petCost": "Up to 2 pets; $400 one/$600 two + $25/month each; breed restrictions.",
       "fees": [
-        "Deposit varies; Obligo option for qualified residents",
+        "Current promotion: $99 total application/admin/deposit with approved credit",
+        "Outside the promotion, deposit varies; another management listing differs—confirm",
+        "Required Xfinity media bundle: amount not publicly shown",
         "Pet: $400 one/$600 two",
         "Pet rent: $25/month each"
       ],
@@ -646,14 +824,38 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/31151/grand-reserve-at-canton_165-reservoir-dr-canton-ga_rpi_ii-2602886-24.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/31151/grand-reserve-at-canton_165-reservoir-dr-canton-ga_rpi_ii-2602886-24.jpg", "sourceUrl": "https://www.grandreservecanton.com/photogallery", "alt": "Grand Reserve at Canton official property photo one" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/31151/grand-reserve-at-canton_165-reservoir-dr-canton-ga_rpi_ii-2602886-08.jpg", "sourceUrl": "https://www.grandreservecanton.com/photogallery", "alt": "Grand Reserve at Canton official property photo two" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/31151/grand-reserve-at-canton_165-reservoir-dr-canton-ga_rpi_ii-2602886-10.jpg", "sourceUrl": "https://www.grandreservecanton.com/photogallery", "alt": "Grand Reserve at Canton official property photo three" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/31151/grand-reserve-at-canton_165-reservoir-dr-canton-ga_rpi_ii-2602886-24.jpg",
+          "sourceUrl": "https://www.grandreservecanton.com/photogallery",
+          "alt": "Grand Reserve at Canton official property photo one"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/31151/grand-reserve-at-canton_165-reservoir-dr-canton-ga_rpi_ii-2602886-08.jpg",
+          "sourceUrl": "https://www.grandreservecanton.com/photogallery",
+          "alt": "Grand Reserve at Canton official property photo two"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/31151/grand-reserve-at-canton_165-reservoir-dr-canton-ga_rpi_ii-2602886-10.jpg",
+          "sourceUrl": "https://www.grandreservecanton.com/photogallery",
+          "alt": "Grand Reserve at Canton official property photo three"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "JavaScript-rendered official inventory confirmed the displayed ranges, deal, and pet terms; some move-in charges vary.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "aspect-river",
@@ -663,26 +865,26 @@
       "address": "59 Anderson Avenue, Canton, GA 30114",
       "lat": 34.241763,
       "lng": -84.4955826,
-      "distanceMiles": 7.3,
+      "distanceMiles": 7.2,
       "driveMin": 16,
-      "driveMax": 23,
-      "commuteNote": "Static route baseline was about 16 minutes; downtown Canton traffic can add time.",
+      "driveMax": 20,
+      "commuteNote": "7.2 mi / 16 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1500,
-        "max": null,
-        "note": "Official displayed starting price; another public feed showed lower, so verify.",
+        "min": 1200,
+        "max": 1500,
+        "note": "Official current units: Fairlie at $1,200 and Castleberry at $1,500.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1555,
+        "min": null,
         "max": null,
-        "note": "Official displayed starting price; one unit crawl differed by $25.",
+        "note": "2BR plans exist, but no current public price or availability is shown; call.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
-      "priceSource": "Official floor plans; public sources conflict",
-      "deal": "2 months free—verify",
-      "dealDetail": "A community-supplied listing advertises two months free prorated over four months, but the official page did not confirm it.",
+      "priceSource": "Official floor plans and current community-supplied unit cross-check",
+      "deal": "2 months free",
+      "dealDetail": "Official page displays two months free, prorated over four months. The popup still calls it an August special, so confirm before relying; no public end date was shown.",
       "dealExpires": null,
       "amenities": [
         "Riverfront location",
@@ -696,11 +898,17 @@
         "Controlled access",
         "Package lockers"
       ],
-      "petCost": "Up to 2 pets, 300 lb max; $40/month each; breed restrictions; one-time fee requires confirmation.",
+      "petCost": "Up to 2 pets, 300 lb maximum; $300 fee + $40/month per pet; $25 pet screening; breed restrictions.",
       "fees": [
-        "Pet rent: $40/month each",
-        "One-time pet fee: call",
-        "Ask for required building/service fees"
+        "Application: $50 per applicant",
+        "Administration: $175 per application",
+        "Deposit: $500 approved; $1,000 conditional",
+        "Valet trash: $25/month",
+        "Pest: $3/month",
+        "Amenity fee: $7.50/month",
+        "Pet screening: $25",
+        "Pet fee: $300",
+        "Pet rent: $40/month per pet"
       ],
       "review": {
         "rating": 4.6,
@@ -716,14 +924,38 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/110939/p1810975_1_1_photogallery.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/110939/p1810975_1_1_photogallery.jpg", "sourceUrl": "https://www.aspectontheriverapts.com/photogallery", "alt": "Aspect on the River official property photo one" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/110939/p1810975_29_1_photogallery.jpg", "sourceUrl": "https://www.aspectontheriverapts.com/photogallery", "alt": "Aspect on the River official property photo two" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/110939/p1810975_35_1_photogallery.jpg", "sourceUrl": "https://www.aspectontheriverapts.com/photogallery", "alt": "Aspect on the River official property photo three" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/110939/p1810975_1_1_photogallery.jpg",
+          "sourceUrl": "https://www.aspectontheriverapts.com/photogallery",
+          "alt": "Aspect on the River official property photo one"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/110939/p1810975_29_1_photogallery.jpg",
+          "sourceUrl": "https://www.aspectontheriverapts.com/photogallery",
+          "alt": "Aspect on the River official property photo two"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/110939/p1810975_35_1_photogallery.jpg",
+          "sourceUrl": "https://www.aspectontheriverapts.com/photogallery",
+          "alt": "Aspect on the River official property photo three"
+        }
       ],
-      "priceConfidence": "conflict",
+      "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "The official page confirmed two current 1BR prices and the promotion; all 2BR plans currently require a quote.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "legends-laurel-canyon",
@@ -735,24 +967,24 @@
       "lng": -84.499951,
       "distanceMiles": 9.4,
       "driveMin": 20,
-      "driveMax": 28,
-      "commuteNote": "Static route baseline was about 20 minutes; verify the school-arrival drive from this northern location.",
+      "driveMax": 26,
+      "commuteNote": "9.4 mi / 20 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1400,
-        "max": 1524,
-        "note": "Official modules varied dynamically within this range.",
+        "min": 1495,
+        "max": 2025,
+        "note": "Official current advertised range across Juniper, Waleska, and alternate layouts.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1922,
-        "max": 2162,
-        "note": "Official/current listing range; verify available unit.",
+        "min": 1825,
+        "max": 2367,
+        "note": "Official current advertised range across Riverstone and alternate layouts; one Reinhardt plan requires a quote.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property modules",
-      "deal": "$200 off first month",
-      "dealDetail": "Official floor-plan module showed $200 off the first month on select units without a public expiration.",
+      "deal": "4 weeks free",
+      "dealDetail": "Official offer: four weeks free on leases of 12 months or longer; no public expiration was shown.",
       "dealExpires": null,
       "amenities": [
         "Saltwater pool",
@@ -780,14 +1012,34 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.legendsatlaurelcanyon.com/",
-      "pricingUrl": "https://legendsatlaurelcanyon.prospectportal.com/",
+      "pricingUrl": "https://www.legendsatlaurelcanyon.com/floor-plans",
       "amenitiesUrl": "https://www.legendsatlaurelcanyon.com/amenities",
       "imageUrl": "https://cdn.prod.website-files.com/6967dff5115c52d58d6cde65/69681de90a39ee51de827cc5_Laurel-Canyon-26.jpg",
       "imageSource": "Official property website",
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "reachable_unparsed",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [
+        {
+          "min": 1495,
+          "max": 2367,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ],
+      "detectedDeal": "4 weeks free",
+      "auditStatus": "official",
+      "auditNote": "Official live floor-plan ranges and promotion replaced stale values from an older portal snapshot.",
+      "galleryUrl": "https://www.legendsatlaurelcanyon.com/gallery",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true,
+      "lastSourceSuccess": "2026-09-04"
     },
     {
       "id": "crest-laurel-canyon",
@@ -797,26 +1049,26 @@
       "address": "30 Laurel Canyon Village Circle, Canton, GA 30114",
       "lat": 34.2710453,
       "lng": -84.5042203,
-      "distanceMiles": 9.9,
-      "driveMin": 21,
-      "driveMax": 29,
-      "commuteNote": "Static route baseline was about 21 minutes; verify school-arrival traffic before touring.",
+      "distanceMiles": 9.8,
+      "driveMin": 20,
+      "driveMax": 26,
+      "commuteNote": "9.8 mi / 20 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1441,
-        "max": null,
-        "note": "Recent marketplace starting snapshot; official page currently says call for 1BR pricing.",
+        "min": 1419,
+        "max": 3222,
+        "note": "Official live Cypress unit/lease-term range; the Birch plan requires a quote.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1709,
-        "max": 3588,
-        "note": "Official available-unit/lease-term range; the broad maximum needs confirmation.",
+        "min": 1706,
+        "max": 3877,
+        "note": "Official live range across Maple, Oak, and Hawthorne units and lease terms.",
         "observedAt": "2026-09-04"
       },
-      "priceBasis": "Mixed official and recent base-rent snapshot",
-      "priceSource": "Official floor plans; 1BR marketplace snapshot",
-      "deal": null,
-      "dealDetail": "No broad current general promotion was verified.",
+      "priceBasis": "Official advertised base-rent range across units and lease terms",
+      "priceSource": "Official property floor plans",
+      "deal": "$800 off for qualifying employees",
+      "dealDetail": "Targeted offer: $800 off the first full month for employees of qualifying employers. Ask whether the employer participates; restrictions apply; no public expiry.",
       "dealExpires": null,
       "amenities": [
         "Pool",
@@ -852,14 +1104,38 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/dji_fly_20230714_122450_113_1689433819192_photo.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/dji_fly_20230714_122450_113_1689433819192_photo.jpg", "sourceUrl": "https://www.crestlaurelcanyon.com/photogallery", "alt": "The Crest at Laurel Canyon aerial view" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/the%20crest%20at%20laurel%20canyon%202%20bedroom%20model%20apartment%20home%20kitchen%281%29.jpg", "sourceUrl": "https://www.crestlaurelcanyon.com/photogallery", "alt": "The Crest at Laurel Canyon two-bedroom kitchen" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/the%20crest%20at%20laurel%20canyon%202%20bedroom%20model%20apartment%20home%20dining%20space%281%29.jpg", "sourceUrl": "https://www.crestlaurelcanyon.com/photogallery", "alt": "The Crest at Laurel Canyon two-bedroom dining area" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/dji_fly_20230714_122450_113_1689433819192_photo.jpg",
+          "sourceUrl": "https://www.crestlaurelcanyon.com/photogallery",
+          "alt": "The Crest at Laurel Canyon aerial view"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/the%20crest%20at%20laurel%20canyon%202%20bedroom%20model%20apartment%20home%20kitchen%281%29.jpg",
+          "sourceUrl": "https://www.crestlaurelcanyon.com/photogallery",
+          "alt": "The Crest at Laurel Canyon two-bedroom kitchen"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/94173/the%20crest%20at%20laurel%20canyon%202%20bedroom%20model%20apartment%20home%20dining%20space%281%29.jpg",
+          "sourceUrl": "https://www.crestlaurelcanyon.com/photogallery",
+          "alt": "The Crest at Laurel Canyon two-bedroom dining area"
+        }
       ],
-      "priceConfidence": "conflict",
+      "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "Official live unit and lease-term ranges were expanded across all 1BR and 2BR layouts; upper values reflect term-dependent pricing.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "alexander-ridge",
@@ -870,20 +1146,20 @@
       "address": "102 Alexander Drive, Canton, GA 30114",
       "lat": 34.1996022,
       "lng": -84.5126174,
-      "distanceMiles": 4,
+      "distanceMiles": 3.9,
       "driveMin": 10,
-      "driveMax": 15,
-      "commuteNote": "Static route baseline was about 10 minutes; a close option in ordinary traffic.",
+      "driveMax": 12,
+      "commuteNote": "3.9 mi / 10 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1199,
         "max": 1251,
-        "note": "Current market-rate range. Lower AMI units have separate income eligibility.",
+        "note": "Current market-rate range. Separate 60% AMI 1BR homes were $1,125–$1,246.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1400,
         "max": 1534,
-        "note": "Current market-rate range. Lower AMI units have separate income eligibility.",
+        "note": "Current market-rate range. Separate 50%/60% AMI 2BR homes were $1,211 and $1,334–$1,484.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised market-rate base rent",
@@ -903,7 +1179,7 @@
         "Gated/controlled access",
         "On-site management"
       ],
-      "petCost": "Up to 2 pets; $300 one/$500 two + $40/month each; breed restrictions.",
+      "petCost": "Up to 2 pets; $300 one/$500 two + $40/month each. Ask the property whether any breed rules apply.",
       "fees": [
         "Pet fee: $300 one/$500 two",
         "Pet rent: $40/month each",
@@ -923,14 +1199,37 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/101498/09_102_alexander_dr_canton_ga_30114_usa-exterior-dji_20251106125439_0091_d.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/101498/09_102_alexander_dr_canton_ga_30114_usa-exterior-dji_20251106125439_0091_d.jpg", "sourceUrl": "https://www.alexanderridge.com/photogallery", "alt": "Alexander Ridge aerial property view" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/101498/07_102_alexander_dr_canton_ga_30114_usa-exterior-dji_20251106130601_0109_d.jpg", "sourceUrl": "https://www.alexanderridge.com/photogallery", "alt": "Alexander Ridge official property photo two" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/101498/15_102_alexander_dr_canton_ga_30114_usa-exterior-a7402023.jpg", "sourceUrl": "https://www.alexanderridge.com/photogallery", "alt": "Alexander Ridge apartment exterior" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/101498/09_102_alexander_dr_canton_ga_30114_usa-exterior-dji_20251106125439_0091_d.jpg",
+          "sourceUrl": "https://www.alexanderridge.com/photogallery",
+          "alt": "Alexander Ridge aerial property view"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/101498/07_102_alexander_dr_canton_ga_30114_usa-exterior-dji_20251106130601_0109_d.jpg",
+          "sourceUrl": "https://www.alexanderridge.com/photogallery",
+          "alt": "Alexander Ridge official property photo two"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/101498/15_102_alexander_dr_canton_ga_30114_usa-exterior-a7402023.jpg",
+          "sourceUrl": "https://www.alexanderridge.com/photogallery",
+          "alt": "Alexander Ridge apartment exterior"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "Market-rate rents were rechecked. Separate lower prices require household eligibility and are not mixed into the market-rate sort.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "lancaster-ridge",
@@ -940,10 +1239,10 @@
       "address": "800 Hickory Knoll Drive, Canton, GA 30114",
       "lat": 34.25142,
       "lng": -84.4908051,
-      "distanceMiles": 8.3,
+      "distanceMiles": 8.2,
       "driveMin": 18,
-      "driveMax": 25,
-      "commuteNote": "Static route baseline was about 18 minutes; allow for Riverstone-area traffic.",
+      "driveMax": 23,
+      "commuteNote": "8.2 mi / 18 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": null,
         "max": null,
@@ -953,7 +1252,7 @@
       "twoBed": {
         "min": 1450,
         "max": null,
-        "note": "Official current starting price.",
+        "note": "Advertised starting price; the plan is marked Coming Soon, so no currently available unit was verified.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
@@ -994,11 +1293,19 @@
       "verifiedAt": "2026-09-04",
       "detectedDeal": "Up to one month free + one month free rent",
       "dealLastSeenAt": "2026-09-04",
-      "dealStatus": "needs_review",
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "Both eligible floor plans are marked coming soon or call; no currently available unit was verified.",
+      "galleryUrl": "https://www.lifeatlancaster.com/gallery",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "northwood-canton",
@@ -1008,10 +1315,10 @@
       "address": "234 Marietta Highway, Canton, GA 30114",
       "lat": 34.2427378,
       "lng": -84.4959933,
-      "distanceMiles": 7.3,
-      "driveMin": 16,
-      "driveMax": 23,
-      "commuteNote": "Static route baseline was about 16 minutes; downtown traffic can widen the estimate.",
+      "distanceMiles": 7.2,
+      "driveMin": 15,
+      "driveMax": 20,
+      "commuteNote": "7.2 mi / 15 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1250,
         "max": 1350,
@@ -1030,20 +1337,18 @@
       "dealDetail": "The previously posted August 31 promotion has expired.",
       "dealExpires": null,
       "amenities": [
-        "Water/trash/sewer included",
         "Shared laundry",
-        "Washer/dryer hookups select",
-        "Grills",
-        "Renovated finishes"
+        "Washer/dryer hookups in select homes",
+        "On-site management"
       ],
       "security": [
-        "Video patrol",
         "On-site management"
       ],
       "petCost": "No pets; service animals are accommodated under applicable law.",
       "fees": [
-        "Water/trash/sewer included",
-        "No-pet policy; confirm all move-in charges"
+        "Application: $25–$50",
+        "No-pet policy",
+        "Confirm all move-in and recurring charges"
       ],
       "review": {
         "rating": 1.4,
@@ -1052,35 +1357,41 @@
         "url": "https://reviews.birdeye.com/northwood-apartments-156807970637191",
         "observedAt": "2026-09-04"
       },
-      "officialUrl": "https://www.northwoodga.com/",
+      "officialUrl": "https://www.rentcafe.com/apartments/ga/canton/northwood3/default.aspx",
       "pricingUrl": "https://www.rentcafe.com/apartments/ga/canton/northwood3/default.aspx",
-      "amenitiesUrl": "https://www.northwoodga.com/amenities",
-      "galleryUrl": "https://www.precisionmngmtprop.com/landing/northwoodga",
+      "amenitiesUrl": "https://www.rentcafe.com/apartments/ga/canton/northwood3/default.aspx",
+      "galleryUrl": "https://www.rentcafe.com/apartments/ga/canton/northwood3/default.aspx",
       "imageUrl": "https://static.wixstatic.com/media/189bce_a415312b194940acb32294aa0a9104ed~mv2.jpg/v1/fill/w_834%2Ch_557%2Cal_c%2Cq_85%2Cenc_auto/189bce_a415312b194940acb32294aa0a9104ed~mv2.jpg",
-      "imageSource": "Official management gallery",
-      "galleryImages": [
-        { "url": "https://static.wixstatic.com/media/189bce_a415312b194940acb32294aa0a9104ed~mv2.jpg/v1/fill/w_834%2Ch_557%2Cal_c%2Cq_85%2Cenc_auto/189bce_a415312b194940acb32294aa0a9104ed~mv2.jpg", "sourceUrl": "https://www.precisionmngmtprop.com/landing/northwoodga", "alt": "Northwood Apartments official property photo one" },
-        { "url": "https://static.wixstatic.com/media/189bce_ca60ef0a2e554ad7ab725e98764f0a9c~mv2.jpg/v1/fill/w_980%2Ch_735%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto/189bce_ca60ef0a2e554ad7ab725e98764f0a9c~mv2.jpg", "sourceUrl": "https://www.precisionmngmtprop.com/landing/northwoodga", "alt": "Northwood Apartments official property photo two" },
-        { "url": "https://static.wixstatic.com/media/189bce_bd7c4d055a2f454db77ccb50c27346b6~mv2.jpg/v1/fill/w_980%2Ch_655%2Cal_c%2Cq_85%2Cusm_0.66_1.00_0.01%2Cenc_auto/189bce_bd7c4d055a2f454db77ccb50c27346b6~mv2.jpg", "sourceUrl": "https://www.precisionmngmtprop.com/landing/northwoodga", "alt": "Northwood Apartments official property photo three" }
-      ],
+      "imageSource": "Previously published property-site photo; verify against current management gallery",
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The former property domain currently shows a generic Clarkston template. Links now use the valid management-network listing; only claims supported there are retained.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "ridgewalk-income",
       "name": "Ridgewalk Apartments",
       "city": "Woodstock",
       "county": "Cherokee",
-      "eligibility": "Income limits may apply—confirm household eligibility",
+      "eligibility": "Mixed community: 239 LIHTC and 101 market-rate units; confirm the eligibility rules for the specific home",
       "address": "1 Elena Way, Woodstock, GA 30188",
       "lat": 34.1171321,
       "lng": -84.519852,
       "distanceMiles": 6,
-      "driveMin": 11,
+      "driveMin": 14,
       "driveMax": 18,
-      "commuteNote": "Static route estimate with a conservative ordinary-traffic allowance.",
+      "commuteNote": "6.0 mi / 14 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1149,
         "max": null,
@@ -1094,7 +1405,7 @@
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
-      "priceSource": "Official management page and community listing",
+      "priceSource": "Community-supplied Apartments.com listing",
       "deal": null,
       "dealDetail": "No broad current promotion was verified.",
       "dealExpires": null,
@@ -1107,14 +1418,18 @@
         "Playground"
       ],
       "security": [
-        "On-site management",
-        "Income-qualified leasing review"
+        "Controlled/gated access reported by the community-supplied listing",
+        "On-site management"
       ],
       "petCost": "Up to 2 pets, 25 lb; $450 one/$600 two + $25/month one or $55/month two; restrictions.",
       "fees": [
+        "Application: $35",
+        "Good-faith fee: $100",
+        "Security deposit: $350 to one month",
+        "Storage: $35/month",
+        "Trash included",
         "Pet fee: $450 one/$600 two",
-        "Pet rent: $25 one/$55 two",
-        "Income limits may apply"
+        "Pet rent: $25 one/$55 two"
       ],
       "review": {
         "rating": 3.6,
@@ -1134,7 +1449,15 @@
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The official manager publishes no rents. Community-supplied prices and fees are shown; the property includes both LIHTC and market-rate units.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "avonlea-towne-lake",
@@ -1144,10 +1467,10 @@
       "address": "1000 Avonlea Place, Woodstock, GA 30189",
       "lat": 34.0997557,
       "lng": -84.5348834,
-      "distanceMiles": 7.8,
-      "driveMin": 12,
-      "driveMax": 20,
-      "commuteNote": "Static route estimate; Towne Lake traffic is reflected in the upper range.",
+      "distanceMiles": 7.3,
+      "driveMin": 15,
+      "driveMax": 19,
+      "commuteNote": "7.3 mi / 15 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1462,
         "max": 1810,
@@ -1155,15 +1478,15 @@
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1890,
+        "min": 1823,
         "max": 2060,
-        "note": "Current dynamic base-rent range.",
+        "note": "Current community-supplied available-unit base-rent range.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
-      "priceSource": "Official property availability",
+      "priceSource": "Community-supplied Apartments.com inventory; official page unavailable",
       "deal": "Half off first full month",
-      "dealDetail": "Advertised on classic homes; confirm the eligible unit and lease term.",
+      "dealDetail": "Community-supplied offer: half off the first full month on eligible classic homes; confirm the unit and lease term.",
       "dealExpires": null,
       "amenities": [
         "Greenway access",
@@ -1175,6 +1498,7 @@
       ],
       "security": [
         "Gated community",
+        "Alarm system included",
         "On-site management"
       ],
       "petCost": "Up to 2 pets, 74-lb combined; $400 first + $100 second; $15/month each; $30 screening.",
@@ -1195,13 +1519,23 @@
       "amenitiesUrl": "https://www.avonleatownelake.com/apartments/ga/woodstock/amenities",
       "imageUrl": "https://g5-assets-cld-res.cloudinary.com/image/upload/x_0,y_279,h_760,w_1901,c_crop/q_auto,f_auto,c_fill,g_center,h_800,w_2000/v1763055539/g5/g5-c-5wlomy6ok-quintus-corporation/g5-cl-1nd2c8knqg-quintus-corporation-woodstock-ga/uploads/173379118_1_doevyb_mrkdng.jpg",
       "imageSource": "Official property website",
-      "priceConfidence": "official",
+      "priceConfidence": "snapshot",
       "verifiedAt": "2026-09-04",
       "detectedDeal": null,
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The official page could not display inventory; current rents, promotion, and review are community-supplied.",
+      "galleryUrl": "https://www.avonleatownelake.com/apartments/ga/woodstock/photo-gallery",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "brooke-mill",
@@ -1211,27 +1545,27 @@
       "address": "50 Downsby Lane, Woodstock, GA 30189",
       "lat": 34.0822104,
       "lng": -84.5542588,
-      "distanceMiles": 9.6,
-      "driveMin": 15,
-      "driveMax": 23,
-      "commuteNote": "Static route estimate; Towne Lake and Bells Ferry conditions can add time.",
+      "distanceMiles": 9.4,
+      "driveMin": 18,
+      "driveMax": 24,
+      "commuteNote": "9.4 mi / 18 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1333,
-        "max": 2327,
-        "note": "Official current base-rent range across units and terms.",
+        "min": 1361,
+        "max": 3160,
+        "note": "Official advertised range across current units and lease terms; community-supplied base figures were lower.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1394,
-        "max": 2035,
-        "note": "Official current base-rent range across units and terms.",
+        "max": 2113,
+        "note": "Official advertised range across current units and lease terms; community-supplied figures differed.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official property floor plans",
-      "deal": "1 month free",
-      "dealDetail": "Current advertised concession; confirm the participating home, term, and move-in deadline.",
-      "dealExpires": null,
+      "deal": "6 weeks free",
+      "dealDetail": "Official offer: lease by September 30, 2026 on a 13–15 month term for six weeks free; confirm eligibility.",
+      "dealExpires": "2026-09-30",
       "amenities": [
         "Pool",
         "Clubhouse Wi-Fi",
@@ -1248,7 +1582,7 @@
       "fees": [
         "Application: $125",
         "Administration: $200",
-        "Storage: $65",
+        "Storage: $65/month",
         "Pet charges: call"
       ],
       "review": {
@@ -1263,10 +1597,23 @@
       "amenitiesUrl": "https://www.liveatbrookemill.com/amenities",
       "imageUrl": "https://resource.rentcafe.com/image/upload/x_0,y_0,w_1600,h_1020,c_crop/q_auto,f_auto,c_lfill,w_1600,ar_1.9536019536019535,g_auto/s3/2/135284/p1171255_brooke-mill-ext-3288-(zf-9540-20919-1-001).jpg",
       "imageSource": "Official property website",
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "source_conflict",
+      "auditNote": "Official unit/lease-term ranges and community-supplied base figures differed; the official range is displayed and the conflict is disclosed.",
+      "galleryUrl": "https://www.liveatbrookemill.com/photogallery",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "heights-towne-lake",
@@ -1276,20 +1623,20 @@
       "address": "1395 Buckhead Crossing, Woodstock, GA 30189",
       "lat": 34.1100195,
       "lng": -84.5414174,
-      "distanceMiles": 8,
-      "driveMin": 14,
-      "driveMax": 22,
-      "commuteNote": "Static route estimate; Towne Lake congestion can widen the range.",
+      "distanceMiles": 7.9,
+      "driveMin": 16,
+      "driveMax": 21,
+      "commuteNote": "7.9 mi / 16 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1458,
-        "max": null,
-        "note": "Recent advertised base-rent snapshot.",
+        "max": 1581,
+        "note": "Community-supplied advertised/base-rent range; mandatory fees are additional.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1684,
-        "max": null,
-        "note": "Recent advertised base-rent snapshot.",
+        "max": 1870,
+        "note": "Community-supplied advertised/base-rent range; mandatory fees are additional.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Recent advertised base rent",
@@ -1311,10 +1658,12 @@
       ],
       "petCost": "Up to 2 pets; $350 first + $150 second; $20/month each.",
       "fees": [
+        "Application: $75 per person",
+        "Administration: $150 per apartment",
+        "Deposit: from $250",
         "Valet trash: $25/month",
         "Pest: $3/month",
-        "Service fee: $5/month",
-        "Pet charges apply"
+        "Service fee: $5/month"
       ],
       "review": {
         "rating": 3.6,
@@ -1330,9 +1679,21 @@
       "imageUrl": "https://capi.myleasestar.com/v2/dimg/161068755/1920x1080/161068755.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://capi.myleasestar.com/v2/dimg/161068755/1920x1080/161068755.jpg", "sourceUrl": "https://www.heightsattownlake.com/Gallery.aspx", "alt": "The Heights at Towne Lake official property photo one" },
-        { "url": "https://capi.myleasestar.com/v2/dimg/161069323/1920x1080/161069323.jpg", "sourceUrl": "https://www.heightsattownlake.com/Gallery.aspx", "alt": "The Heights at Towne Lake official property photo two" },
-        { "url": "https://capi.myleasestar.com/v2/dimg/161069345/1920x1080/161069345.jpg", "sourceUrl": "https://www.heightsattownlake.com/Gallery.aspx", "alt": "The Heights at Towne Lake official property photo three" }
+        {
+          "url": "https://capi.myleasestar.com/v2/dimg/161068755/1920x1080/161068755.jpg",
+          "sourceUrl": "https://www.heightsattownlake.com/Gallery.aspx",
+          "alt": "The Heights at Towne Lake official property photo one"
+        },
+        {
+          "url": "https://capi.myleasestar.com/v2/dimg/161069323/1920x1080/161069323.jpg",
+          "sourceUrl": "https://www.heightsattownlake.com/Gallery.aspx",
+          "alt": "The Heights at Towne Lake official property photo two"
+        },
+        {
+          "url": "https://capi.myleasestar.com/v2/dimg/161069345/1920x1080/161069345.jpg",
+          "sourceUrl": "https://www.heightsattownlake.com/Gallery.aspx",
+          "alt": "The Heights at Towne Lake official property photo three"
+        }
       ],
       "priceConfidence": "snapshot",
       "verifiedAt": "2026-09-04",
@@ -1340,7 +1701,15 @@
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "Current rents and fees are community-supplied because the official site does not expose a structured live-price feed.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "park-towne-lake",
@@ -1350,10 +1719,10 @@
       "address": "50 Paces Parkway, Woodstock, GA 30189",
       "lat": 34.1082243,
       "lng": -84.5385679,
-      "distanceMiles": 8,
-      "driveMin": 14,
-      "driveMax": 22,
-      "commuteNote": "Static route estimate; use the live route during the actual school commute.",
+      "distanceMiles": 7.8,
+      "driveMin": 16,
+      "driveMax": 21,
+      "commuteNote": "7.8 mi / 16 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1441,
         "max": 1486,
@@ -1385,9 +1754,14 @@
       ],
       "petCost": "Up to 2 pets, 80 lb; $300 each + $10/month each; breed restrictions. Older feeds differ.",
       "fees": [
-        "Pet fee: $300 each—confirm",
-        "Pet rent: $10/month each",
-        "Shown rents are advertised monthly totals"
+        "Application: $75",
+        "Administration: $150",
+        "Doorstep trash: $25/month",
+        "Pest: $4/month",
+        "Utility service: $8/month",
+        "Variable utilities additional",
+        "Pet fee: $300 each",
+        "Pet rent: $10/month each"
       ],
       "review": {
         "rating": 3.9,
@@ -1397,7 +1771,7 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://livebh.com/apartments/park-at-towne-lake-apartments/",
-      "pricingUrl": "https://livebh.com/apartments/park-at-towne-lake-apartments/",
+      "pricingUrl": "https://livebh.com/apartments/park-at-towne-lake-apartments/floor-plans/",
       "amenitiesUrl": "https://livebh.com/apartments/park-at-towne-lake-apartments/features/",
       "imageUrl": "https://cdn.livebh.com/wp-content/uploads/2022/03/29163909/Park-At-Towne-Lake-Featured-Image.png",
       "imageSource": "Official property website",
@@ -1407,7 +1781,15 @@
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Advertised monthly totals, fee components, access features, pet terms, and review snapshot were rechecked.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "the-palmer",
@@ -1417,26 +1799,26 @@
       "address": "1345 Towne Lake Hills South Drive, Woodstock, GA 30189",
       "lat": 34.1039148,
       "lng": -84.5458034,
-      "distanceMiles": 8,
-      "driveMin": 14,
+      "distanceMiles": 8.7,
+      "driveMin": 17,
       "driveMax": 22,
-      "commuteNote": "Static route estimate; Towne Lake traffic is reflected in the upper bound.",
+      "commuteNote": "8.7 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1363,
-        "max": null,
-        "note": "Official base starting rent; total widget showed about $1,399.",
+        "min": 1374,
+        "max": 1536,
+        "note": "Community-supplied total monthly leasing-price range including mandatory fees.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1357,
-        "max": null,
-        "note": "Official base starting rent; total widget showed about $1,393.",
+        "min": 1363,
+        "max": 1665,
+        "note": "Community-supplied total monthly leasing-price range including mandatory fees.",
         "observedAt": "2026-09-04"
       },
-      "priceBasis": "Advertised base rent",
-      "priceSource": "Official property/Greystar listing",
+      "priceBasis": "Total monthly leasing price including mandatory fees",
+      "priceSource": "Community-supplied totals; official Greystar widget was not reliably extractable",
       "deal": "Up to 1 month free",
-      "dealDetail": "Official property terms say select homes; a marketplace showed a larger conflicting offer, so first-party terms are used.",
+      "dealDetail": "The official property advertises up to one month free on base rent for select homes; a community-supplied listing says up to six weeks. Confirm the written offer.",
       "dealExpires": null,
       "amenities": [
         "Resort pool",
@@ -1447,19 +1829,24 @@
         "Garages"
       ],
       "security": [
-        "On-site management",
-        "Package services reported"
+        "Controlled/gated access",
+        "Package room"
       ],
-      "petCost": "Up to 2 pets, no weight limit; $500 each + $10/month each; breed restrictions.",
+      "petCost": "Official policy: maximum 2, no weight limit, aggressive-breed restrictions; charges are not publicly disclosed and a linked listing conflicts—confirm.",
       "fees": [
-        "Pet fee: $500 each",
-        "Pet rent: $10/month each",
-        "Official total-price widgets differed slightly—verify"
+        "Pest: $4.99/month",
+        "Doorstep trash: $25/month",
+        "Utility-billing administration: $5.35/month",
+        "Washer/dryer rental: $50/month per rentable item",
+        "Access device: $50",
+        "Utility setup: $15",
+        "Final utility bill: $10",
+        "Variable utilities and liability charges additional"
       ],
       "review": {
-        "rating": 3.3,
-        "count": 187,
-        "source": "Apartments.com snapshot",
+        "rating": null,
+        "count": 0,
+        "source": "Apartments.com—no renter rating",
         "url": "https://www.apartments.com/the-palmer-woodstock-ga/fe2znmv/",
         "observedAt": "2026-09-04"
       },
@@ -1468,13 +1855,22 @@
       "amenitiesUrl": "https://www.palmerapartments.com/Amenities.aspx",
       "imageUrl": "https://s7d9.scene7.com/is/image/greystarprod/15063PL2?fmt=avif&wid=1600&qlt=80&fit=constrain",
       "imageSource": "Official Greystar property page",
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "detectedDeal": null,
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "source_conflict",
+      "auditNote": "Greystar confirms total-price presentation, but its live widget was not reliably extractable; ranges are community-supplied and promotion sources differ.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "park-9",
@@ -1484,24 +1880,24 @@
       "address": "800 Milwood Street, Woodstock, GA 30189",
       "lat": 34.1272058,
       "lng": -84.5289769,
-      "distanceMiles": 7.2,
-      "driveMin": 13,
-      "driveMax": 20,
-      "commuteNote": "Static route estimate; upper range allows for ordinary Woodstock traffic.",
+      "distanceMiles": 5.4,
+      "driveMin": 12,
+      "driveMax": 16,
+      "commuteNote": "5.4 mi / 12 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1455,
-        "max": 1720,
-        "note": "Official live-unit base-rent range; add required monthly fees.",
+        "min": 1404,
+        "max": 1794,
+        "note": "Community-supplied total monthly price; official embedded inventory was not reliably extractable.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1550,
-        "max": 2145,
-        "note": "Official live-unit base-rent range; add required monthly fees.",
+        "min": 1784,
+        "max": 2244,
+        "note": "Community-supplied total monthly price; official embedded inventory was not reliably extractable.",
         "observedAt": "2026-09-04"
       },
-      "priceBasis": "Advertised base rent",
-      "priceSource": "Official Brookfield property cards",
+      "priceBasis": "Community-supplied advertised total monthly price",
+      "priceSource": "Community-supplied current listing; official embedded inventory blocked",
       "deal": "Up to 1.5 months free",
       "dealDetail": "Apply by September 15, 2026; select homes and possible 48-hour look-and-lease terms apply.",
       "dealExpires": "2026-09-15",
@@ -1514,21 +1910,21 @@
         "Bike rentals"
       ],
       "security": [
-        "Controlled building access reported",
-        "On-site management"
+        "Parcel/package system",
+        "On-site team"
       ],
-      "petCost": "Up to 2 pets; $250 each + $25/month each; breed restrictions.",
+      "petCost": "Previously reported: up to 2 pets, $250 each + $25/month each; not revalidated first-party—confirm.",
       "fees": [
-        "Required monthly fees: $98.56",
-        "Internet: $60",
-        "Pest: $4",
-        "Water admin: $14.56",
-        "Valet trash: $20"
+        "Previously reported mandatory fees: $98.56/month—confirm",
+        "Internet: $60/month—confirm",
+        "Pest: $4/month—confirm",
+        "Water administration: $14.56/month—confirm",
+        "Valet trash: $20/month—confirm"
       ],
       "review": {
-        "rating": 4.6,
-        "count": 118,
-        "source": "Apartments.com snapshot",
+        "rating": null,
+        "count": 0,
+        "source": "Apartments.com—no renter rating",
         "url": "https://www.apartments.com/park-9-woodstock-ga/r8m5gc3/",
         "observedAt": "2026-09-04"
       },
@@ -1537,14 +1933,21 @@
       "amenitiesUrl": "https://rent.brookfieldproperties.com/property/park-9/",
       "imageUrl": "https://rent.brookfieldproperties.com/wp-content/uploads/2026/06/Park-9-Living-Room-and-Kitchen-scaled.jpeg",
       "imageSource": "Official Brookfield property website",
-      "priceConfidence": "official",
+      "priceConfidence": "snapshot",
       "verifiedAt": "2026-09-04",
-      "detectedDeal": "5 months free",
       "dealLastSeenAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "The official embedded inventory and fee guide were not reliably extractable; current totals and unverified charges are clearly labeled.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "station-92",
@@ -1554,26 +1957,26 @@
       "address": "10247 Highway 92, Woodstock, GA 30188",
       "lat": 34.0893826,
       "lng": -84.5180767,
-      "distanceMiles": 11.4,
-      "driveMin": 22,
-      "driveMax": 32,
-      "commuteNote": "Highway 92 and I-575 traffic can widen this static range; check live before touring.",
+      "distanceMiles": 8.9,
+      "driveMin": 17,
+      "driveMax": 21,
+      "commuteNote": "8.9 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1650,
-        "max": null,
-        "note": "Official current base-rent start.",
+        "min": 1655,
+        "max": 1680,
+        "note": "Official current advertised range; linked inventory showed $1,650–$1,730.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1925,
-        "max": null,
-        "note": "Official current base-rent start.",
+        "max": 2095,
+        "note": "Official current advertised range.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
       "priceSource": "Official Equity Apartments availability",
       "deal": "1 month free",
-      "dealDetail": "Advertised through September 30, 2026 on select homes; verify lease term.",
+      "dealDetail": "One month free through September 30, 2026 on select homes; new residents only and transfers excluded.",
       "dealExpires": "2026-09-30",
       "amenities": [
         "Resort pool",
@@ -1584,11 +1987,13 @@
         "Pet friendly"
       ],
       "security": [
-        "Controlled package handling reported",
+        "Smart-home technology",
         "On-site management"
       ],
       "petCost": "Up to 3 pets; $400 dog fee shown; dogs/cats $20/month. Confirm cat fee.",
       "fees": [
+        "Application: $100 per person",
+        "Administration: $200 per apartment",
         "Dog fee shown: $400",
         "Pet rent: $20/month",
         "Cat one-time fee: confirm"
@@ -1605,27 +2010,21 @@
       "amenitiesUrl": "https://www.equityapartments.com/atlanta/woodstock/station-92-at-woodstock-apartments",
       "imageUrl": "https://media.equityapartments.com/images/c_crop,x_0,y_0,w_1920,h_1080/c_fill,w_1920,h_1080/q_auto,f_auto/4307-35/station-92-at-woodstock-apartments-exterior",
       "imageSource": "Official Equity Apartments website",
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
-      "detectedDeal": "Up to 1 month free + 25% off your first month",
       "dealLastSeenAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": [
-        {
-          "min": 1375,
-          "max": 2050,
-          "observedAt": "2026-09-04",
-          "bedroom": 1
-        },
-        {
-          "min": 1615,
-          "max": 2065,
-          "observedAt": "2026-09-04",
-          "bedroom": 2
-        }
-      ]
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "source_conflict",
+      "auditNote": "Official and community-supplied 1BR values differed by $5 at the low end; the official range is displayed.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "elevate-woodstock",
@@ -1635,24 +2034,24 @@
       "address": "107 Skyridge Drive, Woodstock, GA 30188",
       "lat": 34.087622,
       "lng": -84.515005,
-      "distanceMiles": 11.5,
-      "driveMin": 22,
-      "driveMax": 32,
-      "commuteNote": "Borderline in heavier school/rush traffic; use the live-directions link at the intended time.",
+      "distanceMiles": 9.1,
+      "driveMin": 17,
+      "driveMax": 22,
+      "commuteNote": "9.1 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1443,
-        "max": 1468,
-        "note": "Current syndicated total monthly price; official page did not expose a reliably parsed rent.",
+        "max": null,
+        "note": "Official advertised start for the A2 plan; the A1 plan requires a quote.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1836,
         "max": null,
-        "note": "Current syndicated total monthly price; official page did not expose a reliably parsed rent.",
+        "note": "Official advertised start for the B2 plan; one home was shown and the B1 plan requires a quote.",
         "observedAt": "2026-09-04"
       },
-      "priceBasis": "Recent advertised monthly total",
-      "priceSource": "Community-supplied listing; verify on official site",
+      "priceBasis": "Official advertised rent; mandatory-fee inclusion is not disclosed",
+      "priceSource": "Official property floor plans",
       "deal": null,
       "dealDetail": "No broad current official promotion was verified.",
       "dealExpires": null,
@@ -1665,8 +2064,8 @@
         "Pet friendly"
       ],
       "security": [
-        "Package service",
-        "On-site management"
+        "Package service reported by the current listing",
+        "On-site management reported by the current listing"
       ],
       "petCost": "Up to 2 dogs/cats; other small pets may be allowed; breed restrictions; current charges require a quote.",
       "fees": [
@@ -1674,38 +2073,53 @@
         "Advertised figures are total-price snapshots"
       ],
       "review": {
-        "rating": 4.3,
-        "count": 12,
-        "source": "Apartments.com snapshot",
+        "rating": null,
+        "count": 0,
+        "source": "Apartments.com—no renter rating",
         "url": "https://www.apartments.com/elevate-woodstock-woodstock-ga/rq8s2h3/",
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://elevatewoodstockapts.com/",
-      "pricingUrl": "https://elevatewoodstockapts.com/",
-      "amenitiesUrl": "https://elevatewoodstockapts.com/",
+      "pricingUrl": "https://elevatewoodstockapts.com/floorplans/",
+      "amenitiesUrl": "https://elevatewoodstockapts.com/amenities/",
       "imageUrl": "https://elevatewoodstockapts.com/assets/images/cache/4tIqqc03ogp9vxVga9cPQIVObMQATMIObAkaWFLh-caaabe30aa8b52657f4a5fcbd77e4357.jpg",
       "imageSource": "Official property website",
-      "priceConfidence": "snapshot",
+      "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "detectedDeal": null,
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [
+        {
+          "min": 1192,
+          "max": 1213,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        }
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "limited_public_data",
+      "auditNote": "Official plan starts are shown; whether mandatory charges are included is not disclosed, and no renter-rating score is currently available.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "riverstock",
       "name": "Riverstock Apartments",
       "city": "Woodstock",
       "county": "Cherokee",
-      "eligibility": "Income-restricted; household income limits apply",
+      "eligibility": "Income-restricted: minimum income $42,090; household maximums vary from $49,500 to $70,680 for 1–4 occupants; student-status rules apply; vouchers accepted",
       "address": "50 Sandy Circle, Woodstock, GA 30188",
       "lat": 34.0992698,
       "lng": -84.5114669,
-      "distanceMiles": 10.5,
-      "driveMin": 20,
-      "driveMax": 28,
-      "commuteNote": "Static route estimate with ordinary-traffic allowance; verify at school-arrival time.",
+      "distanceMiles": 7.9,
+      "driveMin": 16,
+      "driveMax": 21,
+      "commuteNote": "7.9 mi / 16 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": null,
         "max": null,
@@ -1715,7 +2129,7 @@
       "twoBed": {
         "min": 1501,
         "max": null,
-        "note": "Official 1,167-sf two-bedroom price; nine units were shown.",
+        "note": "Official 1,167-sf 2BR price; five units were shown (123, 212, 302, 714, and 722).",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised income-restricted base rent",
@@ -1732,8 +2146,8 @@
         "Private entrances"
       ],
       "security": [
-        "Income-qualified leasing review",
-        "On-site management"
+        "Gated community",
+        "Controlled/key-fob entry"
       ],
       "petCost": "Up to 2 pets, 75 lb; $300 deposit + $25/month; breed restrictions.",
       "fees": [
@@ -1743,9 +2157,9 @@
       ],
       "review": {
         "rating": null,
-        "count": 0,
-        "source": "Current review listing unavailable",
-        "url": "https://www.apartments.com/riverstock-apartments-woodstock-ga/2w2rs6b/",
+        "count": null,
+        "source": "No live review source",
+        "url": null,
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.riverstockapartments.com/",
@@ -1756,7 +2170,18 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "limited_public_data",
+      "auditNote": "Five official 2BR homes were shown. The saved review link no longer resolves to a property review page, so no rating or count is claimed.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "the-knox",
@@ -1766,26 +2191,26 @@
       "address": "1000 Etowah Ferry Drive, Acworth, GA 30102",
       "lat": 34.098325,
       "lng": -84.584302,
-      "distanceMiles": 11,
-      "driveMin": 18,
-      "driveMax": 28,
-      "commuteNote": "Bells Ferry route can vary; the upper estimate allows for ordinary commute traffic.",
+      "distanceMiles": 7.3,
+      "driveMin": 17,
+      "driveMax": 22,
+      "commuteNote": "7.3 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1448,
-        "max": null,
-        "note": "Current advertised base-rent start.",
+        "max": 1588,
+        "note": "Current official advertised base-rent range.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1776,
-        "max": null,
-        "note": "Current advertised base-rent start.",
+        "max": 2100,
+        "note": "Current official advertised range; one layout still requires a quote.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
-      "priceSource": "Official property and community-supplied availability",
+      "priceSource": "Official property floor plans",
       "deal": "6 weeks free",
-      "dealDetail": "Reported for select homes with move-in by September 30, 2026; confirm exact eligibility.",
+      "dealDetail": "Official offer: six weeks free on all apartment homes for move-in by September 30, 2026; confirm lease terms.",
       "dealExpires": "2026-09-30",
       "amenities": [
         "Resort pool",
@@ -1801,9 +2226,11 @@
       ],
       "petCost": "Up to 2 pets; $350 one/$500 two + $20/month each; breed restrictions.",
       "fees": [
+        "Application: $85 per person",
+        "Administration: $200 per apartment",
+        "Deposit varies",
         "Pet fee: $350 one/$500 two",
-        "Pet rent: $20/month each",
-        "Ask for all mandatory monthly charges"
+        "Pet rent: $20/month each"
       ],
       "review": {
         "rating": 4.8,
@@ -1813,23 +2240,57 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://theknoxbellsferry.com/",
-      "pricingUrl": "https://theknoxbellsferry.com/",
+      "pricingUrl": "https://theknoxbellsferry.com/floorplans/",
       "amenitiesUrl": "https://theknoxbellsferry.com/amenities/",
       "galleryUrl": "https://theknoxbellsferry.com/gallery/",
       "imageUrl": "https://theknoxbellsferry.com/assets/images/cache/shoootin-photo-17-33cd9075cd3d6e05d69302fe26232cc3.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://theknoxbellsferry.com/assets/images/cache/shoootin-photo-17-33cd9075cd3d6e05d69302fe26232cc3.jpg", "sourceUrl": "https://theknoxbellsferry.com/gallery/", "alt": "The Knox official property photo one" },
-        { "url": "https://theknoxbellsferry.com/assets/images/cache/shoootin-photo-21-471f97e12fdf6cfae021d7905db92543.jpg", "sourceUrl": "https://theknoxbellsferry.com/gallery/", "alt": "The Knox official property photo two" },
-        { "url": "https://theknoxbellsferry.com/assets/images/cache/shoootin-photo-31-43f2721d9acc38036da0bfb5c54d6ae9.jpg", "sourceUrl": "https://theknoxbellsferry.com/gallery/", "alt": "The Knox official property photo three" }
+        {
+          "url": "https://theknoxbellsferry.com/assets/images/cache/shoootin-photo-17-33cd9075cd3d6e05d69302fe26232cc3.jpg",
+          "sourceUrl": "https://theknoxbellsferry.com/gallery/",
+          "alt": "The Knox official property photo one"
+        },
+        {
+          "url": "https://theknoxbellsferry.com/assets/images/cache/shoootin-photo-21-471f97e12fdf6cfae021d7905db92543.jpg",
+          "sourceUrl": "https://theknoxbellsferry.com/gallery/",
+          "alt": "The Knox official property photo two"
+        },
+        {
+          "url": "https://theknoxbellsferry.com/assets/images/cache/shoootin-photo-31-43f2721d9acc38036da0bfb5c54d6ae9.jpg",
+          "sourceUrl": "https://theknoxbellsferry.com/gallery/",
+          "alt": "The Knox official property photo three"
+        }
       ],
-      "priceConfidence": "snapshot",
+      "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "detectedDeal": null,
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [
+        {
+          "min": 1448,
+          "max": 1538,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1448,
+          "max": 1967,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Current official ranges, all-homes promotion, amenities, access features, pet terms, and review snapshot were rechecked.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "cherokee-summit",
@@ -1839,24 +2300,24 @@
       "address": "5920 Bells Ferry Road, Acworth, GA 30102",
       "lat": 34.097296,
       "lng": -84.579929,
-      "distanceMiles": 10.8,
-      "driveMin": 18,
-      "driveMax": 27,
-      "commuteNote": "Bells Ferry conditions can vary; use the live route at school-arrival time.",
+      "distanceMiles": 7,
+      "driveMin": 16,
+      "driveMax": 20,
+      "commuteNote": "7.0 mi / 16 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1294,
-        "max": null,
-        "note": "Current advertised base-rent start.",
+        "max": 1320,
+        "note": "Current advertised base-rent range; fees additional.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1326,
-        "max": null,
-        "note": "Current advertised base-rent start.",
+        "max": 1426,
+        "note": "Current advertised base-rent range; fees additional.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
-      "priceSource": "Community-supplied current listing; verify on official site",
+      "priceSource": "Official property floor plans and current community-supplied cross-check",
       "deal": null,
       "dealDetail": "No broad current promotion was verified.",
       "dealExpires": null,
@@ -1869,15 +2330,19 @@
         "Washer/dryer connections"
       ],
       "security": [
-        "Controlled/gated access",
-        "On-site management"
+        "Controlled access",
+        "On-site management",
+        "24-hour emergency maintenance"
       ],
       "petCost": "Up to 2 pets; $250 each + $25/month each.",
       "fees": [
+        "Application: $75 per person",
+        "Administration: $200",
         "Amenity: $18/month",
-        "Utility admin: $6/month",
+        "Utility administration: $6/month",
         "Pest: $4/month",
-        "Variable trash/utilities"
+        "Trash billed by unit/occupants",
+        "Usage-based water/sewer/trash additional"
       ],
       "review": {
         "rating": 3.7,
@@ -1887,23 +2352,43 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://www.cherokeesummitga.com/",
-      "pricingUrl": "https://www.cherokeesummitga.com/",
+      "pricingUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/floor-plans",
       "amenitiesUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/amenities",
       "galleryUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/photo-gallery",
       "imageUrl": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_667,w_1000/v1765487691/g5/g5-c-5cjpuxdo1-hercules-real-estate-services-multi/g5-cl-1mzpb95f1g-hercules-real-estate-services-multi-acworth-ga/uploads/5920_Bells_Ferry_Rd_-_Web_Quality_-_043_-_50_Exterior_Front_Unit_-_207_wubr40.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_667,w_1000/v1765487691/g5/g5-c-5cjpuxdo1-hercules-real-estate-services-multi/g5-cl-1mzpb95f1g-hercules-real-estate-services-multi-acworth-ga/uploads/5920_Bells_Ferry_Rd_-_Web_Quality_-_043_-_50_Exterior_Front_Unit_-_207_wubr40.jpg", "sourceUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/photo-gallery", "alt": "Cherokee Summit apartment exterior" },
-        { "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/x_8,y_0,h_2843,w_4262,c_crop/q_auto,f_auto,c_fill,g_center,h_667,w_1000/v1756212258/g5/g5-c-5cjpuxdo1-hercules-real-estate-services-multi/g5-cl-1mzpb95f1g-hercules-real-estate-services-multi-acworth-ga/uploads/117_ii5vbg.jpg", "sourceUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/photo-gallery", "alt": "Cherokee Summit official property photo two" },
-        { "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_667,w_1000/v1664229085/g5/g5-c-5cjpuxdo1-hercules-real-estate-services-multi/g5-cl-1mzpb95f1g-hercules-real-estate-services-multi-acworth-ga/uploads/cherokee-summit-gated-community.jpg", "sourceUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/photo-gallery", "alt": "Cherokee Summit gated community entrance" }
+        {
+          "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_667,w_1000/v1765487691/g5/g5-c-5cjpuxdo1-hercules-real-estate-services-multi/g5-cl-1mzpb95f1g-hercules-real-estate-services-multi-acworth-ga/uploads/5920_Bells_Ferry_Rd_-_Web_Quality_-_043_-_50_Exterior_Front_Unit_-_207_wubr40.jpg",
+          "sourceUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/photo-gallery",
+          "alt": "Cherokee Summit apartment exterior"
+        },
+        {
+          "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/x_8,y_0,h_2843,w_4262,c_crop/q_auto,f_auto,c_fill,g_center,h_667,w_1000/v1756212258/g5/g5-c-5cjpuxdo1-hercules-real-estate-services-multi/g5-cl-1mzpb95f1g-hercules-real-estate-services-multi-acworth-ga/uploads/117_ii5vbg.jpg",
+          "sourceUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/photo-gallery",
+          "alt": "Cherokee Summit official property photo two"
+        },
+        {
+          "url": "https://g5-assets-cld-res.cloudinary.com/image/upload/q_auto,f_auto,c_fill,g_center,h_667,w_1000/v1664229085/g5/g5-c-5cjpuxdo1-hercules-real-estate-services-multi/g5-cl-1mzpb95f1g-hercules-real-estate-services-multi-acworth-ga/uploads/cherokee-summit-gated-community.jpg",
+          "sourceUrl": "https://www.cherokeesummitga.com/apartments/ga/acworth/photo-gallery",
+          "alt": "Cherokee Summit gated community entrance"
+        }
       ],
-      "priceConfidence": "snapshot",
+      "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "detectedDeal": null,
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Current advertised ranges, fees, pet terms, access features, amenities, and review snapshot were rechecked.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "the-everlee",
@@ -1913,10 +2398,10 @@
       "address": "100 Peaks Ridge, Acworth, GA 30102",
       "lat": 34.095173,
       "lng": -84.581859,
-      "distanceMiles": 10.7,
+      "distanceMiles": 7.2,
       "driveMin": 17,
-      "driveMax": 26,
-      "commuteNote": "Bells Ferry corridor traffic is reflected in the upper estimate.",
+      "driveMax": 21,
+      "commuteNote": "7.2 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1439,
         "max": 1508,
@@ -1943,14 +2428,17 @@
         "In-home washer/dryer"
       ],
       "security": [
-        "Smart-home entry features",
-        "On-site management"
+        "Gated entry",
+        "Package lockers",
+        "Smart lock/doorbell"
       ],
       "petCost": "Up to 2 pets; $300 one/$500 two + $20/month each; breed restrictions.",
       "fees": [
+        "Application: $100 per person",
+        "Administration: $200 per apartment",
+        "Optional garage: $175/month",
         "Pet fee: $300 one/$500 two",
-        "Pet rent: $20/month each",
-        "Ask for recurring service fees"
+        "Pet rent: $20/month each"
       ],
       "review": {
         "rating": 4.2,
@@ -1966,15 +2454,25 @@
       "imageUrl": "https://static.aspensquare.com/strapi-uploads/properties/georgia/acworth/the-everlee/gallery/xlarge_Aerial_Pool_1_1d5a4b0f8c.webp",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://static.aspensquare.com/strapi-uploads/properties/georgia/acworth/the-everlee/gallery/xlarge_Aerial_Pool_1_1d5a4b0f8c.webp", "sourceUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee", "alt": "The Everlee aerial pool view" },
-        { "url": "https://static.aspensquare.com/strapi-uploads/properties/georgia/acworth/the-everlee/gallery/xlarge_Kitchen_2_3d68a6702d.webp", "sourceUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee", "alt": "The Everlee apartment kitchen" },
-        { "url": "https://static.aspensquare.com/strapi-uploads/properties/georgia/acworth/the-everlee/gallery/xlarge_Fire_Pit_1_c09011041e.webp", "sourceUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee", "alt": "The Everlee community fire pit" }
+        {
+          "url": "https://static.aspensquare.com/strapi-uploads/properties/georgia/acworth/the-everlee/gallery/xlarge_Aerial_Pool_1_1d5a4b0f8c.webp",
+          "sourceUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee",
+          "alt": "The Everlee aerial pool view"
+        },
+        {
+          "url": "https://static.aspensquare.com/strapi-uploads/properties/georgia/acworth/the-everlee/gallery/xlarge_Kitchen_2_3d68a6702d.webp",
+          "sourceUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee",
+          "alt": "The Everlee apartment kitchen"
+        },
+        {
+          "url": "https://static.aspensquare.com/strapi-uploads/properties/georgia/acworth/the-everlee/gallery/xlarge_Fire_Pit_1_c09011041e.webp",
+          "sourceUrl": "https://www.aspensquare.com/apartments/georgia/acworth/the-everlee",
+          "alt": "The Everlee community fire pit"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
-      "detectedDeal": "1 month free + 25% off first month",
       "dealLastSeenAt": "2026-09-04",
-      "dealStatus": "needs_review",
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
@@ -1985,7 +2483,15 @@
           "observedAt": "2026-09-04",
           "bedroom": 2
         }
-      ]
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "Current unit counts/ranges, promotion, fees, pet terms, access features, amenities, and review were rechecked.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "the-parker",
@@ -1995,44 +2501,52 @@
       "address": "5944 Highway 92, Acworth, GA 30102",
       "lat": 34.087208,
       "lng": -84.590392,
-      "distanceMiles": 11.5,
-      "driveMin": 19,
-      "driveMax": 29,
-      "commuteNote": "Highway 92/Bells Ferry traffic can widen the static estimate.",
+      "distanceMiles": 7.9,
+      "driveMin": 18,
+      "driveMax": 24,
+      "commuteNote": "7.9 mi / 18 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1711,
-        "max": null,
-        "note": "Advertised mandatory monthly total; base was about $1,595.",
+        "max": 2286,
+        "note": "Advertised total monthly price; base rent was $1,595–$2,170.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1915,
-        "max": null,
-        "note": "Advertised mandatory monthly total; base was about $1,799.",
+        "max": 2831,
+        "note": "Advertised total monthly price; base rent was $1,799–$2,715.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised mandatory monthly total",
       "priceSource": "Official property availability",
       "deal": "Up to 10 weeks free",
-      "dealDetail": "Advertised on select homes with possible waived application, administration, and deposit; get written eligibility terms.",
+      "dealDetail": "Community-supplied offer: up to ten weeks free, possibly with waived application, administration, and deposit. The official page did not surface it; get terms in writing.",
       "dealExpires": null,
       "amenities": [
-        "Gated",
         "Pool",
         "Pickleball",
-        "Fitness center",
-        "Dog park & wash",
+        "24-hour fitness",
+        "Coworking",
+        "Dog park & spa",
         "EV charging"
       ],
       "security": [
-        "Gated access",
-        "Controlled package handling reported"
+        "Keyless-entry smart locks"
       ],
       "petCost": "$400 per pet + $25/month each; breed restrictions.",
       "fees": [
-        "Pet fee: $400 each",
-        "Pet rent: $25/month each",
-        "Shown rents are advertised monthly totals"
+        "Mandatory fixed fees: $116/month",
+        "Pest: $10/month",
+        "Package: $10/month",
+        "Doorstep trash: $25/month",
+        "Utility administration: $6/month",
+        "Internet: $65/month",
+        "Application: $100 per person",
+        "Administration: $250",
+        "Utility setup: $17",
+        "Access device: $50",
+        "Refundable deposit: $500",
+        "Variable electric, water, sewer, and trash hauling additional"
       ],
       "review": {
         "rating": 4.8,
@@ -2042,15 +2556,27 @@
         "observedAt": "2026-09-04"
       },
       "officialUrl": "https://theparkerga.com/",
-      "pricingUrl": "https://theparkerga.com/",
-      "amenitiesUrl": "https://theparkerga.com/faqs/",
+      "pricingUrl": "https://theparkerga.com/floorplans/",
+      "amenitiesUrl": "https://theparkerga.com/amenities/",
       "galleryUrl": "https://theparkerga.com/gallery/",
       "imageUrl": "https://theparkerga.com/assets/images/cache/shoootin-photo-172-f64d69c3c4048dc68adedacfe256fc85.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://theparkerga.com/assets/images/cache/shoootin-photo-172-f64d69c3c4048dc68adedacfe256fc85.jpg", "sourceUrl": "https://theparkerga.com/gallery/", "alt": "The Parker official property photo one" },
-        { "url": "https://theparkerga.com/assets/images/cache/1970-1736-The-Parker-46-4e6d429d2c9b3189ae634abec3f50cb4.jpg", "sourceUrl": "https://theparkerga.com/gallery/", "alt": "The Parker official property photo two" },
-        { "url": "https://theparkerga.com/assets/images/cache/The-Parker-53-3047e7e7ef846eefab34c0b26bb051b4.jpg", "sourceUrl": "https://theparkerga.com/gallery/", "alt": "The Parker official property photo three" }
+        {
+          "url": "https://theparkerga.com/assets/images/cache/shoootin-photo-172-f64d69c3c4048dc68adedacfe256fc85.jpg",
+          "sourceUrl": "https://theparkerga.com/gallery/",
+          "alt": "The Parker official property photo one"
+        },
+        {
+          "url": "https://theparkerga.com/assets/images/cache/1970-1736-The-Parker-46-4e6d429d2c9b3189ae634abec3f50cb4.jpg",
+          "sourceUrl": "https://theparkerga.com/gallery/",
+          "alt": "The Parker official property photo two"
+        },
+        {
+          "url": "https://theparkerga.com/assets/images/cache/The-Parker-53-3047e7e7ef846eefab34c0b26bb051b4.jpg",
+          "sourceUrl": "https://theparkerga.com/gallery/",
+          "alt": "The Parker official property photo three"
+        }
       ],
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
@@ -2058,7 +2584,29 @@
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [
+        {
+          "min": 1595,
+          "max": 2286,
+          "observedAt": "2026-09-04",
+          "bedroom": 1
+        },
+        {
+          "min": 1595,
+          "max": 2831,
+          "observedAt": "2026-09-04",
+          "bedroom": 2
+        }
+      ],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "source_conflict",
+      "auditNote": "Official pricing and fees were rechecked; the current promotion is community-supplied and is not displayed on the official page.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "brookstone-acworth",
@@ -2068,23 +2616,23 @@
       "address": "4832 Highway 92, Acworth, GA 30102",
       "lat": 34.0895914,
       "lng": -84.6113311,
-      "distanceMiles": 12.5,
-      "driveMin": 23,
-      "driveMax": 33,
-      "commuteNote": "Outer edge of the corridor; Highway 92 traffic can push the route toward the upper estimate.",
+      "distanceMiles": 9.2,
+      "driveMin": 21,
+      "driveMax": 27,
+      "commuteNote": "9.2 mi / 21 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
-        "min": 1499,
-        "max": null,
-        "note": "Official base start; mandatory total was roughly $1,624.",
+        "min": 1623.59,
+        "max": 1987.59,
+        "note": "Mandatory monthly total; base rent was $1,499–$1,863, generally on 13-month terms.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 1899,
-        "max": null,
-        "note": "Official base start; mandatory total was roughly $2,023.",
+        "min": 2023.59,
+        "max": 2432.59,
+        "note": "Mandatory monthly total; base rent was $1,899–$2,308.",
         "observedAt": "2026-09-04"
       },
-      "priceBasis": "Advertised base rent",
+      "priceBasis": "Advertised mandatory monthly total",
       "priceSource": "Official property floor plans",
       "deal": "Up to 8 weeks free",
       "dealDetail": "Advertised on select homes; confirm lease term, move-in deadline, and mandatory charges.",
@@ -2098,16 +2646,21 @@
         "In-home washer/dryer"
       ],
       "security": [
-        "Gated access",
-        "Package access"
+        "Automatic gate-controlled vehicle entry",
+        "Access-controlled package room"
       ],
-      "petCost": "Up to 2 pets; public feeds conflict around $350–$500 and $25–$30/month; 75-lb/breed limits.",
+      "petCost": "Up to 2 pets, 75 lb, with breed restrictions; public charges conflict between $350–$500 and $25–$30/month—call.",
       "fees": [
+        "Mandatory fixed fees: $124.59/month",
         "Internet: $85/month",
         "Trash: $10/month",
         "Liability: $16.59/month",
         "Pest: $5/month",
-        "Utility billing: $8/month"
+        "Utility billing: $8/month",
+        "Application: $100 per person",
+        "Administration: $200",
+        "Gate card: $25",
+        "Deposit: $250"
       ],
       "review": {
         "rating": 4.7,
@@ -2123,14 +2676,38 @@
       "imageUrl": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/97682/the%20brookstone_2024_twilights_drone%20aerials_063%20-%20copy.jpg",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/97682/the%20brookstone_2024_twilights_drone%20aerials_063%20-%20copy.jpg", "sourceUrl": "https://www.thebrookstoneapartments.com/photogallery", "alt": "The Brookstone Apartments aerial exterior" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/97682/the%20brookstone_2024_twilights_183%281%29.jpg", "sourceUrl": "https://www.thebrookstoneapartments.com/photogallery", "alt": "The Brookstone Apartments official property photo two" },
-        { "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/97682/the%20brookstone_2024_interiors_551%281%29.jpg", "sourceUrl": "https://www.thebrookstoneapartments.com/photogallery", "alt": "The Brookstone Apartments interior" }
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/97682/the%20brookstone_2024_twilights_drone%20aerials_063%20-%20copy.jpg",
+          "sourceUrl": "https://www.thebrookstoneapartments.com/photogallery",
+          "alt": "The Brookstone Apartments aerial exterior"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/97682/the%20brookstone_2024_twilights_183%281%29.jpg",
+          "sourceUrl": "https://www.thebrookstoneapartments.com/photogallery",
+          "alt": "The Brookstone Apartments official property photo two"
+        },
+        {
+          "url": "https://resource.rentcafe.com/image/upload/q_auto%2Cf_auto%2Cc_limit%2Cw_1200/s3/2/97682/the%20brookstone_2024_interiors_551%281%29.jpg",
+          "sourceUrl": "https://www.thebrookstoneapartments.com/photogallery",
+          "alt": "The Brookstone Apartments interior"
+        }
       ],
-      "priceConfidence": "official",
+      "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "source_conflict",
+      "auditNote": "Official rent and mandatory-fee ranges were rechecked; public pet-charge disclosures conflict, so those amounts are not presented as exact.",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "the-quincy",
@@ -2140,20 +2717,20 @@
       "address": "900 Buice Lake Parkway, Acworth, GA 30102",
       "lat": 34.100857,
       "lng": -84.583395,
-      "distanceMiles": 12,
-      "driveMin": 25,
-      "driveMax": 35,
-      "commuteNote": "Outer-edge option; check the live school-arrival route because congestion can approach the 40-minute ceiling.",
+      "distanceMiles": 6.9,
+      "driveMin": 16,
+      "driveMax": 21,
+      "commuteNote": "6.9 mi / 16 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": 1341,
-        "max": null,
-        "note": "Official current base-rent start.",
+        "max": 1488,
+        "note": "Current visible official base-rent range; higher term-dependent aggregate maxima are excluded.",
         "observedAt": "2026-09-04"
       },
       "twoBed": {
         "min": 1723,
-        "max": null,
-        "note": "Official current base-rent start.",
+        "max": 1903,
+        "note": "Current visible official base-rent range.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised base rent",
@@ -2170,11 +2747,17 @@
         "In-home washer/dryer"
       ],
       "security": [
-        "Controlled package handling reported",
+        "Mailroom with package lockers",
         "On-site management"
       ],
       "petCost": "$350 first + $200 second; $35/month each; breed restrictions.",
       "fees": [
+        "Application: $85 per person",
+        "Administration: $250",
+        "Valet trash: $30/month",
+        "Pest: $5/month",
+        "Variable water/sewer/trash additional",
+        "Liability coverage: $13/month only if renter insurance is not supplied",
         "Pet fee: $350 first + $200 second",
         "Pet rent: $35/month each"
       ],
@@ -2193,7 +2776,20 @@
       "priceConfidence": "official",
       "verifiedAt": "2026-09-04",
       "lastSourceCheck": "2026-09-04",
-      "sourceCheckStatus": "blocked"
+      "sourceCheckStatus": "blocked",
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "priceReviewCandidates": [],
+      "detectedDeal": null,
+      "sourceCheckError": "HTTP 403",
+      "auditStatus": "official",
+      "auditNote": "Current visible unit starts/ranges, move-in promotion, fees, pet terms, amenities, and review snapshot were rechecked.",
+      "galleryUrl": "https://www.livethequincy.com/photogallery",
+      "auditedAt": "2026-09-04",
+      "dealLastSeenAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "summerwell-bells-ferry",
@@ -2204,10 +2800,10 @@
       "address": "1151 Hunter Trail, Acworth, GA 30102",
       "lat": 34.095927,
       "lng": -84.58474,
-      "distanceMiles": 10,
-      "driveMin": 20,
-      "driveMax": 30,
-      "commuteNote": "Bells Ferry route; check live school-arrival traffic before relying on the range.",
+      "distanceMiles": 7.3,
+      "driveMin": 17,
+      "driveMax": 22,
+      "commuteNote": "7.3 mi / 17 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": null,
         "max": null,
@@ -2215,9 +2811,9 @@
         "observedAt": "2026-09-04"
       },
       "twoBed": {
-        "min": 2150,
+        "min": 2158,
         "max": 2158,
-        "note": "Advertised total monthly price; base was $2,000 and term-dependent.",
+        "note": "Advertised total for one 960-sf Aurora home: $2,000 base plus fixed fees; shown available October 28.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Advertised mandatory monthly total",
@@ -2234,14 +2830,19 @@
         "Modern interiors"
       ],
       "security": [
-        "Private-home entries",
+        "Individual home entrances",
         "On-site management"
       ],
       "petCost": "Up to 3 pets; $500–$900 one-time based on count + $25/month each; breed restrictions; confirm wording.",
       "fees": [
         "Base rent: $2,000",
-        "Advertised total: $2,150–$2,158",
-        "Pet fees vary by count"
+        "Smart-home services: $150/month",
+        "Utility-billing administration: $7.75/month",
+        "Utility setup: $17",
+        "Final bill: $20",
+        "Variable electric and liability additional",
+        "Community listing: $35 application and $1,500 refundable deposit",
+        "Optional liability coverage: $20.42/month"
       ],
       "review": {
         "rating": 4.9,
@@ -2261,7 +2862,15 @@
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "official",
+      "auditNote": "The one current 2BR home, total/base price, fee components, pet terms, amenities, and review snapshot were rechecked.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     },
     {
       "id": "gregory-lane",
@@ -2271,10 +2880,10 @@
       "address": "466 Gregory Lane, Acworth, GA 30102",
       "lat": 34.0822,
       "lng": -84.577281,
-      "distanceMiles": 11.5,
-      "driveMin": 25,
-      "driveMax": 35,
-      "commuteNote": "Outer-edge option; live inventory and the school-arrival route both need phone/live-map confirmation.",
+      "distanceMiles": 8.3,
+      "driveMin": 19,
+      "driveMax": 24,
+      "commuteNote": "8.3 mi / 19 min no-traffic route rechecked 2026-09-04. The upper figure adds a 30% planning buffer; actual school-time traffic may be higher.",
       "oneBed": {
         "min": null,
         "max": null,
@@ -2283,14 +2892,14 @@
       },
       "twoBed": {
         "min": 1410,
-        "max": null,
-        "note": "Estimated mandatory monthly total: $1,340 base + $15 community + $55 water.",
+        "max": 1410,
+        "note": "Estimated total: $1,340 base + $15 community + $55 water. Official availability showed 0 results while the linked listing showed three homes.",
         "observedAt": "2026-09-04"
       },
       "priceBasis": "Estimated mandatory monthly total",
       "priceSource": "Official fee pages plus current community listing",
-      "deal": "Up to 1 month free + admin credit",
-      "dealDetail": "Reported with a 48-hour look-and-lease condition; official embedded availability showed no units, so call first.",
+      "deal": null,
+      "dealDetail": "The current linked listing explicitly says there are no specials.",
       "dealExpires": null,
       "amenities": [
         "Pool",
@@ -2300,11 +2909,14 @@
         "Renovated interiors"
       ],
       "security": [
-        "On-site management",
-        "Phone confirmation recommended before touring"
+        "Professionally managed",
+        "24-hour emergency maintenance"
       ],
       "petCost": "Up to 2 pets, 75 lb; $300 one/$450 two + $20/month each; breed restrictions.",
       "fees": [
+        "Application: $55 per person",
+        "Administration: $160",
+        "Deposit: $500",
         "Community: $15/month",
         "Water: $55/month",
         "Pet fee: $300 one/$450 two",
@@ -2324,19 +2936,36 @@
       "imageUrl": "https://irp.cdn-website.com/f4845780/dms3rep/multi/Updated+pool+photo.png",
       "imageSource": "Official property gallery",
       "galleryImages": [
-        { "url": "https://irp.cdn-website.com/f4845780/dms3rep/multi/Updated+pool+photo.png", "sourceUrl": "https://www.visitgregorylane.com/gallery", "alt": "Gregory Lane swimming pool" },
-        { "url": "https://irp.cdn-website.com/f4845780/dms3rep/multi/BuildingPhoto+%284%29.jpg", "sourceUrl": "https://www.visitgregorylane.com/gallery", "alt": "Gregory Lane apartment building" },
-        { "url": "https://irp.cdn-website.com/f4845780/dms3rep/multi/Living+Room+%282%29.jpg", "sourceUrl": "https://www.visitgregorylane.com/gallery", "alt": "Gregory Lane apartment living room" }
+        {
+          "url": "https://irp.cdn-website.com/f4845780/dms3rep/multi/Updated+pool+photo.png",
+          "sourceUrl": "https://www.visitgregorylane.com/gallery",
+          "alt": "Gregory Lane swimming pool"
+        },
+        {
+          "url": "https://irp.cdn-website.com/f4845780/dms3rep/multi/BuildingPhoto+%284%29.jpg",
+          "sourceUrl": "https://www.visitgregorylane.com/gallery",
+          "alt": "Gregory Lane apartment building"
+        },
+        {
+          "url": "https://irp.cdn-website.com/f4845780/dms3rep/multi/Living+Room+%282%29.jpg",
+          "sourceUrl": "https://www.visitgregorylane.com/gallery",
+          "alt": "Gregory Lane apartment living room"
+        }
       ],
       "priceConfidence": "conflict",
       "verifiedAt": "2026-09-04",
-      "detectedDeal": "Up to 1 month free + 1 month free rent",
-      "dealLastSeenAt": "2026-09-04",
-      "dealStatus": "needs_review",
       "lastSourceCheck": "2026-09-04",
       "lastSourceSuccess": "2026-09-04",
       "sourceCheckStatus": "reachable_unparsed",
-      "priceReviewCandidates": []
+      "priceReviewCandidates": [],
+      "routeReviewCandidate": null,
+      "routeObservedAt": "2026-09-04",
+      "routeSource": "OSRM route using OpenStreetMap road data",
+      "routeSourceUrl": "https://www.openstreetmap.org/copyright",
+      "auditStatus": "source_conflict",
+      "auditNote": "Official availability shows no units while the linked current listing shows three 2BR homes; call before touring.",
+      "auditedAt": "2026-09-04",
+      "withinDriveLimit": true
     }
   ]
 }
