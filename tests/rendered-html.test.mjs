@@ -2,8 +2,6 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const root = new URL("../", import.meta.url);
-
 async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
@@ -37,8 +35,30 @@ test("ships a complete, bounded apartment dataset", async () => {
   assert.ok(apartments.every((home) => home.driveMax <= 40));
   assert.ok(apartments.every((home) => (home.oneBed.min ?? home.twoBed.min) > 0));
   assert.ok(apartments.every((home) => home.officialUrl.startsWith("https://")));
-  assert.ok(apartments.every((home) => home.imageUrl === null || home.imageUrl.startsWith("https://")));
+  assert.ok(apartments.every((home) => home.imageUrl?.startsWith("https://")));
   assert.ok(apartments.every((home) => home.review.url.startsWith("https://")));
+});
+
+test("builds a unique, shareable detail page for every apartment", async () => {
+  const primary = JSON.parse(await readFile(new URL("../app/apartments.json", import.meta.url), "utf8"));
+  const expanded = JSON.parse(await readFile(new URL("../app/apartments-expanded.json", import.meta.url), "utf8"));
+  const apartments = [...primary.apartments, ...expanded.apartments];
+
+  for (const apartment of apartments) {
+    const html = await readFile(new URL(`../pages-dist/apartments/${apartment.id}/index.html`, import.meta.url), "utf8");
+    assert.match(html, new RegExp(`<title>${apartment.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\| Bella's Home Base<\\/title>`, "i"));
+    assert.match(html, new RegExp(`Apartment4Bella/apartments/${apartment.id}/`));
+    assert.match(html, /property="og:image" content="https:\/\//i);
+    assert.equal((html.match(/property="og:title"/gi) ?? []).length, 1);
+    assert.equal((html.match(/name="twitter:title"/gi) ?? []).length, 1);
+    assert.match(html, new RegExp(`property="og:title" content="${apartment.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\| Bella's Home Base"`, "i"));
+    assert.match(html, new RegExp(`name="twitter:title" content="${apartment.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\| Bella's Home Base"`, "i"));
+  }
+
+  const withPhoto = await readFile(new URL("../pages-dist/apartments/atlantic-bridgemill/index.html", import.meta.url), "utf8");
+  assert.match(withPhoto, /property="og:image" content="https:\/\//i);
+  assert.doesNotMatch(withPhoto, /property="og:image" content="https:\/\/williamjblodgett\.github\.io\/Apartment4Bella\/og\.png"/i);
+
 });
 
 test("includes the scheduled GitHub Pages publisher", async () => {

@@ -11,6 +11,8 @@ The public site is deployed with GitHub Pages at:
 - 46 second-pass researched apartment communities in Canton, Holly Springs, Woodstock, Acworth, and Kennesaw
 - drive-time, bedroom, rent, deal, amenity, and access-feature filters
 - official property, pricing, amenity, photo, and live-directions links
+- a dedicated, shareable page for every community, with property-specific social metadata
+- an official-site property photo for all 46 communities and three-photo galleries where stable first-party assets were available
 - detailed rent notes, fees, pet policies, review snapshots, and deal caveats
 - starting-rent affordability scoring based on the same directory, with price-basis caveats
 - GBI county-level reported-crime context with an explicit no-property-rating caveat
@@ -35,7 +37,7 @@ npm run validate:data
 
 - `npm run dev` runs the full vinext/Sites preview.
 - `npm run build` validates the Cloudflare-compatible application build.
-- `npm run build:pages` creates the static GitHub Pages artifact in `pages-dist/`.
+- `npm run build:pages` creates the static GitHub Pages artifact, all 46 detail routes, and a sitemap in `pages-dist/`.
 - `npm run refresh:data` performs the same best-effort official-source refresh used by the daily workflow.
 - `npm run validate:data` rejects duplicate communities, invalid prices, missing source links, and anything outside the 40-minute ceiling.
 
@@ -45,5 +47,5 @@ npm run validate:data
 - Affordability is relative to the current shortlist; it does not determine personal affordability or leasing eligibility.
 - Crime figures are county/jurisdiction context, never a property safety grade. No location can be guaranteed safe.
 - Review ratings are dated snapshots with live source links.
-- Property photos remain hosted by and attributed to official property sites; cards without a stable embeddable asset link to the official gallery instead.
+- Property photos remain hosted by and attributed to official property or management sites, with direct links to their complete galleries.
 - This is a broad community directory, not a licensed feed guaranteed to contain every individual available unit or private rental.

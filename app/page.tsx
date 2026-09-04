@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import rawData from "./apartments.json";
 import expandedData from "./apartments-expanded.json";
 
 type Price = { min: number | null; max: number | null; note: string; observedAt?: string };
 type Review = { rating: number | null; count: number; source: string; url: string; observedAt?: string };
+type GalleryImage = { url: string; sourceUrl: string; alt: string };
 type SortKey = "drive" | "price" | "rating" | "reviews" | "deals";
 type Apartment = {
   id: string;
@@ -35,8 +36,10 @@ type Apartment = {
   officialUrl: string;
   pricingUrl: string;
   amenitiesUrl: string;
+  galleryUrl?: string;
   imageUrl: string | null;
   imageSource: string;
+  galleryImages?: GalleryImage[];
   priceConfidence: "official" | "snapshot" | "conflict";
   verifiedAt: string;
   lastSourceCheck?: string;
@@ -66,6 +69,25 @@ const locationUrl = (address: string) =>
 
 const formatDate = (date: string) =>
   new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(new Date(`${date}T12:00:00`));
+
+function siteBasePath() {
+  if (typeof window === "undefined") return "/";
+  const marker = "/apartments/";
+  const markerIndex = window.location.pathname.lastIndexOf(marker);
+  if (markerIndex >= 0) return window.location.pathname.slice(0, markerIndex + 1);
+  return window.location.pathname.endsWith("/") ? window.location.pathname : `${window.location.pathname}/`;
+}
+
+const detailPageUrl = (id: string) => `${siteBasePath()}apartments/${encodeURIComponent(id)}/`;
+const directoryUrl = () => siteBasePath();
+
+function apartmentIdFromLocation() {
+  if (typeof window === "undefined") return null;
+  const match = window.location.pathname.match(/\/apartments\/([^/]+)\/?$/);
+  return match ? decodeURIComponent(match[1]) : null;
+}
+
+const apartmentInitials = (name: string) => name.split(" ").map((word) => word[0]).slice(0, 2).join("");
 
 function priceFor(apartment: Apartment, bedrooms: string) {
   if (bedrooms === "2") return apartment.twoBed.min ?? Number.POSITIVE_INFINITY;
@@ -133,6 +155,177 @@ function compareApartments(a: Apartment, b: Apartment, sort: SortKey, bedrooms: 
   return commuteTieBreak();
 }
 
+function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apartment; isSaved: boolean; onToggleSaved: () => void }) {
+  const countyRate = apartment.county === "Cherokee" ? crimeContext.cherokeeRate : crimeContext.cobbRate;
+  const valueScore = affordabilityScore(apartment, "either");
+  const galleryImages = apartment.galleryImages?.length
+    ? apartment.galleryImages
+    : apartment.imageUrl
+      ? [{ url: apartment.imageUrl, sourceUrl: apartment.officialUrl, alt: `${apartment.name} property photograph` }]
+      : [];
+  const nearby = apartments
+    .filter((item) => item.id !== apartment.id)
+    .sort((a, b) => Math.abs(a.driveMax - apartment.driveMax) - Math.abs(b.driveMax - apartment.driveMax) || a.driveMax - b.driveMax)
+    .slice(0, 3);
+  const description = `${apartment.name} is a ${apartment.city} rental community approximately ${apartment.driveMin}–${apartment.driveMax} minutes from Sixes Elementary. Highlights include ${apartment.amenities.slice(0, 3).join(", ")}.`;
+  const photoPageUrl = apartment.galleryUrl || apartment.amenitiesUrl;
+
+  return (
+    <main className="property-page">
+      <header className="site-header detail-site-header">
+        <a className="brand" href={directoryUrl()} aria-label="Back to Bella's apartment finder">
+          <span className="brand-mark">B</span>
+          <span>Bella&apos;s Home Base</span>
+        </a>
+        <nav className="header-nav" aria-label="Property navigation">
+          <a href={`${directoryUrl()}#matches`}>All apartments</a>
+          <a href={apartment.pricingUrl} target="_blank" rel="noreferrer">Live pricing ↗</a>
+          <a href={photoPageUrl} target="_blank" rel="noreferrer">Official photos ↗</a>
+        </nav>
+        <a className="back-to-results" href={`${directoryUrl()}#matches`}>← Back to results</a>
+      </header>
+
+      <article className="property-detail">
+        <div className="detail-breadcrumb"><a href={directoryUrl()}>Home</a><span>/</span><a href={`${directoryUrl()}#matches`}>Apartments</a><span>/</span><b>{apartment.name}</b></div>
+
+        <section className="property-detail-hero">
+          <div className={`detail-gallery ${galleryImages.length > 1 ? "has-multiple" : ""}`}>
+            {galleryImages.length ? galleryImages.slice(0, 3).map((image, index) => (
+              <a className={index === 0 ? "gallery-primary" : "gallery-secondary"} href={image.sourceUrl} target="_blank" rel="noreferrer" key={image.url}>
+                <img src={image.url} alt={image.alt} onError={(event) => { event.currentTarget.style.display = "none"; }} />
+                {index === 0 && <span>Photo: {apartment.imageSource}</span>}
+              </a>
+            )) : (
+              <div className="gallery-fallback">
+                <b aria-hidden="true">{apartmentInitials(apartment.name)}</b>
+                <span>Property photos are available on the official gallery.</span>
+              </div>
+            )}
+            <a className="open-gallery-button" href={photoPageUrl} target="_blank" rel="noreferrer">View official photos ↗</a>
+          </div>
+
+          <div className="property-hero-copy">
+            <span className="section-kicker">{apartment.city}, GEORGIA · {apartment.distanceMiles.toFixed(1)} MILES FROM SCHOOL</span>
+            <h1>{apartment.name}</h1>
+            <p className="property-lede">{description}</p>
+            <a className="property-address" href={locationUrl(apartment.address)} target="_blank" rel="noreferrer">{apartment.address} ↗</a>
+
+            <div className="detail-fact-grid">
+              <div className="detail-commute"><span>EST. DRIVE</span><strong>{apartment.driveMin}–{apartment.driveMax} min</strong><small>to Sixes Elementary</small></div>
+              <div><span>1 BEDROOM</span><strong>{priceRange(apartment.oneBed)}</strong><small>{apartment.priceBasis}</small></div>
+              <div><span>2 BEDROOM</span><strong>{priceRange(apartment.twoBed)}</strong><small>{apartment.priceBasis}</small></div>
+              <a href={apartment.review.url} target="_blank" rel="noreferrer"><span>RESIDENT REVIEWS</span><strong>{apartment.review.rating !== null ? `${apartment.review.rating.toFixed(1)} ★` : "Not rated"}</strong><small>{apartment.review.count ? `${apartment.review.count} on ${apartment.review.source.replace(" snapshot", "")}` : "Open review source"}</small></a>
+            </div>
+
+            <div className="detail-signals">
+              {hasCurrentDeal(apartment) ? <span className="deal">✦ {apartment.deal}</span> : <span className="no-deal">No current broad deal verified</span>}
+              {apartment.eligibility && <span className="eligibility-badge">{apartment.eligibility}</span>}
+              <span className={`confidence ${apartment.priceConfidence}`}>{confidenceCopy(apartment.priceConfidence)}</span>
+            </div>
+
+            <div className="detail-primary-actions">
+              <a className="detail-main-action" href={apartment.officialUrl} target="_blank" rel="noreferrer">Visit official website ↗</a>
+              <a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Check live drive ↗</a>
+              <button type="button" className={isSaved ? "detail-save active" : "detail-save"} onClick={onToggleSaved}>{isSaved ? "♥ Saved" : "♡ Save this place"}</button>
+            </div>
+            <p className="detail-freshness">{sourceStatusCopy(apartment)} · Always confirm the final quote with the leasing office.</p>
+          </div>
+        </section>
+
+        <section className="property-content-grid">
+          <div className="property-main-column">
+            <section className="detail-section">
+              <span className="section-kicker">PRICE PICTURE</span>
+              <h2>Costs and availability</h2>
+              <div className="bedroom-detail-grid">
+                <article><span>ONE BEDROOM</span><strong>{priceRange(apartment.oneBed)}</strong><p>{apartment.oneBed.note}</p></article>
+                <article><span>TWO BEDROOM</span><strong>{priceRange(apartment.twoBed)}</strong><p>{apartment.twoBed.note}</p></article>
+              </div>
+              <div className="affordability-detail"><b>{valueScore}</b><div><strong>{affordabilityLabel(valueScore)}</strong><span>Starting-rent comparison within this researched directory—not a personal affordability determination.</span></div></div>
+              <p className="source-note">Pricing basis: {apartment.priceBasis}. Source: <a href={apartment.pricingUrl} target="_blank" rel="noreferrer">{apartment.priceSource} ↗</a></p>
+            </section>
+
+            <section className="detail-section">
+              <span className="section-kicker">WHAT STANDS OUT</span>
+              <h2>Perks and amenities</h2>
+              <div className="large-tag-list">{apartment.amenities.map((item) => <span key={item}>{item}</span>)}</div>
+              <a className="text-link" href={photoPageUrl} target="_blank" rel="noreferrer">See more property photos ↗</a>
+            </section>
+
+            <section className="detail-section access-section">
+              <span className="section-kicker">VERIFY ON A TOUR</span>
+              <h2>Property-reported access features</h2>
+              <div className="large-tag-list security-detail-list">{apartment.security.map((item) => <span key={item}>✓ {item}</span>)}</div>
+              <p>These features are property-reported and unverified. Ask to see exterior lighting, building entries, locks, parking, package handling, and emergency procedures in person.</p>
+            </section>
+
+            <section className="detail-section commute-section">
+              <span className="section-kicker">LOCATION</span>
+              <h2>The school drive</h2>
+              <div className="commute-callout"><b>{apartment.driveMin}–{apartment.driveMax}</b><span>estimated minutes</span></div>
+              <p>{apartment.commuteNote}</p>
+              <p>The range is a planning estimate without guaranteed live traffic. Check the route at the actual weekday school-arrival time before signing a lease.</p>
+              <div className="inline-actions"><a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Open live Google directions ↗</a><a href={locationUrl(apartment.address)} target="_blank" rel="noreferrer">Open location map ↗</a></div>
+            </section>
+          </div>
+
+          <aside className="property-side-column">
+            <section className="tour-card">
+              <span className="section-kicker">BEFORE YOU TOUR</span>
+              <h2>Useful links</h2>
+              <a className="tour-primary" href={apartment.officialUrl} target="_blank" rel="noreferrer">Official property site ↗</a>
+              <a href={apartment.pricingUrl} target="_blank" rel="noreferrer">Current floor plans & pricing ↗</a>
+              <a href={photoPageUrl} target="_blank" rel="noreferrer">Official photos ↗</a>
+              <a href={apartment.amenitiesUrl} target="_blank" rel="noreferrer">Complete amenities ↗</a>
+              <a href={apartment.review.url} target="_blank" rel="noreferrer">Read resident reviews ↗</a>
+              <a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Check live commute ↗</a>
+            </section>
+
+            <section className="side-detail-card">
+              <h3>Fees found</h3>
+              <ul>{apartment.fees.map((fee) => <li key={fee}>{fee}</li>)}</ul>
+              <h3>Pet costs and rules</h3>
+              <p>{apartment.petCost}</p>
+              {apartment.eligibility && <><h3>Eligibility</h3><p>{apartment.eligibility}</p></>}
+            </section>
+
+            <section className="side-detail-card deal-detail-card">
+              <h3>Deal details</h3>
+              <p>{apartment.dealDetail}</p>
+              {apartment.dealExpires && <p className="expiry">Listed end date: {formatDate(apartment.dealExpires)}</p>}
+            </section>
+          </aside>
+        </section>
+
+        <section className="crime-context-detail">
+          <div><span className="section-kicker">REPORTED-CRIME CONTEXT</span><h2>Area-level information, not a property score</h2></div>
+          <p className="crime-number"><b>{countyRate}</b><span>reported Index Crimes per 1,000 residents</span></p>
+          <p>{apartment.county} County’s {crimeContext.period} GBI rate describes a law-enforcement jurisdiction—not this apartment or personal risk. Not all incidents are reported, agency data can be incomplete or revised, and no location can be guaranteed safe.</p>
+          <a href={crimeContext.sourceUrl} target="_blank" rel="noreferrer">Review the GBI source ↗</a>
+        </section>
+
+        <section className="nearby-properties">
+          <div><span className="section-kicker">KEEP COMPARING</span><h2>Three nearby alternatives</h2></div>
+          <div className="nearby-grid">{nearby.map((item) => (
+            <a href={detailPageUrl(item.id)} key={item.id}>
+              <div className="nearby-image"><span>{apartmentInitials(item.name)}</span>{item.imageUrl && <img src={item.imageUrl} alt="" loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />}</div>
+              <small>{item.city} · {item.driveMin}–{item.driveMax} min</small>
+              <strong>{item.name}</strong>
+              <span>From {money(Math.min(...[item.oneBed.min, item.twoBed.min].filter((price): price is number => price !== null)))} · View page →</span>
+            </a>
+          ))}</div>
+        </section>
+      </article>
+
+      <footer>
+        <a className="brand footer-brand" href={directoryUrl()}><span className="brand-mark">B</span><span>Bella&apos;s Home Base</span></a>
+        <p>Compare the facts. Tour the favorites. Verify the final quote.</p>
+        <span className="footer-fine">Daily source checks · Public information · {apartments.length} researched communities</span>
+      </footer>
+    </main>
+  );
+}
+
 export default function Home() {
   const [maxDrive, setMaxDrive] = useState(40);
   const [bedrooms, setBedrooms] = useState("either");
@@ -141,26 +334,25 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [dealsOnly, setDealsOnly] = useState(false);
   const [securityOnly, setSecurityOnly] = useState(false);
-  const [saved, setSaved] = useState<string[]>([]);
-  const [selected, setSelected] = useState(apartments[0].id);
-  const [filtersOpen, setFiltersOpen] = useState(false);
-
-  useEffect(() => {
+  const [saved, setSaved] = useState<string[]>(() => {
+    if (typeof window === "undefined") return [];
     try {
       const stored = window.localStorage.getItem("bella-saved-apartments");
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        if (Array.isArray(parsed) && parsed.every((item) => typeof item === "string")) setSaved(parsed);
-      }
+      if (!stored) return [];
+      const parsed = JSON.parse(stored);
+      return Array.isArray(parsed) && parsed.every((item) => typeof item === "string") ? parsed : [];
     } catch {
-      // Blocked browser storage should never stop the search experience.
+      return [];
     }
-  }, []);
+  });
+  const [selected, setSelected] = useState(apartments[0].id);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [detailId] = useState<string | null>(() => apartmentIdFromLocation());
 
   const toggleSaved = (id: string) => {
     setSaved((current) => {
       const next = current.includes(id) ? current.filter((item) => item !== id) : [...current, id];
-      try { window.localStorage.setItem("bella-saved-apartments", JSON.stringify(next)); } catch {}
+      try { window.localStorage.setItem("bella-saved-apartments", JSON.stringify(next)); } catch { /* Saving is optional when browser storage is blocked. */ }
       return next;
     });
   };
@@ -177,11 +369,8 @@ export default function Home() {
       .sort((a, b) => compareApartments(a, b, sort, bedrooms));
   }, [bedrooms, dealsOnly, maxDrive, maxRent, query, securityOnly, sort]);
 
-  useEffect(() => {
-    if (matches.length && !matches.some((item) => item.id === selected)) setSelected(matches[0].id);
-  }, [matches, selected]);
-
-  const selectedApartment = matches.find((item) => item.id === selected) ?? matches[0];
+  const effectiveSelected = matches.some((item) => item.id === selected) ? selected : matches[0]?.id;
+  const selectedApartment = matches.find((item) => item.id === effectiveSelected) ?? matches[0];
   const cheapest = matches.length ? Math.min(...matches.map((item) => priceFor(item, bedrooms))) : null;
   const dealCount = matches.filter(hasCurrentDeal).length;
 
@@ -194,6 +383,11 @@ export default function Home() {
     setQuery("");
     setSort("drive");
   };
+
+  const detailApartment = detailId ? apartments.find((apartment) => apartment.id === detailId) : null;
+  if (detailApartment) {
+    return <ApartmentDetail apartment={detailApartment} isSaved={saved.includes(detailApartment.id)} onToggleSaved={() => toggleSaved(detailApartment.id)} />;
+  }
 
   return (
     <main>
@@ -300,15 +494,16 @@ export default function Home() {
             {matches.length ? matches.map((apartment, index) => {
               const valueScore = affordabilityScore(apartment, bedrooms);
               const isSaved = saved.includes(apartment.id);
-              const isSelected = selected === apartment.id;
-              const countyRate = apartment.county === "Cherokee" ? crimeContext.cherokeeRate : crimeContext.cobbRate;
+              const isSelected = effectiveSelected === apartment.id;
               return (
                 <article className={`home-card ${isSelected ? "selected" : ""}`} key={apartment.id} onMouseEnter={() => setSelected(apartment.id)}>
-                  <figure className="property-photo" onClick={() => setSelected(apartment.id)}>
-                    <span className="photo-fallback" aria-hidden="true">{apartment.name.split(" ").map((word) => word[0]).slice(0, 2).join("")}</span>
-                    {apartment.imageUrl && <img src={apartment.imageUrl} alt={`${apartment.name} property photograph`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
-                    <span className="rank">{String(index + 1).padStart(2, "0")}</span>
-                    {index === 0 && sort === "drive" && <span className="best-badge">CLOSEST MATCH</span>}
+                  <figure className="property-photo">
+                    <a className="property-photo-link" href={detailPageUrl(apartment.id)} aria-label={`Open the full page for ${apartment.name}`}>
+                      <span className="photo-fallback" aria-hidden="true">{apartmentInitials(apartment.name)}</span>
+                      {apartment.imageUrl && <img src={apartment.imageUrl} alt={`${apartment.name} property photograph`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />}
+                      <span className="rank">{String(index + 1).padStart(2, "0")}</span>
+                      {index === 0 && sort === "drive" && <span className="best-badge">CLOSEST MATCH</span>}
+                    </a>
                     <a className="photo-credit" href={apartment.imageUrl ? apartment.officialUrl : apartment.amenitiesUrl} target="_blank" rel="noreferrer">{apartment.imageUrl ? "Photo: property site" : "Open official gallery"} ↗</a>
                   </figure>
 
@@ -317,7 +512,7 @@ export default function Home() {
                       <span>{apartment.city}, GA · {apartment.distanceMiles.toFixed(1)} mi</span>
                       <button className={isSaved ? "favorite active" : "favorite"} aria-label={`${isSaved ? "Remove" : "Save"} ${apartment.name}`} aria-pressed={isSaved} onClick={() => toggleSaved(apartment.id)}>{isSaved ? "♥" : "♡"}</button>
                     </div>
-                    <h3><button type="button" onClick={() => setSelected(apartment.id)}>{apartment.name}</button></h3>
+                    <h3><a href={detailPageUrl(apartment.id)}>{apartment.name}</a></h3>
                     <p className="address">{apartment.address}</p>
 
                     <div className="primary-facts">
@@ -340,55 +535,13 @@ export default function Home() {
                         <b>{apartment.review.rating !== null ? `${apartment.review.rating.toFixed(1)} ★` : "N/A"}</b>
                         <span>{apartment.review.count ? `${apartment.review.count} reviews · ${apartment.review.source.replace(" snapshot", "")}` : "No current review rating"}</span>
                       </a>
-                      <button className="details-link" type="button" onClick={() => {
-                        const details = document.getElementById(`details-${apartment.id}`) as HTMLDetailsElement | null;
-                        if (details) { details.open = true; details.scrollIntoView({ behavior: "smooth", block: "center" }); }
-                      }}>Full details ↓</button>
+                      <a className="details-link" href={detailPageUrl(apartment.id)}>View property page →</a>
                     </div>
 
-                    <details className="detail-drawer" id={`details-${apartment.id}`}>
-                      <summary>Costs, perks, reviews & area context</summary>
-                      <div className="detail-grid">
-                        <div>
-                          <h4>What the rent means</h4>
-                          <p><b>1BR:</b> {apartment.oneBed.note}</p>
-                          <p><b>2BR:</b> {apartment.twoBed.note}</p>
-                          <p><b>Drive:</b> {apartment.commuteNote}</p>
-                          <p className="source-line">Source: <a href={apartment.pricingUrl} target="_blank" rel="noreferrer">{apartment.priceSource} ↗</a></p>
-                        </div>
-                        <div>
-                          <h4>Deal details</h4>
-                          <p>{apartment.dealDetail}</p>
-                          {apartment.dealExpires && <p className="expiry">Listed end date: {formatDate(apartment.dealExpires)}</p>}
-                        </div>
-                        <div>
-                          <h4>Fees & pets found</h4>
-                          <ul>{apartment.fees.map((fee) => <li key={fee}>{fee}</li>)}</ul>
-                          <p>{apartment.petCost}</p>
-                          {apartment.eligibility && <p><b>Eligibility:</b> {apartment.eligibility}</p>}
-                        </div>
-                        <div>
-                          <h4>Reported-crime context</h4>
-                          <p className="crime-number"><b>{countyRate}</b> <span>per 1,000</span></p>
-                          <p>{apartment.county} County’s {crimeContext.period} GBI reported Index Crime rate. This is county-level context—not a property safety rating.</p>
-                          <a href={crimeContext.sourceUrl} target="_blank" rel="noreferrer">Open GBI source ↗</a>
-                        </div>
-                        <div className="wide-detail">
-                          <h4>Property-reported access & security features</h4>
-                          <div className="security-list">{apartment.security.map((item) => <span key={item}>✓ {item}</span>)}</div>
-                          <p className="tiny-note">Features are property-reported and unverified. Ask to see lighting, entries, locks, parking, and emergency procedures during a tour.</p>
-                        </div>
-                        <div className="wide-detail">
-                          <h4>All highlighted perks</h4>
-                          <div className="security-list amenities-list">{apartment.amenities.map((item) => <span key={item}>{item}</span>)}</div>
-                        </div>
-                      </div>
-                    </details>
-
                     <div className="card-actions">
-                      <a className="primary-link" href={apartment.officialUrl} target="_blank" rel="noreferrer">Visit official site ↗</a>
+                      <a className="primary-link" href={detailPageUrl(apartment.id)}>View full page →</a>
+                      <a href={apartment.officialUrl} target="_blank" rel="noreferrer">Official site ↗</a>
                       <a href={directionsUrl(apartment.address)} target="_blank" rel="noreferrer">Check live drive ↗</a>
-                      <a href={apartment.amenitiesUrl} target="_blank" rel="noreferrer">All amenities ↗</a>
                       <span>{sourceStatusCopy(apartment)}</span>
                     </div>
                   </div>
@@ -409,7 +562,7 @@ export default function Home() {
               <span className="map-label canton">CANTON</span><span className="map-label woodstock">WOODSTOCK</span><span className="map-label acworth">ACWORTH</span>
               <span className="school-pin" style={mapPosition(school)} aria-label="Sixes Elementary School">★<small>Sixes<br />Elementary</small></span>
               {matches.map((apartment, index) => (
-                <button key={apartment.id} type="button" className={`map-pin ${selected === apartment.id ? "active" : ""}`} style={mapPosition(apartment)} onClick={() => setSelected(apartment.id)} aria-label={`Select ${apartment.name}`}>{index + 1}</button>
+                <button key={apartment.id} type="button" className={`map-pin ${effectiveSelected === apartment.id ? "active" : ""}`} style={mapPosition(apartment)} onClick={() => setSelected(apartment.id)} aria-label={`Select ${apartment.name}`}>{index + 1}</button>
               ))}
               {selectedApartment && <div className="map-note"><span>{selectedApartment.city} · {selectedApartment.distanceMiles.toFixed(1)} mi</span><b>{selectedApartment.name}</b><small>{selectedApartment.driveMin}–{selectedApartment.driveMax} min estimated</small><a href={directionsUrl(selectedApartment.address)} target="_blank" rel="noreferrer">Live directions ↗</a></div>}
             </div>
@@ -421,7 +574,7 @@ export default function Home() {
       {saved.length > 0 && (
         <section className="saved-strip" id="saved">
           <div><span className="section-kicker">BELLA&apos;S SAVED LIST</span><h2>{saved.length} place{saved.length === 1 ? "" : "s"} worth a closer look</h2></div>
-          <div className="saved-names">{saved.map((id) => { const item = apartments.find((apartment) => apartment.id === id); return item ? <a href={`#details-${id}`} key={id}>{item.name}</a> : null; })}</div>
+          <div className="saved-names">{saved.map((id) => { const item = apartments.find((apartment) => apartment.id === id); return item ? <a href={detailPageUrl(id)} key={id}>{item.name} →</a> : null; })}</div>
         </section>
       )}
 

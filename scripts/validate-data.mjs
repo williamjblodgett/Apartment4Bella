@@ -29,7 +29,16 @@ for (const apartment of data.apartments ?? []) {
   for (const [label, url] of [["officialUrl", apartment.officialUrl], ["pricingUrl", apartment.pricingUrl], ["amenitiesUrl", apartment.amenitiesUrl], ["review.url", apartment.review?.url]]) {
     if (typeof url !== "string" || !url.startsWith("https://")) errors.push(`invalid ${label}: ${apartment.id}`);
   }
-  if (apartment.imageUrl !== null && (typeof apartment.imageUrl !== "string" || !apartment.imageUrl.startsWith("https://"))) errors.push(`invalid imageUrl: ${apartment.id}`);
+  if (apartment.galleryUrl !== undefined && (typeof apartment.galleryUrl !== "string" || !apartment.galleryUrl.startsWith("https://"))) errors.push(`invalid galleryUrl: ${apartment.id}`);
+  if (typeof apartment.imageUrl !== "string" || !apartment.imageUrl.startsWith("https://")) errors.push(`missing or invalid imageUrl: ${apartment.id}`);
+  if (apartment.galleryImages !== undefined) {
+    if (!Array.isArray(apartment.galleryImages) || apartment.galleryImages.length === 0) errors.push(`invalid galleryImages: ${apartment.id}`);
+    for (const image of apartment.galleryImages ?? []) {
+      if (typeof image?.url !== "string" || !image.url.startsWith("https://") || typeof image?.sourceUrl !== "string" || !image.sourceUrl.startsWith("https://") || typeof image?.alt !== "string" || !image.alt.trim()) {
+        errors.push(`invalid gallery image: ${apartment.id}`);
+      }
+    }
+  }
   if (!Array.isArray(apartment.amenities) || apartment.amenities.length < 3) errors.push(`too few amenities: ${apartment.id}`);
   if (!Array.isArray(apartment.security) || !apartment.security.length) errors.push(`missing property-reported security/access notes: ${apartment.id}`);
   if (apartment.deal && apartment.dealExpires && apartment.dealExpires < new Date().toISOString().slice(0, 10)) errors.push(`expired deal still active: ${apartment.id}`);

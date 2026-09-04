@@ -10,11 +10,11 @@
     "build": "vinext build",
     "start": "vinext start",
     "dev:pages": "vite --config vite.pages.config.ts",
-    "build:pages": "vite build --config vite.pages.config.ts",
+    "build:pages": "vite build --config vite.pages.config.ts && node scripts/build-detail-pages.mjs",
     "refresh:data": "node scripts/refresh-data.mjs",
     "validate:data": "node scripts/validate-data.mjs",
-    "test": "npm run validate:data && npm run build && node --test tests/rendered-html.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "test": "npm run validate:data && npm run build && npm run build:pages && node --test tests/rendered-html.test.mjs",
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern pages-dist",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
