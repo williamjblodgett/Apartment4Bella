@@ -49,6 +49,11 @@ test("ships a complete, bounded apartment dataset", async () => {
   assert.equal(byId.get("view-at-woodstock").deal, null);
   assert.equal(byId.get("park-9").review.rating, null);
   assert.equal(byId.get("the-palmer").review.rating, null);
+  assert.ok(Math.abs(byId.get("the-indigo").lat - 34.1903411) < 0.00001);
+  assert.ok(Math.abs(byId.get("the-indigo").lng - -84.5127583) < 0.00001);
+  assert.ok(byId.get("the-indigo").distanceMiles >= 3.5);
+  assert.ok(byId.get("the-indigo").driveMin >= 10);
+  assert.ok(byId.get("the-indigo").driveMax <= 40);
 });
 
 test("builds a unique, shareable detail page for every apartment", async () => {

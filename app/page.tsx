@@ -222,7 +222,7 @@ function ApartmentDetail({ apartment, isSaved, onToggleSaved }: { apartment: Apa
           </div>
 
           <div className="property-hero-copy">
-            <span className="section-kicker">{apartment.city}, GEORGIA · {apartment.distanceMiles.toFixed(1)} MILES FROM SCHOOL</span>
+            <span className="section-kicker">{apartment.city}, GEORGIA · {apartment.distanceMiles.toFixed(1)} ROUTE MILES FROM SCHOOL</span>
             <h1>{apartment.name}</h1>
             <p className="property-lede">{description}</p>
             <p className="property-address">{apartment.address}</p>
@@ -524,7 +524,7 @@ export default function Home() {
 
                   <div className="card-copy">
                     <div className="card-topline">
-                      <span>{apartment.city}, GA · {apartment.distanceMiles.toFixed(1)} mi</span>
+                      <span>{apartment.city}, GA · {apartment.distanceMiles.toFixed(1)} route mi</span>
                       <button className={isSaved ? "favorite active" : "favorite"} aria-label={`${isSaved ? "Remove" : "Save"} ${apartment.name}`} aria-pressed={isSaved} onClick={() => toggleSaved(apartment.id)}>{isSaved ? "♥" : "♡"}</button>
                     </div>
                     <h3><a href={detailPageUrl(apartment.id)}>{apartment.name}</a></h3>
